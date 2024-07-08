@@ -30,13 +30,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Terrain #1
+  - Obstacle
+  - Creep
+  - Tower
+  - Platform
+  - Path
+  - Terrain #2
   m_SortingLayers:
   - name: Default
     uniqueID: 0
