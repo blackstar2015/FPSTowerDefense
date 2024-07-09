@@ -18,19 +18,19 @@ namespace TDTK {
 				Debug.LogWarning("Prefab object not found");
 				return;
 			}
-			
-			
-			GameObject uiObj=(GameObject)Instantiate(Resources.Load("NewScenePrefab/UI", typeof(GameObject)));
-			if(uiObj==null){
-				Debug.LogWarning("Prefab object not found");
-				return;
-			}
-			
 			obj.name="TDTK";
-			uiObj.name="UI";
-			uiObj.transform.parent=obj.transform;
 			
+			//Removed these lines since I nested the UI prefab inside the TDTK prefab. This was required in order to configure the stacked cameras.
+			//We no longer need to insantiate a new copy of the prefab
+			//GameObject uiObj=(GameObject)Instantiate(Resources.Load("NewScenePrefab/UI", typeof(GameObject)));
+			//if(uiObj==null){
+			//	Debug.LogWarning("Prefab object not found");
+			//	return;
+			//}			
+			//uiObj.name="UI";
+			//uiObj.transform.parent=obj.transform;
 			
+			//NOT REMOVED BY ME
 			//SpawnManager spawnManager=(SpawnManager)FindObjectOfType(typeof(SpawnManager));
 			//if(spawnManager.waveList[0].subWaveList[0].unit==null)
 				//spawnManager.waveList[0].subWaveList[0].unit=CreepDB.GetFirstPrefab().gameObject;
