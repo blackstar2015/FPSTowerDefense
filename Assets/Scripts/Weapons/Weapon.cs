@@ -39,7 +39,6 @@ public class Weapon : MonoBehaviour
         float nextAttackTime = _lastAttackTime + Cooldown;
         if (Time.time < nextAttackTime) return false;
 
-        // don't forget to set last attack time to NOW
         _lastAttackTime = Time.time;
 
         Attack(aimPosition, instigator);
@@ -50,8 +49,8 @@ public class Weapon : MonoBehaviour
     {
         // play SFX
         if (!AttackSFX.IsNull) RuntimeManager.PlayOneShot(AttackSFX, transform.position);
-        // play animation (we're checking for NULL or EMPTY, strings can be either)
         if (!string.IsNullOrEmpty(AnimationTrigger)) Animator.SetTrigger(AnimationTrigger);
+
         // play VFX
     }
 }
