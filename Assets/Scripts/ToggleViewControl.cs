@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TDTK;
 using UnityEngine;
 
 public class ToggleViewControl : MonoBehaviour
 {
-    [Tooltip("Specify objects to be enabled if and only if in overhead view.")]
+    [Tooltip("Specify objects to be enabled if and only if in overhead view. First object in list must contain the camera in its hierarchy.")]
     [SerializeField] List<GameObject> overheadViewObjects;
-    [Tooltip("Specify objects to be enabled if and only if in first person view.")]
+    [Tooltip("Specify objects to be enabled if and only if in first person view. First object in list must contain the camera in its hierarchy.")]
     [SerializeField] List<GameObject> firstPersonViewObjects;
     
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
@@ -42,9 +43,15 @@ public class ToggleViewControl : MonoBehaviour
         ToggleGameObjects(firstPersonViewObjects, inFirstPerson);
 
         if (inFirstPerson)
+        {
             SetMouse(mouseLocked);
+            CameraControl.mainCam = firstPersonViewObjects[0].GetComponentInChildren<Camera>();
+        }
         else
+        {
             SetMouse(false); // mouse is always on in Overview mode.
+            CameraControl.mainCam = overheadViewObjects[0].GetComponentInChildren<Camera>();
+        }
     }
 
     void ToggleGameObjects(List<GameObject> list, bool activateThem)
