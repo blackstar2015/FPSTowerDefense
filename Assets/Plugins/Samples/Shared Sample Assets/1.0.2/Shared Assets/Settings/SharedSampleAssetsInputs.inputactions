@@ -1,5 +1,5 @@
 {
-    "name": "UIComponentsSample",
+    "name": "SharedSampleAssetsInputs",
     "maps": [
         {
             "name": "Player",
@@ -45,6 +45,15 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "f057191b-2caa-449b-a20d-db50ce2f9636",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleWeapon",
+                    "type": "Button",
+                    "id": "2f26a6f3-a8e0-4e63-a3c0-be50c66ed37b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -313,6 +322,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79945f22-8bdd-4075-af5c-06137af2954e",
+                    "path": "<Keyboard>/backslash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ToggleWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -35,6 +35,7 @@ public class Weapon : MonoBehaviour
 
     public bool TryAttack(Vector3 aimPosition, GameObject instigator)
     {
+        if(!this.enabled)  return false; 
         // handle attack cooldown
         float nextAttackTime = _lastAttackTime + Cooldown;
         if (Time.time < nextAttackTime) return false;
