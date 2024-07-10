@@ -80,6 +80,8 @@ FMOD/fmod.log
 FMOD/fmod_editor.log
 FMOD/Metadata/ProfilerSession
 
+*.bundle text eol=lf
+
 # Code Editors
 .vs/
 .gradle/
