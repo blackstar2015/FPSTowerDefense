@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using GameEvents;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +13,7 @@ namespace TDTK{
 		
 		public HorizontalLayoutGroup buttonLayoutGroup;
 		public List<UIButton> buildButtons=new List<UIButton>();
-		
+		public StringEventAsset InputNumberAsset;
 		private GameObject buttonPrefab;
 		
 		//filled up during runtime, used for dragNdrop mode only
@@ -34,12 +36,18 @@ namespace TDTK{
 			buildButtons.Clear();
 			
 			buildableList=TowerManager.GetBuildableList();
-			for(int i=0; i<buildableList.Count; i++) AddBuildButton(i, buildableList[i].icon,  buildableList[i].GetCost()[0].ToString("f0"));
-			
-			if(UIControl.UsePointNBuildMode()) thisObj.SetActive(false);
+			for (int i = 0; i < buildableList.Count; i++)
+			{
+				AddBuildButton(i, buildableList[i].icon, buildableList[i].GetCost()[0].ToString("f0"));
+
+            }
+
+            if (UIControl.UsePointNBuildMode()) thisObj.SetActive(false);
 			else if(UIControl.UseDragNDropMode()){ UpdateBuildableStatus(); canvasGroup.alpha=1; thisObj.SetActive(true); }
 		}
 		
+		
+
 		public static void NewBuildable(UnitTower tower){
 			instance.AddBuildButton(instance.buildButtons.Count, tower.icon, tower.GetCost()[0].ToString("f0"));
 			instance.buildableList=TowerManager.GetBuildableList();
@@ -49,6 +57,7 @@ namespace TDTK{
 			//if(idx>0) buildButtons.Add(UIButton.Clone(buildButtons[0].rootObj, "Button"+(idx)));
 			buildButtons.Add(UIButton.Clone(buttonPrefab, "Button"+(idx)));
 			buildButtons[idx].rootObj.SetActive(true);
+            InputNumberAsset.Invoke(idx.ToString());
 			buildButtons[idx].Init();
 			
 			if(UIControl.InTouchMode() && UIControl.UseDragNDropMode()) buildButtons[idx].SetClickCallback(OnBuildButton, null);
@@ -68,7 +77,7 @@ namespace TDTK{
 			buildButtons[idx].image.sprite=tower.icon;
 			buildButtons[idx].label.text=tower.GetCost()[0].ToString("f0");
 		}
-		
+
 		
 		
 		
@@ -195,8 +204,18 @@ namespace TDTK{
 		
 		
 		#region piemenu
-		void Update(){
-			if(UIControl.UseDragNDropMode() || !UIControl.UsePieMenuForBuild()) return;
+		void Update()
+		{
+			//building using button press
+			for (int i = (int)KeyCode.Alpha0; i < (int)KeyCode.Alpha9; ++i)
+            {
+                if (Input.GetKeyDown((KeyCode)i))
+                {
+					int index = (i - ((int)KeyCode.Alpha0))-1;
+					buildButtons[index].button.onClick.Invoke();
+                }
+            }
+            if (UIControl.UseDragNDropMode() || !UIControl.UsePieMenuForBuild()) return;
 			
 			if(buttonLayoutGroup.enabled==UIControl.UsePieMenuForBuild())
 				buttonLayoutGroup.enabled=!UIControl.UsePieMenuForBuild();

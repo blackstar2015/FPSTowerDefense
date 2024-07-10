@@ -9491,7 +9491,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4261412919
 --- !u!1 &1246982476753424
 GameObject:
   m_ObjectHideFlags: 0
@@ -15680,7 +15680,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4261412919
 --- !u!1 &1399018808644198
 GameObject:
   m_ObjectHideFlags: 0
@@ -27081,7 +27081,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4261412919
 --- !u!225 &225349317093336490
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31105,7 +31105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameScene: 1
   touchMode: 0
-  buildMode: 1
+  buildMode: 0
   disableCameraDragOnDragNDrop: 1
   dragNDropOffset: {x: 0, y: 0}
   usePieMenuForBuild: 0
@@ -39856,7 +39856,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4261412919
 --- !u!1 &1993358433694308
 GameObject:
   m_ObjectHideFlags: 0
