@@ -13,8 +13,9 @@ namespace TDTK{
 		
 		public HorizontalLayoutGroup buttonLayoutGroup;
 		public List<UIButton> buildButtons=new List<UIButton>();
-		public StringEventAsset InputNumberAsset;
+		public Text InputText;
 		private GameObject buttonPrefab;
+		
 		
 		//filled up during runtime, used for dragNdrop mode only
 		[HideInInspector] public List<UnitTower> buildableList=new List<UnitTower>();	
@@ -57,7 +58,7 @@ namespace TDTK{
 			//if(idx>0) buildButtons.Add(UIButton.Clone(buildButtons[0].rootObj, "Button"+(idx)));
 			buildButtons.Add(UIButton.Clone(buttonPrefab, "Button"+(idx)));
 			buildButtons[idx].rootObj.SetActive(true);
-            InputNumberAsset.Invoke(idx.ToString());
+            InputText.text = (idx+2).ToString();
 			buildButtons[idx].Init();
 			
 			if(UIControl.InTouchMode() && UIControl.UseDragNDropMode()) buildButtons[idx].SetClickCallback(OnBuildButton, null);

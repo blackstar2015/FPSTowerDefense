@@ -510,6 +510,7 @@ MonoBehaviour:
   - {fileID: 0}
   firstPersonViewObjects:
   - {fileID: 5867738439710604489}
+  UIPrefab: {fileID: 0}
   inFirstPerson: 1
   mouseLocked: 1
 --- !u!1 &9070621380565275725
