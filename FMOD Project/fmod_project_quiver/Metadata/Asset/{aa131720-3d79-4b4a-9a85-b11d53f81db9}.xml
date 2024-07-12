@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="DataFile" id="{b5a37118-b4fc-436b-979c-8d983773a30a}">
+	<object class="EncodableAsset" id="{aa131720-3d79-4b4a-9a85-b11d53f81db9}">
 		<property name="assetPath">
-			<value>audiogaming_audiomotors_demo_engine.agp</value>
+			<value>Placeholders/Gunshot/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{0d64e92c-f65c-4afc-8bb4-76ac062cb82f}</destination>

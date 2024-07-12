@@ -514,6 +514,13 @@ MonoBehaviour:
   UIPrefab: {fileID: 0}
   inFirstPerson: 1
   mouseLocked: 1
+  fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &3490121788960726918
 MonoBehaviour:
   m_ObjectHideFlags: 0

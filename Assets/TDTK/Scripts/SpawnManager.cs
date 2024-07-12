@@ -20,6 +20,8 @@ namespace TDTK{
 		
 		public bool autoStart=false;
 		public float startTimer=5;
+	
+		
 		
 		
 		[Space(5)] [HideInInspector]
