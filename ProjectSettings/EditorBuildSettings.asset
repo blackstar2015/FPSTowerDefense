@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/DarrenTestScene2.unity
+    guid: 8653c218d07d2ec40abcd773dd899dec
+  - enabled: 1
     path: Assets/Scenes/DarrenTestScene.unity
     guid: e80c62c58718d1145b6bedf4ec5c699b
   - enabled: 1

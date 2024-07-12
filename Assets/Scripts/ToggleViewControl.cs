@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TDTK;
@@ -71,16 +72,13 @@ public class ToggleViewControl : MonoBehaviour
     }
 
     void SetMouse(bool toLocked)
-    {
+    {        
+        Functions.SetMouse(toLocked);
+        var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+
         if (!toLocked)
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
+            cinemachineInputProvider.enabled = false;
         else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+            cinemachineInputProvider.enabled = true;
     }
 }
