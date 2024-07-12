@@ -13,7 +13,7 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] private UIControl UIPrefab;
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] bool mouseLocked;
-    [SerializeField] private FMODUnity.EventReference fmodEvent;
+    [SerializeField] bool disableMouseLookInMouseCursorMode;
 
 
 
@@ -31,6 +31,9 @@ public class ToggleViewControl : MonoBehaviour
 
         if (inFirstPerson && Input.GetKeyDown(KeyCode.X))
             ToggleMouse();
+
+        if (Input.GetKeyDown(KeyCode.G))
+            SpawnManager.Spawn();
     }
 
     void ToggleView()
@@ -55,7 +58,6 @@ public class ToggleViewControl : MonoBehaviour
         {
             SetMouse(false); // mouse is always on in Overview mode.
             CameraControl.mainCam = overheadViewObjects[0].GetComponentInChildren<Camera>();
-            FMODUnity.RuntimeManager.PlayOneShot(fmodEvent, transform.position);
             //UIPrefab.usePieMenuForBuild = false;
             //UIPrefab.buildMode = UIControl._BuildMode.DragNDrop;
         }
@@ -65,20 +67,21 @@ public class ToggleViewControl : MonoBehaviour
     {
         foreach (GameObject gameObject in list)
             gameObject.SetActive(activateThem);
-            FMODUnity.RuntimeManager.PlayOneShot(fmodEvent, transform.position);
     }
 
     void ToggleMouse()
     {
         mouseLocked = !mouseLocked;
         SetMouse(mouseLocked);
-
     }
 
     void SetMouse(bool toLocked)
     {        
         Functions.SetMouse(toLocked);
         var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+
+        if (!disableMouseLookInMouseCursorMode)
+            return;
 
         if (!toLocked)
             cinemachineInputProvider.enabled = false;
