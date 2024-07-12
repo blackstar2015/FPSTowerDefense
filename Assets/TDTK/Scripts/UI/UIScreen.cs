@@ -39,6 +39,8 @@ namespace TDTK{
 				canvasGroup.alpha=1;
 				thisObj.SetActive(true);
 			}
+
+			Functions.SetMouse(false);
 		}
 		public virtual void _Hide(float duration=0.25f){ _Hide(false, duration); }
 		public void _Hide(bool instant, float duration=0.25f){
@@ -50,6 +52,8 @@ namespace TDTK{
 				canvasGroup.alpha=0;
 				thisObj.SetActive(false);
 			}
+
+			Functions.SetMouse(true);
 		}
 		
 	}

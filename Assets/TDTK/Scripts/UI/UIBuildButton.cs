@@ -285,7 +285,6 @@ namespace TDTK{
 			sInfo=info;
 			
 			UpdateDisplay();
-			Functions.SetMouse(false);
 			base._Show();
 			//base._Show(instant);
 		}
@@ -296,7 +295,6 @@ namespace TDTK{
 			
 			instance.ClearTouchModeSelect();
 			instance._Hide(true);
-			Functions.SetMouse(true);
 		}
 		
 		public static bool IsActive(){ return instance!=null && instance.thisObj.activeInHierarchy; }
