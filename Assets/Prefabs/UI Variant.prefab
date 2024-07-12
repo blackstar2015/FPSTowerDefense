@@ -153,6 +153,11 @@ PrefabInstance:
       propertyPath: touchMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114314280835547418, guid: c405c9710e70a1946a823c5b43df017f,
+        type: 3}
+      propertyPath: usePieMenuForBuild
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114599087155050624, guid: c405c9710e70a1946a823c5b43df017f,
         type: 3}
       propertyPath: m_BlockingMask.m_Bits
@@ -977,6 +982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659083427703664779, guid: c405c9710e70a1946a823c5b43df017f,
+        type: 3}
+      propertyPath: m_Text
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
