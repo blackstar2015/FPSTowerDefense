@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TDTK;
@@ -72,11 +73,13 @@ public class ToggleViewControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>().enabled = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>().enabled = true;
         }
     }
 }
