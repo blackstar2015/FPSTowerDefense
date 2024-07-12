@@ -72,18 +72,13 @@ public class ToggleViewControl : MonoBehaviour
     }
 
     void SetMouse(bool toLocked)
-    {
+    {        
+        Functions.SetMouse(toLocked);
+        var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+
         if (!toLocked)
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>().enabled = false;
-        }
+            cinemachineInputProvider.enabled = false;
         else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>().enabled = true;
-        }
+            cinemachineInputProvider.enabled = true;
     }
 }
