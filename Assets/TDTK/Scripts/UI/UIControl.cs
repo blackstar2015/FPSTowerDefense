@@ -189,6 +189,7 @@ namespace TDTK{
 				}
 			}
 			
+			// right mouse button click cancels out of stuff -- djoe
 			if(Input.GetMouseButtonDown(1)){
 				UIAbilityButton.ClearSelect();	//ClearSelectedAbility();
 				
@@ -232,13 +233,14 @@ namespace TDTK{
 					SelectControl.SelectUnit(sInfo.GetTower());
 					UITowerSelect.Show(sInfo.GetTower());
 				}
-				else if(buildMode==_BuildMode.PointNBuild && sInfo.AvailableForBuild() && sInfo.buildableList.Count>0){
+				else if(buildMode==_BuildMode.PointNBuild && sInfo.AvailableForBuild() && sInfo.buildableList.Count>0){ // we bring up the build menu. -- djoe
 					build=true;
 					UIBuildButton.Show(sInfo);
 					SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
 				}
 			}
 			
+			// if we clicked but we're not buliding, meaning we just selected a tower to build? -- djoe
 			if(buildMode==_BuildMode.PointNBuild && !build){
 				SelectControl.ClearNode();
 				UIBuildButton.Hide();
