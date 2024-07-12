@@ -514,6 +514,7 @@ MonoBehaviour:
   UIPrefab: {fileID: 0}
   inFirstPerson: 1
   mouseLocked: 1
+  disableMouseLookInMouseCursorMode: 0
 --- !u!114 &3490121788960726918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +666,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6232304669683478274}
     m_Modifications:
+    - target: {fileID: 451838707955803502, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <JumpHeight>k__BackingField
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 913755488788806708, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
       propertyPath: m_Name

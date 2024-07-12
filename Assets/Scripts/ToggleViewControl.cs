@@ -13,6 +13,7 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] private UIControl UIPrefab;
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] bool mouseLocked;
+    [SerializeField] bool disableMouseLookInMouseCursorMode;
 
 
 
@@ -30,6 +31,9 @@ public class ToggleViewControl : MonoBehaviour
 
         if (inFirstPerson && Input.GetKeyDown(KeyCode.X))
             ToggleMouse();
+
+        if (Input.GetKeyDown(KeyCode.G))
+            SpawnManager.Spawn();
     }
 
     void ToggleView()
@@ -75,6 +79,9 @@ public class ToggleViewControl : MonoBehaviour
     {        
         Functions.SetMouse(toLocked);
         var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+
+        if (!disableMouseLookInMouseCursorMode)
+            return;
 
         if (!toLocked)
             cinemachineInputProvider.enabled = false;
