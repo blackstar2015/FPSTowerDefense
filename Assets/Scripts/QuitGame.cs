@@ -13,6 +13,7 @@ public class QuitGame : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             QuitCanvas.SetActive(!isActive);
+            Functions.SetMouse(!isActive);
         }
     }
 
