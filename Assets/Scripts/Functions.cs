@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class Functions
 {
+    // if set to true, SetMouse calls won't hide the mouse. Use for overhead view when you always want the mouse cursor on.
+    public static bool mouseOverride = false;
+
     public static void SetMouse(bool toLocked)
     {
         if (!toLocked)
@@ -11,7 +14,7 @@ public static class Functions
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
-        else
+        else if (!mouseOverride)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

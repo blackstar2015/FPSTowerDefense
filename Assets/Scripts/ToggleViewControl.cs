@@ -47,6 +47,8 @@ public class ToggleViewControl : MonoBehaviour
         ToggleGameObjects(overheadViewObjects, !inFirstPerson);
         ToggleGameObjects(firstPersonViewObjects, inFirstPerson);
 
+        Functions.mouseOverride = !inFirstPerson;
+
         if (inFirstPerson)
         {
             SetMouse(mouseLocked);
