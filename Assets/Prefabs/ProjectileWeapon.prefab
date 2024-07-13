@@ -129,11 +129,11 @@ MonoBehaviour:
   <AnimationTrigger>k__BackingField: 
   <AttackSFX>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 581048849
+      Data2: 1124410921
+      Data3: -812147531
+      Data4: -63274002
+    Path: event:/PLACEHOLDERS/SFX_player_gunshot
   _muzzle: {fileID: 6026466537924291016}
   _bulletPrefab: {fileID: 5209234095696824581, guid: a8efc6792d707d64e89c78e1828d0336,
     type: 3}
