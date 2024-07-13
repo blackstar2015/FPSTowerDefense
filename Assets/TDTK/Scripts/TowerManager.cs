@@ -73,9 +73,12 @@ namespace TDTK{
 		
 		private static TowerManager instance;
 		public static TowerManager GetInstance(){ return instance; }
-		
-		// Use this for initialization
-		void Awake() {
+
+		[SerializeField] private FMODUnity.EventReference fmodEventUnitsOptions;
+
+
+        // Use this for initialization
+        void Awake() {
 			instance=this;
 			
 			buildableList.Clear();
@@ -92,7 +95,7 @@ namespace TDTK{
 				sampleList[sampleList.Count-1].gameObject.layer=TDTK.GetLayerTerrain();
 				sampleList[sampleList.Count-1].transform.parent=transform;
 				obj.SetActive(false);
-			}
+            }
 			
 			//Debug.Log("remove this");
 			//for(int i=0; i<buildableList.Count; i++) buildableList[i].prefabID=i;
@@ -135,7 +138,9 @@ namespace TDTK{
 			int replaceIdx=-1;
 			if(replacePID>=0){
 				for(int i=0; i<instance.buildableList.Count; i++){
-					if(instance.buildableList[i].prefabID==replacePID){ replaceIdx=i; break; }
+					if(instance.buildableList[i].prefabID==replacePID){ replaceIdx=i; 
+						break;
+					}
 				}
 			}
 			
@@ -143,14 +148,14 @@ namespace TDTK{
 			obj.SetActive(false);
 			
 			Debug.Log(newTower.gameObject.name+"   "+obj.name);
-			
-			if(replaceIdx>=0){
+
+            if (replaceIdx>=0){
 				//TDTK.OnRemoveBuildable(instance.buildableList[replaceIdx]);
 				instance.buildableList[replaceIdx]=newTower;
 				instance.sampleList[replaceIdx]=obj.GetComponent<UnitTower>();
 				instance.sampleList[replaceIdx].isPreview=true;
 				TDTK.OnReplaceBuildable(replaceIdx, newTower);
-			}
+            }
 			else{
 				instance.buildableList.Add(newTower);
 				instance.sampleList.Add(obj.GetComponent<UnitTower>());
@@ -228,7 +233,7 @@ namespace TDTK{
 						if(RscManager.HasSufficientRsc(dndTower.GetCost())){
 							RscManager.SpendRsc(dndTower.GetCost());
 							SelectControl.ClearUnit();
-							if(!UseFreeFormMode()) AddTower(dndTower, sInfo.platform, sInfo.nodeID);
+                            if (!UseFreeFormMode()) AddTower(dndTower, sInfo.platform, sInfo.nodeID);
 							else AddTower(dndTower, CreatePlatformForTower(dndTower, GetGridSize()), 0);
 							dndTower.Build();	dndTower=null;	dndCooldown=Time.unscaledTime;
 							
