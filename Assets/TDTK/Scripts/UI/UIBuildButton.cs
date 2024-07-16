@@ -223,14 +223,14 @@ namespace TDTK{
 			
 			if(sInfo==null) return;
 			
-			Vector3 screenPos = Camera.main.WorldToScreenPoint(sInfo.GetPos()+new Vector3(0, 1, 0))*UI.GetScaleFactor();
+			Vector3 screenPos = Camera.main.WorldToScreenPoint(sInfo.GetPos()+new Vector3(0, 0, 0))*UI.GetScaleFactor();
 			List<Vector3> posList=GetPieMenuPos(sInfo.buildableList.Count, screenPos);
 			
 			for(int i=0; i<posList.Count; i++) buildButtons[i].rectT.localPosition=posList[i]; 
 		}
 		
 		private Transform piePosDummyT;
-		public List<Vector3> GetPieMenuPos(float num, Vector3 screenPos, float cutoff=120, int size=70){
+		public List<Vector3> GetPieMenuPos(float num, Vector3 screenPos, float cutoff=120, int size=100){
 			List<Vector3> points=new List<Vector3>();
 			
 			if(num==1){
