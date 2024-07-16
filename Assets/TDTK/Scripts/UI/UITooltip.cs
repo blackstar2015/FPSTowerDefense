@@ -51,7 +51,7 @@ namespace TDTK{
 		
 		
 		public static void Show(UnitTower tower){
-			instance.rectT.localPosition=new Vector3(10, 10, 0);
+			instance.rectT.localPosition= Input.mousePosition + new Vector3(-300, -350, 0);
 			instance._Show(tower, instance.rectT.position, 0, Vector3.zero);
 		}
 		
