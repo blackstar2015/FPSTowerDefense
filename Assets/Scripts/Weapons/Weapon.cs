@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using FMOD.Studio;
 using FMODUnity;
 using TDTK;
+using GameEvents;
 
 public class Weapon : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Weapon : MonoBehaviour
     [field: SerializeField, BoxGroup("Weapon")] public float EffectiveRange { get; protected set; } = 4f;
     [field: SerializeField, BoxGroup("Weapon")] public float Cooldown { get; protected set; } = 0.5f;
     [field: SerializeField, BoxGroup("Weapon")] public float Duration { get; protected set; } = 1f;
+    [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; }
 
     [field: SerializeField, BoxGroup("Animation")] public Animator Animator { get; protected set; }
     [field: SerializeField, BoxGroup("Animation")] public string AnimationTrigger { get; protected set; }
@@ -58,12 +60,18 @@ public class Weapon : MonoBehaviour
 
         // play VFX
     }
+    private void dUpdate()
+    {
+        WeaponEnabledEvent.Invoke(this.gameObject.activeSelf);
+        //Functions.SetMouse(this.gameObject.activeSelf);
+    }
     private void Update()
     {
-        _buildButton.gameObject.SetActive(!this.gameObject.activeSelf);
-        _towerSelect.gameObject.SetActive(!this.gameObject.activeSelf);
-        _rangeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
-        _nodeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
+        //_buildButton.gameObject.SetActive(!this.gameObject.activeSelf);
+        //_towerSelect.gameObject.SetActive(!this.gameObject.activeSelf);
+        //_rangeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
+        //_nodeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
+        WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);
         Functions.SetMouse(this.gameObject.activeSelf);
     }
 }

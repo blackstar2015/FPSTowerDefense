@@ -1702,6 +1702,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4543633430574735638}
+    - targetCorrespondingSourceObject: {fileID: 1770422919594984, guid: c405c9710e70a1946a823c5b43df017f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7180021989398841127}
     - targetCorrespondingSourceObject: {fileID: 1504623322717602, guid: c405c9710e70a1946a823c5b43df017f,
         type: 3}
       insertIndex: -1
@@ -1811,6 +1815,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &4669424020967034199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1265785394167530, guid: c405c9710e70a1946a823c5b43df017f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4668367294197232573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4669616397681025753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1284292238938468, guid: c405c9710e70a1946a823c5b43df017f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4668367294197232573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4669974846549323861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1770422919594984, guid: c405c9710e70a1946a823c5b43df017f,
@@ -1830,6 +1846,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuitCanvas: {fileID: 4367063422296144907}
+--- !u!114 &7180021989398841127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669974846549323861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1ab41dee2ab2a4b8f93871bf440136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEventAsset: {fileID: 11400000, guid: 43b61cc5927aaef4f84c135ba78ecdd9, type: 2}
+  _useFilter: 0
+  _filterValues: 
+  OnGameEventInvoked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4669616397681025753}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4669424020967034199}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4672872408159647809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4573845608008700, guid: c405c9710e70a1946a823c5b43df017f,
