@@ -8,15 +8,13 @@ using FMOD.Studio;
 using FMODUnity;
 using TDTK;
 using GameEvents;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
     [field: SerializeField, BoxGroup("Weapon")] public float Damage { get; protected set; } = 5f;
-    [field: SerializeField, BoxGroup("Weapon")] public DamageType DamageType { get; protected set; } = DamageType.Physical;
     [field: SerializeField, BoxGroup("Weapon")] public float Range { get; protected set; } = 5f;
-    [field: SerializeField, BoxGroup("Weapon")] public float EffectiveRange { get; protected set; } = 4f;
     [field: SerializeField, BoxGroup("Weapon")] public float Cooldown { get; protected set; } = 0.5f;
-    [field: SerializeField, BoxGroup("Weapon")] public float Duration { get; protected set; } = 1f;
     [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; }
 
     [field: SerializeField, BoxGroup("Animation")] public Animator Animator { get; protected set; }
@@ -35,10 +33,10 @@ public class Weapon : MonoBehaviour
         if (Animator == null) Animator = GetComponentInParent<Animator>();
     }
 
-    public bool TryAttack(Vector3 aimPosition, GameObject instigator)
+        // handle attack cooldown
+    public virtual bool TryAttack(Vector3 aimPosition, GameObject instigator)
     {
         if(!this.enabled)  return false; 
-        // handle attack cooldown
         float nextAttackTime = _lastAttackTime + Cooldown;
         if (Time.time < nextAttackTime) return false;
 
@@ -59,6 +57,7 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
+        transform.rotation = Camera.main.transform.rotation;
         WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);
         Functions.SetMouse(this.gameObject.activeSelf);
     }

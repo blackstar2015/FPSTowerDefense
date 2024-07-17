@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponRangedProjectile : Weapon
 {
     [SerializeField] private Transform _muzzle;
-    [SerializeField] private Projectile _bulletPrefab;
+    [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private float _projectileSpeed = 25f;
     [SerializeField] private int _shotCount = 6;
     [SerializeField] private float _inaccuracy = 10f;
@@ -14,26 +14,30 @@ public class WeaponRangedProjectile : Weapon
     {
         base.Attack(aimPosition, instigator);
 
-        Vector3 spawnPos = _muzzle.position;
-        Vector3 aimDir = _muzzle.transform.forward;
-        Quaternion spawnRot = Quaternion.LookRotation(aimDir);
+        //Vector3 spawnPos = _muzzle.position;
+        //Vector3 aimDir = _muzzle.transform.forward;
+        //Quaternion spawnRot = Quaternion.LookRotation(aimDir);
+        Bullet projectile = Instantiate(_bulletPrefab, _muzzle.position, Quaternion.identity);
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
-        for (int i = 0; i < _shotCount; i++)
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        RaycastHit hit;
+        Vector3 targetPoint;
+
+        if (Physics.Raycast(ray, out hit))
         {
-            float inaccX = Random.Range(-_inaccuracy, _inaccuracy);
-            float inaccY = Random.Range(-_inaccuracy, _inaccuracy);
-
-            Quaternion inaccRot = Quaternion.Euler(_muzzle.up * inaccX + _muzzle.right * inaccY);
-
-            Quaternion finalRotation = spawnRot * inaccRot;
-
-            // spawn projectile and assign initial values
-            Projectile spawnedProjectile = Instantiate(_bulletPrefab, spawnPos, finalRotation);
-            spawnedProjectile.Damage = Damage;
-            spawnedProjectile.DamageType = DamageType;
-            spawnedProjectile.Speed = _projectileSpeed;
-            spawnedProjectile.Range = Range;
-            spawnedProjectile.Instigator = instigator;
+            targetPoint = hit.point;
         }
+        else
+        {
+            targetPoint = ray.GetPoint(Range); 
+        }
+
+        Vector3 direction = (targetPoint - _muzzle.position).normalized;
+
+        // Apply force to the projectile
+        rb.velocity = direction * _projectileSpeed;
+
+
     }
 }
