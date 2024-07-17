@@ -22,6 +22,10 @@ public class Weapon : MonoBehaviour
 
     [field: SerializeField, BoxGroup("SFX")] public EventReference AttackSFX { get; protected set; }
 
+    [SerializeField, BoxGroup("UI Stuff")] private GameObject _buildButton;
+    [SerializeField, BoxGroup("UI Stuff")] private GameObject _towerSelect;
+    [SerializeField, BoxGroup("UI Stuff")] private GameObject _rangeIndicator;
+    [SerializeField, BoxGroup("UI Stuff")] private GameObject _nodeIndicator;
     // TODO: sound FX
     // TODO: VFX
     // TODO: animation
@@ -53,5 +57,12 @@ public class Weapon : MonoBehaviour
         if (!string.IsNullOrEmpty(AnimationTrigger)) Animator.SetTrigger(AnimationTrigger);
 
         // play VFX
+    }
+    private void Update()
+    {
+        _buildButton.gameObject.SetActive(!this.gameObject.activeSelf);
+        _towerSelect.gameObject.SetActive(!this.gameObject.activeSelf);
+        _rangeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
+        _nodeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
     }
 }
