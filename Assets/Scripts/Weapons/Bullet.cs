@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
+        rb.useGravity = false;
         
         // Continuous Dynamic checks collisions more frequently to stop fast objects from passing through colliders
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Weapon>()) return;
+        if(other.gameObject.GetComponent<Weapon>() || other.gameObject.GetComponent<Bullet>()) return;
         if (!other.gameObject.TryGetComponent(out UnitCreep creep))
         {
             //SFX and other effects when not hitting enemy
