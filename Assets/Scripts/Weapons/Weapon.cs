@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
         // play VFX
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         transform.rotation = Camera.main.transform.rotation;
         WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);

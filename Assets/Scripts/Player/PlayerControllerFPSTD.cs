@@ -10,21 +10,32 @@ public class PlayerControllerFPSTD : PlayerController
     private Vector3 _aimPosition;
 
     [field: Header("Weapons")]
-    [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected Weapon[] Weapons { get; private set; }
+    [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected WeaponRangedProjectile[] Weapons { get; private set; }
     private bool IsActive = true;
 
-    public override void OnFire(InputValue value)
+    public  void OnChargeAttack(InputValue value)
     {
         // assume weapon 0 is shotgun
         if (!Weapons[0].isActiveAndEnabled) return;
-        Weapon currentWeapon = Weapons[0];
-        currentWeapon.TryAttack(_aimPosition, gameObject);
+        WeaponRangedProjectile currentWeapon = Weapons[0];
+        currentWeapon.IsCharging = true;
+        currentWeapon.ChargeAttack();
+        //currentWeapon.TryAttack(_aimPosition, gameObject);
+    }
+
+    public void OnReleaseAttack(InputValue value)
+    {
+        if (!Weapons[0].isActiveAndEnabled) return;
+        WeaponRangedProjectile currentWeapon = Weapons[0];
+        currentWeapon.IsCharging = false;
+        currentWeapon.CalculateBulletDirection();
+        currentWeapon.CurrentCharge = 0f;
     }
 
     // call from inspector button
     private void FindWeapons()
     {
-        Weapons = GetComponentsInChildren<Weapon>();
+        Weapons = GetComponentsInChildren<WeaponRangedProjectile>();
     }
 
     public void OnToggleWeapon(InputValue value)

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8286700834386412461}
   - component: {fileID: 7061935359971371776}
   - component: {fileID: 451838707955803502}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   <Fix3DSpriteRotation>k__BackingField: 0
   <ParentToSurface>k__BackingField: 0
   <Gravity>k__BackingField: -20
-  <JumpHeight>k__BackingField: 2.25
+  <JumpHeight>k__BackingField: 0.2
   <AirControl>k__BackingField: 0.1
   <AirTurning>k__BackingField: 1
   <Height>k__BackingField: 1.8
@@ -219,11 +219,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4617266428366038966}
     m_Modifications:
-    - target: {fileID: 34321084049682669, guid: 70aa5d4fb8e4dbb4ebb58d715255961d,
-        type: 3}
-      propertyPath: _projectileSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4649336937841929075, guid: 70aa5d4fb8e4dbb4ebb58d715255961d,
         type: 3}
       propertyPath: m_Name

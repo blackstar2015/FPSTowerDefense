@@ -119,12 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa9ef6380918df41856651ce727f97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 5
-  <DamageType>k__BackingField: 1
+  <Damage>k__BackingField: 1
   <Range>k__BackingField: 5
-  <EffectiveRange>k__BackingField: 4
   <Cooldown>k__BackingField: 0.5
-  <Duration>k__BackingField: 1
+  <WeaponEnabledEvent>k__BackingField: {fileID: 11400000, guid: 43b61cc5927aaef4f84c135ba78ecdd9,
+    type: 2}
   <Animator>k__BackingField: {fileID: 0}
   <AnimationTrigger>k__BackingField: 
   <AttackSFX>k__BackingField:
@@ -135,11 +134,11 @@ MonoBehaviour:
       Data4: -63274002
     Path: event:/PLACEHOLDERS/SFX_player_gunshot
   _muzzle: {fileID: 6026466537924291016}
-  _bulletPrefab: {fileID: 5209234095696824581, guid: a8efc6792d707d64e89c78e1828d0336,
+  _bulletPrefab: {fileID: 4812798854810268410, guid: a8efc6792d707d64e89c78e1828d0336,
     type: 3}
-  _projectileSpeed: 25
-  _shotCount: 1
-  _inaccuracy: 0
+  _projectileSpeed: 100
+  _chargingFactor: 100
+  ChargingCrosshair: {fileID: 0}
 --- !u!1 &6270307149438118760
 GameObject:
   m_ObjectHideFlags: 0

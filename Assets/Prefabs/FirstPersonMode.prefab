@@ -666,25 +666,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6232304669683478274}
     m_Modifications:
-    - target: {fileID: 451838707955803502, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: <JumpHeight>k__BackingField
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 913755488788806708, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 913755488788806708, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4617266428366038966, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
@@ -736,36 +721,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: _bulletPrefab
-      value: 
-      objectReference: {fileID: 4812798854810268410, guid: a8efc6792d707d64e89c78e1828d0336,
-        type: 3}
-    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: _projectileSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: <Damage>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
-        type: 3}
-      propertyPath: <WeaponEnabledEvent>k__BackingField
-      value: 
-      objectReference: {fileID: 11400000, guid: 43b61cc5927aaef4f84c135ba78ecdd9,
-        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8236199093487307237}
   m_SourcePrefab: {fileID: 100100000, guid: 03aab3a1768909143a21ffe8c7788ea3, type: 3}
+--- !u!114 &2900454553137937593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8092452808883998793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546996804492896039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa9ef6380918df41856651ce727f97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3485216213636528127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4617266428366038966, guid: 03aab3a1768909143a21ffe8c7788ea3,
     type: 3}
   m_PrefabInstance: {fileID: 8092452808883998793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7546996804492896039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8092452808883998793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8236199093487307237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546996804492896039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcc5463afaf3224aba97183c7e6a941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEventAsset: {fileID: 11400000, guid: 41a6ee0efe8f2d947bd2076822bc0d26, type: 2}
+  _useFilter: 0
+  _filterValues: []
+  OnGameEventInvoked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2900454553137937593}
+        m_TargetAssemblyTypeName: WeaponRangedProjectile, Assembly-CSharp
+        m_MethodName: SetChargeCrosshair
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
