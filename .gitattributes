@@ -48,7 +48,6 @@
 *.cubemap lfs
 *.unitypackage lfs
 *.bytes lfs
-*.unity lfs
 *.scenetemplate lfs
 
 # Unity Binary .asset files (must use following suffixes for identification)
