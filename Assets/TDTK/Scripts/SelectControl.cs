@@ -7,7 +7,8 @@ using TDTK;
 namespace TDTK{
 
 	public class SelectControl : MonoBehaviour {
-		
+
+		[SerializeField] private Weapon _weapon;
 		private static Unit selectedUnit;
 		public static Unit GetSelectedUnit(){ return selectedUnit; }
 		
@@ -54,8 +55,10 @@ namespace TDTK{
 		
 		public static void SelectNode(BuildPlatform platform, int nodeID){ instance._SelectNode(platform, nodeID); }
 		public void _SelectNode(BuildPlatform platform, int nodeID){
-			//ClearNode();
-			nIndicatorT.position=platform.GetNode(nodeID).pos;
+            //ClearNode();
+            if (_weapon.gameObject.activeSelf) return;
+
+            nIndicatorT.position=platform.GetNode(nodeID).pos;
 			nIndicatorT.rotation=platform.GetRot();
 			nIndicator.SetActive(true);
 		}

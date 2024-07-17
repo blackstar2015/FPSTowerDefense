@@ -84582,6 +84582,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234501242}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1237467274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+    type: 3}
+  m_PrefabInstance: {fileID: 1317800298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa9ef6380918df41856651ce727f97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244525531
 GameObject:
   m_ObjectHideFlags: 0
@@ -136185,6 +136197,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4709704886640968515, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4261412919
+      objectReference: {fileID: 0}
     - target: {fileID: 4886903352882358261, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_PlaneDistance
@@ -144298,6 +144315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd24e7f799bab2a48bcd679f057341ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _weapon: {fileID: 1237467274}
   rIndicator: {fileID: 1075787072}
   nIndicator: {fileID: 1851094706}
 --- !u!1 &1821085556
@@ -149224,7 +149242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1851094707
 Transform:
   m_ObjectHideFlags: 0
