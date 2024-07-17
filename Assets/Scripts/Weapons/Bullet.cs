@@ -10,13 +10,14 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody rb;
     private Collider _collider;
-    public PlayerControllerFPSTD Player;
+    public PlayerControllerFPSTD Player {  get; set; }
     [field: SerializeField] public float lifetime { get; protected set; } = 3f;
+    [SerializeField] private bool UseGravity;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
+        rb.useGravity = UseGravity;
         
         // Continuous Dynamic checks collisions more frequently to stop fast objects from passing through colliders
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -49,5 +50,8 @@ public class Bullet : MonoBehaviour
         //SFX and other effects when bullet is destroyed
         Destroy(this.gameObject);
     }
-    
+    private void Update()
+    {
+        Destroy(gameObject,lifetime);
+    }
 }

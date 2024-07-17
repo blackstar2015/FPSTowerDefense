@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fb3c90198ec644fb137d36a9fdc0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3647493651933799894}
-  _collider: {fileID: 3203838716633404555}
+  Player: {fileID: 0}
+  <lifetime>k__BackingField: 5
+  UseGravity: 1
