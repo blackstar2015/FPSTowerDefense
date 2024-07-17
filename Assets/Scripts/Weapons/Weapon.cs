@@ -64,5 +64,6 @@ public class Weapon : MonoBehaviour
         _towerSelect.gameObject.SetActive(!this.gameObject.activeSelf);
         _rangeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
         _nodeIndicator.gameObject.SetActive(!this.gameObject.activeSelf);
+        Functions.SetMouse(this.gameObject.activeSelf);
     }
 }
