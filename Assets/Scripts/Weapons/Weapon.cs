@@ -56,11 +56,7 @@ public class Weapon : MonoBehaviour
 
         // play VFX
     }
-    private void dUpdate()
-    {
-        WeaponEnabledEvent.Invoke(this.gameObject.activeSelf);
-        //Functions.SetMouse(this.gameObject.activeSelf);
-    }
+
     private void Update()
     {
         WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);
