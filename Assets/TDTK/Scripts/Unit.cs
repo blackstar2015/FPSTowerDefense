@@ -8,7 +8,7 @@ using UnityEngine;
 namespace TDTK{
 	
 	
-	public class Unit : MonoBehaviour {
+	public class Unit : MonoBehaviour, IUnit {
 		
 		public static bool damagePerShootPoint=false;
 		
@@ -80,6 +80,7 @@ namespace TDTK{
 		
 		[Space(8)] 
 		public bool canBeAttacked=true;
+		public bool CanBeAttacked { get { return canBeAttacked; } }
 		public bool canBeTargeted=true;
 		public float unitRadius=.25f;
 		public Transform targetPoint;
@@ -107,11 +108,11 @@ namespace TDTK{
 		
 		
 		[Space(10)] 
-		public List<Unit> attackTargetList=new List<Unit>();
-		public void SetAttackTarget(Unit tgt){ attackTargetList.Clear();	attackTargetList.Add(tgt) ; }
+		public List<IUnit> attackTargetList=new List<IUnit>();
+		public void SetAttackTarget(IUnit tgt){ attackTargetList.Clear();	attackTargetList.Add(tgt) ; }
 		
 		public bool HasTarget(){ return GetTarget()!=null; }
-		public Unit GetTarget(){ 
+		public IUnit GetTarget(){ 
 			//Unit[] targets = attackTargetList.ToArray();
 			return attackTargetList.Count>0 ? attackTargetList[0] : null ; }
 		
@@ -327,7 +328,7 @@ namespace TDTK{
 		public float targetingDir=0;
 		public bool UseDirectionalTargeting(){ return targetingFov>0 && targetingFov<360; }
 		
-		public bool CheckTargetLOS(Unit tgtUnit){
+		public bool CheckTargetLOS(IUnit tgtUnit){
 			RaycastHit hitInfo;
 			LayerMask mask=1<<TDTK.GetLayerTower() | 1<<TDTK.GetLayerCreep();
 			return !Physics.Linecast(GetTargetPoint(), tgtUnit.GetTargetPoint(), out hitInfo, ~mask);
@@ -342,7 +343,7 @@ namespace TDTK{
 
 			if (unitList.Count > 0)
 			{
-				foreach (Unit unit in unitList)
+				foreach (IUnit unit in unitList)
 					if (!attackTargetList.Contains(unit))
 					{
 						attackTargetList.Add(unit);
@@ -650,7 +651,7 @@ namespace TDTK{
 		}
 		*/
 		
-		public float GetDetectionRange(Unit tgtUnit){ return GetAttackRange()+tgtUnit.GetRadius(); }
+		public float GetDetectionRange(IUnit tgtUnit){ return GetAttackRange()+tgtUnit.GetRadius(); }
 		
 		
 		public void Attack(){
@@ -679,7 +680,7 @@ namespace TDTK{
 		}
 		
 		
-		IEnumerator Shoot(Unit targetUnit){
+		IEnumerator Shoot(IUnit targetUnit){
 			float attackDelay=AnimPlayAttack();
 			if(attackDelay>0) yield return new WaitForSeconds(attackDelay);
 			

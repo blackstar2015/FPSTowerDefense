@@ -22,9 +22,9 @@ public static class Functions
         }
     }
 
-    public static List<Unit> GetUnitsWithinRange(Vector3 pos, float range, List<Unit> unitList)
+    public static List<IUnit> GetUnitsWithinRange(Vector3 pos, float range, List<IUnit> unitList)
     {
-        List<Unit> tgtList = new List<Unit>();
+        List<IUnit> tgtList = new List<IUnit>();
 
         for (int i = 0; i < unitList.Count; i++)
         {

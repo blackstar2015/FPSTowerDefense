@@ -454,7 +454,6 @@ MonoBehaviour:
     - 0
     - 0
   effectImmunityList: 
-  attackTargetList: []
   shootObject: {fileID: 114917850592720432, guid: 9894ee1936d71e4409526f77dc26b2ec,
     type: 3}
   shootPoint:

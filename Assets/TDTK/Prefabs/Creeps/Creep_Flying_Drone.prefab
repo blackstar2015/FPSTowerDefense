@@ -208,7 +208,6 @@ MonoBehaviour:
     cooldown_Rsc: 1
     rscGain: []
   effectImmunityList: 0600000008000000
-  attackTargetList: []
   shootObject: {fileID: 114266115900946412, guid: 09a463b997518ca4ba2b0574c697a0c1,
     type: 3}
   shootPoint: []

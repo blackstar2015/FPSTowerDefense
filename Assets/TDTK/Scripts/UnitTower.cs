@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace TDTK{
 
-	public class UnitTower : Unit {
+	public class UnitTower : Unit
+	{
 		
 		public override _UnitType GetUnitType(){ return _UnitType.Tower; }
 		public override bool IsTower(){ return true; }

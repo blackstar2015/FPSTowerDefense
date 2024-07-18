@@ -564,7 +564,7 @@ namespace TDTK{
 		public static List<Unit> GetUnitsWithinRange(Vector3 pos, float range)
 		{
 			List<UnitTower> unitList = GetActiveTowerList();
-			return Functions.GetUnitsWithinRange(pos, range, unitList.Cast<Unit>().ToList());
+			return Functions.GetUnitsWithinRange(pos, range, unitList.Cast<IUnit>().ToList()).Cast<Unit>().ToList();
 		}
 		
 		

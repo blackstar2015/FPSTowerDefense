@@ -499,7 +499,7 @@ namespace TDTK{
 	
 	public class AttackInfo{
 		public Unit srcUnit;
-		public Unit tgtUnit;
+		public IUnit tgtUnit;
 		
 		public float damageMin=0;
 		public float damageMax=0;
@@ -521,10 +521,10 @@ namespace TDTK{
 		
 		public AttackInfo(float dmg){ hit=true;	damage=dmg; }	//not in used
 		
-		public AttackInfo(Unit sUnit, Unit tUnit, int type, bool useAOE=true){	//type: 0-turret, 1-aoe, 2-mine
+		public AttackInfo(Unit sUnit, IUnit tUnit, int type, bool useAOE=true){	//type: 0-turret, 1-aoe, 2-mine
 			srcUnit=sUnit;	tgtUnit=tUnit;
 			
-			if(!tUnit.canBeAttacked) return;
+			if(!tUnit.CanBeAttacked) return;
 			
 			if(type==1){	//aoe
 				if(Random.value>srcUnit.GetHit_AOE()-tgtUnit.GetDodge()){
@@ -553,8 +553,14 @@ namespace TDTK{
 				
 				if(Random.value<srcUnit.GetEffectOnHitChance_Mine()) effectList=srcUnit.GetEffectOnHit_Mine();
 			}
-			else{
-				if(Random.value>srcUnit.GetHit()-tgtUnit.GetDodge()){
+			else
+			{
+				var getHit = srcUnit.GetHit();
+				var targetDodge = tgtUnit.GetDodge();
+				var hitMinusDodge = getHit - targetDodge;
+
+				if (Random.value > hitMinusDodge)//srcUnit.GetHit()-tgtUnit.GetDodge())
+				{
 					damage=1;	//otherwise the 'miss' popup text wont show up
 					return;
 				}
@@ -582,10 +588,10 @@ namespace TDTK{
 			damage*=(1-tUnit.GetDmgReduction());
 		}
 		
-		public AttackInfo(Ability ability, Unit tUnit, bool useAOE=true){
+		public AttackInfo(Ability ability, IUnit tUnit, bool useAOE=true){
 			tgtUnit=tUnit;
 			
-			if(!tUnit.canBeAttacked) return;
+			if(!tUnit.CanBeAttacked) return;
 			
 			damageMin=ability.GetDamageMin();
 			damageMax=ability.GetDamageMax();
@@ -607,10 +613,15 @@ namespace TDTK{
 				damage*=DamageTable.GetModifier(tgtUnit.GetArmorType(), ability.GetDamageType());
 				damage*=(1-tUnit.GetDmgReduction());
 			}
-			
+
 			//Debug.Log(damage+"   "+ability.GetDamageMin()+"   "+ability.GetDamageMax());
-			
-			if(Random.value<ability.GetHit()-tgtUnit.GetDodge()) hit=true;
+
+			var getHit = ability.GetHit();
+			var targetDodge = tgtUnit.GetDodge();
+			var hitMinusDodge = getHit - targetDodge;
+
+			if (Random.value < hitMinusDodge)//ability.GetHit()-tgtUnit.GetDodge()) 
+				hit=true;
 		}
 	}
 	
