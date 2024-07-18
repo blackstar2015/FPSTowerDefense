@@ -337,24 +337,23 @@ namespace TDTK{
 		public bool ScanForPlayer()
 		{
 			RemoveOutOfDateTargets();
-
-			var returnVal = false;
+			
 			var unitList = PlayerManager.GetUnitsWithinRange(this, GetAttackRange());
 
 			if (unitList.Count > 0)
 			{
 				foreach (IUnit unit in unitList)
+				{
 					if (!attackTargetList.Contains(unit))
-					{
 						attackTargetList.Add(unit);
-						returnVal = true;
-					}
+				}
 
 				//if (snapAiming) 
-					Aim();
+				Aim();
+				return true;
 			}
 
-			return returnVal;
+			return false;
 		}
 
 		void RemoveOutOfDateTargets()

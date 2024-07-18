@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class UnitPlayer : MonoBehaviour, IUnit
 {
-    // TODO: Instead of inheriting from Unit, make an IUnit interface with GetPos and GetRadius methods and have this and Unit implement that. Then you can get rid of all the other Unit junk in here.
-
     [SerializeField] float resourcesLostOnHit = 2;
     public float unitRadius = .25f;
+    AudioSource audioSource;
 
     bool IUnit.CanBeAttacked => true;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void ApplyAttack(AttackInfo aInfo)
     {
         RscManager.SpendRsc(new List<float>() { resourcesLostOnHit });
+        audioSource?.Play();
     }
 
     public Vector3 GetPos()
