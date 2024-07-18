@@ -13,6 +13,9 @@ public class Bullet : MonoBehaviour
     public PlayerControllerFPSTD Player {  get; set; }
     [field: SerializeField] public float lifetime { get; protected set; } = 3f;
     [SerializeField] private bool UseGravity;
+    [field: SerializeField, BoxGroup("SFX")] public EventReference BulletDestroyedSFX { get; protected set; }
+    [field: SerializeField, BoxGroup("SFX")] public EventReference EnemyHitSFX { get; protected set; }
+
 
     private void Awake()
     {
@@ -32,6 +35,7 @@ public class Bullet : MonoBehaviour
         if (!other.gameObject.TryGetComponent(out UnitCreep creep))
         {
             //SFX and other effects when not hitting enemy
+            if (!BulletDestroyedSFX.IsNull) RuntimeManager.PlayOneShot(BulletDestroyedSFX, transform.position);
             Cleanup();
             return;
         }
@@ -42,12 +46,12 @@ public class Bullet : MonoBehaviour
     {
         //SFX and other effects when hitting enemy
         Debug.Log($"Hit enemy {creep.gameObject.name}");
+        if (!EnemyHitSFX.IsNull) RuntimeManager.PlayOneShot(EnemyHitSFX, transform.position);
         Cleanup();
     }
 
     private void Cleanup()
     {
-        //SFX and other effects when bullet is destroyed
         Destroy(this.gameObject);
     }
     private void Update()

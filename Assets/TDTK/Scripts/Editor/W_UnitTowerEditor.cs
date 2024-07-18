@@ -410,23 +410,23 @@ namespace TDTK {
 			
 			startY+=10;
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Building:", "OPTIONAL - The audio clip to play when the tower starts building");
-			tower.soundBuilding=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundBuilding, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Building:", "OPTIONAL - The audio clip to play when the tower starts building");
+			//tower.soundBuilding=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundBuilding, typeof(AudioClip), true);
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Built:", "OPTIONAL - The audio clip to play when the tower finishes building");
-			tower.soundBuilt=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundBuilt, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Built:", "OPTIONAL - The audio clip to play when the tower finishes building");
+			//tower.soundBuilt=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundBuilt, typeof(AudioClip), true);
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Upgrading:", "OPTIONAL - The audio clip to play when the tower starts upgrading");
-			tower.soundUpgrading=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundUpgrading, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Upgrading:", "OPTIONAL - The audio clip to play when the tower starts upgrading");
+			//tower.soundUpgrading=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundUpgrading, typeof(AudioClip), true);
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Upgraded:", "OPTIONAL - The audio clip to play when the tower finishes upgraded");
-			tower.soundUpgraded=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundUpgraded, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Upgraded:", "OPTIONAL - The audio clip to play when the tower finishes upgraded");
+			//tower.soundUpgraded=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundUpgraded, typeof(AudioClip), true);
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Sold:", "OPTIONAL - The audio clip to play when the tower is sold");
-			tower.soundSold=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundSold, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Sold:", "OPTIONAL - The audio clip to play when the tower is sold");
+			//tower.soundSold=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundSold, typeof(AudioClip), true);
 			
-			TDE.Label(startX, startY+=spaceY, width, height, "Sound-Destroyed:", "OPTIONAL - The audio clip to play when the tower is destroyed");
-			tower.soundDestroyed=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundDestroyed, typeof(AudioClip), true);
+			//TDE.Label(startX, startY+=spaceY, width, height, "Sound-Destroyed:", "OPTIONAL - The audio clip to play when the tower is destroyed");
+			//tower.soundDestroyed=(AudioClip)EditorGUI.ObjectField(new Rect(startX+spaceX, startY, width, height), tower.soundDestroyed, typeof(AudioClip), true);
 			
 			return startY;
 		}

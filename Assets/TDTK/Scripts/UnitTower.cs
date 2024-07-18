@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using FMODUnity;
+using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -104,15 +106,22 @@ namespace TDTK{
 		public VisualObject effectSold=new VisualObject();
 		public VisualObject effectDestroyed=new VisualObject();
 		
-		[Space(5)] 
-		public AudioClip soundBuilding;
-		public AudioClip soundBuilt;
-		public AudioClip soundUpgrading;
-		public AudioClip soundUpgraded;
-		public AudioClip soundSold;
-		public AudioClip soundDestroyed;
-		
-		[Space(10)][Tooltip("Use in Free-Form mode only, specify the space occupied by the tower")]
+		//[Space(5)] 
+		//public AudioClip soundBuilding;
+		//public AudioClip soundBuilt;
+		//public AudioClip soundUpgrading;
+		//public AudioClip soundUpgraded;
+		//public AudioClip soundSold;
+		//public AudioClip soundDestroyed;
+
+		[SerializeField, FoldoutGroup("SFX")] public EventReference BuildingSFX { get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference BuiltSFX { get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference UpgradingSFX{ get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference UpgradedSFX{ get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference SoldSFX { get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference DestroyedSFX { get; protected set; }
+
+        [Space(10)][Tooltip("Use in Free-Form mode only, specify the space occupied by the tower")]
 		public float radius=.5f;
 		
 		
@@ -150,16 +159,19 @@ namespace TDTK{
 			
 			if(!isUpgrade){
 				constructState=_ConstructState.Build;
-				AudioManager.OnBuildStart();
-				AudioManager.PlaySound(soundBuilding);
-			}
-			else{
+                //AudioManager.OnBuildStart();
+                //AudioManager.PlaySound(soundBuilding);
+                if (!BuildingSFX.IsNull) RuntimeManager.PlayOneShot(BuildingSFX, transform.position);
+            }
+            else
+            {
 				constructState=_ConstructState.Upgrade;
-				AudioManager.OnUpgradeStart();
-				AudioManager.PlaySound(soundUpgrading);
-			}
-			
-			float buildDuration=GetBuildDuration(level + (isUpgrade ? 1 : 0));
+                //AudioManager.OnUpgradeStart();
+                //AudioManager.PlaySound(soundUpgrading);
+                if (!UpgradedSFX.IsNull) RuntimeManager.PlayOneShot(UpgradedSFX, transform.position);
+            }
+
+            float buildDuration=GetBuildDuration(level + (isUpgrade ? 1 : 0));
 			constructDuration=buildDuration;
 			constructRemained=buildDuration;
 			
@@ -180,9 +192,9 @@ namespace TDTK{
 			constructRemained=statsList[level].sellDuration;
 			
 			//effectSold.Spawn(GetPos(), Quaternion.identity);
-			AudioManager.PlaySound(soundSold);
-			
-			AnimPlayDeconstruct();
+			/*AudioManager.PlaySound(soundSold)*/;
+            if (!SoldSFX.IsNull) RuntimeManager.PlayOneShot(SoldSFX, transform.position);
+            AnimPlayDeconstruct();
 			
 			AudioManager.OnTowerSold();
 			TDTK.OnTowerConstructing(this);
@@ -214,20 +226,20 @@ namespace TDTK{
 					
 					level+=1;
 					if(statsList[level].hp>statsList[level-1].hp) hp+=statsList[level].hp-statsList[level-1].hp;
-					
-					AudioManager.OnUpgradeComplete();
-					AudioManager.PlaySound(soundUpgraded);
-					
-					OnSupportTowerBuilt();
+
+                    //AudioManager.OnUpgradeComplete();
+                    //AudioManager.PlaySound(soundUpgraded);
+                    if (!UpgradedSFX.IsNull) RuntimeManager.PlayOneShot(UpgradedSFX, transform.position);
+                    OnSupportTowerBuilt();
 					
 					NewTower(this);	//for applying support
 				}
 				if(constructState==_ConstructState.Build){
 					effectBuilt.Spawn(GetPos(), Quaternion.identity);
-					AudioManager.OnBuildComplete();
-					AudioManager.PlaySound(soundBuilt);
-					
-					OnSupportTowerBuilt();
+                    //AudioManager.OnBuildComplete();
+                    //AudioManager.PlaySound(soundBuilt);
+                    if (!BuiltSFX.IsNull) RuntimeManager.PlayOneShot(BuiltSFX, transform.position);
+                    OnSupportTowerBuilt();
 				}
 				
 				isUpgrading=false;
@@ -492,8 +504,9 @@ namespace TDTK{
 			
 			if(spawnEffDestroyed){
 				effectDestroyed.Spawn(GetPos(), Quaternion.identity);
-				AudioManager.PlaySound(soundDestroyed);
-			}
+                //AudioManager.PlaySound(soundDestroyed);
+                if (!DestroyedSFX.IsNull) RuntimeManager.PlayOneShot(DestroyedSFX, transform.position);
+            }
 			
 			if(destroyedByAttack){
 				if(lifeCostOnDestroyed>0) GameControl.LostLife(lifeCostOnDestroyed);
