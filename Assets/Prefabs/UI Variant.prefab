@@ -171,12 +171,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Press G to spawn next wave
 
-    Press Tab to toggle overhead view
-
-    Right-click
-    to toggle gun
-
-    Press X to toggle mouse cursor to use buttons'
+    Right-click to toggle gun'
 --- !u!1 &4367063422296144907
 GameObject:
   m_ObjectHideFlags: 0
