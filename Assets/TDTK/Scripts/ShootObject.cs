@@ -83,7 +83,7 @@ namespace TDTK {
 		
 		
 		[Header("Runtime Attribute (For Debugging)")]
-		public Unit tgtUnit;
+		public IUnit tgtUnit;
 		public float tgtRadius=0;
 		public Vector3 targetPos;
 		
@@ -142,7 +142,7 @@ namespace TDTK {
 			//Debug.Log("InitShoot1  "+attachToShootPoint+"   "+shootPoint);
 			//if(attachToShootPoint) thisT.parent=shootPoint;
 		}
-		public void InitShoot(Unit tUnit, Transform shootP=null){
+		public void InitShoot(IUnit tUnit, Transform shootP=null){
 			//Debug.Log("InitShoot2  "+attachToShootPoint+"   "+shootPoint);
 			
 			shootPoint=shootP;

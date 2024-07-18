@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 0
   prefabID: 4
   instanceID: -1
   unitName: Support Tower
@@ -358,7 +359,6 @@ MonoBehaviour:
     rscGain:
     - 1
   effectImmunityList: 
-  attackTargetList: []
   shootObject: {fileID: 114266115900946412, guid: 09a463b997518ca4ba2b0574c697a0c1,
     type: 3}
   shootPoint: []

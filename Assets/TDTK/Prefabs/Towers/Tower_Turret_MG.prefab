@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 0
   prefabID: 0
   instanceID: -1
   unitName: MG Tower
@@ -570,7 +571,6 @@ MonoBehaviour:
     - 0
     - 0
   effectImmunityList: 
-  attackTargetList: []
   shootObject: {fileID: 114266115900946412, guid: 0a7192722c7813b4d90ad76ef51b55c3,
     type: 3}
   shootPoint:

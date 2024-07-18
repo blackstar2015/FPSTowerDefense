@@ -357,6 +357,13 @@ MonoBehaviour:
   supportTowerList: []
   towerCounterTypeID: 
   towerCounterList: 
+  fmodEventUnitsOptions:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   dndTower: {fileID: 0}
   freeFormMode: 0
   raycastForTerrain: 1
@@ -11633,6 +11640,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4887865187629294897, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887865187629294897, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4887898152041916585, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -22291,8 +22308,12 @@ MonoBehaviour:
   carryOver: 0
   sellValueMultiplier: 0.5
   regenerateRsc: 0
-  regenModList: []
-  regenMulList: []
+  regenModList:
+  - 0
+  - 0
+  regenMulList:
+  - 1
+  - 1
   rscList: b40000000a000000
 --- !u!114 &1866772659
 MonoBehaviour:
@@ -22812,7 +22833,7 @@ MonoBehaviour:
     - unitPrefabID: 1
       prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
         type: 3}
-      enabled: 1
+      enabled: 0
       minWave: 0
       maxWave: -1
       attOdds:
@@ -22863,7 +22884,7 @@ MonoBehaviour:
     - unitPrefabID: 2
       prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
         type: 3}
-      enabled: 1
+      enabled: 0
       minWave: 2
       maxWave: -1
       attOdds:
@@ -22914,7 +22935,7 @@ MonoBehaviour:
     - unitPrefabID: 3
       prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
         type: 3}
-      enabled: 1
+      enabled: 0
       minWave: 3
       maxWave: -1
       attOdds:
@@ -23016,7 +23037,7 @@ MonoBehaviour:
     - unitPrefabID: 5
       prefab: {fileID: 114049506200566766, guid: d6cd206db468caa4e95412e4a16cabd4,
         type: 3}
-      enabled: 1
+      enabled: 0
       minWave: 0
       maxWave: -1
       attOdds:

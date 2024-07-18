@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 1
+  attacksPlayer: 0
   prefabID: 2
   instanceID: -1
   unitName: Laser Tower
@@ -453,7 +454,6 @@ MonoBehaviour:
     - 0
     - 0
   effectImmunityList: 
-  attackTargetList: []
   shootObject: {fileID: 114917850592720432, guid: 9894ee1936d71e4409526f77dc26b2ec,
     type: 3}
   shootPoint:

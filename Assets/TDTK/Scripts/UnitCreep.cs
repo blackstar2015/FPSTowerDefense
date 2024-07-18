@@ -59,7 +59,7 @@ namespace TDTK{
 		private Vector3 pathOffsetV;
 		
 		[Space(10)]
-		public bool stopToAttack=false;
+		public bool stopToAttack=true;
 		public int attackLimitPerStop=3;
 		private int attackLimitPerStopCounter=0;
 		public float stopToAttackCooldown=3;
@@ -243,10 +243,12 @@ namespace TDTK{
 			if(IsDestroyed()) return;
 			if(IsStunned()) return;
 			
-			if(IsTurret()){	//this is just to control the creep movement and aim, the actual attack call in in Unit.cs
+			if(IsTurret() || attacksPlayer){	//this is just to control the creep movement and aim, the actual attack call in in Unit.cs
 				if(stopToAttack){
-					if((GetTarget()!=null && !CreepIsOnAttackCD()) || Time.time-lastAttackTime<0.5f) speedMultiplier=0; 
-					else{
+					if((GetTarget()!=null && !CreepIsOnAttackCD()) || Time.time-lastAttackTime<0.5f) 
+						speedMultiplier=0; 
+					else
+					{
 						speedMultiplier=1;
 						if(GetTarget()==null && !resetingAim) StartCoroutine(ResetAim());
 					}
