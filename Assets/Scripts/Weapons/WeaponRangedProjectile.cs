@@ -56,6 +56,7 @@ public class WeaponRangedProjectile : Weapon
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
 
         rb.velocity = direction * _projectileSpeed * ChargePercentage;
+        Debug.Log(rb.velocity);
     }
 
     private Rigidbody SpawnProjectile()

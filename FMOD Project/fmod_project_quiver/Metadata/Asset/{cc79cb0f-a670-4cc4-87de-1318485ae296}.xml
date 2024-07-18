@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{cc79cb0f-a670-4cc4-87de-1318485ae296}">
+		<property name="assetPath">
+			<value>SFX/Weapons/Slingshot/Whoosh Layer/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0d64e92c-f65c-4afc-8bb4-76ac062cb82f}</destination>
+		</relationship>
+	</object>
+</objects>
