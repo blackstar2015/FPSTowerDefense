@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using TDTK;
+using System.Linq;
 
 namespace TDTK{
 
@@ -560,13 +561,10 @@ namespace TDTK{
 		
 		
 		public static List<Unit> GetUnitsWithinRange(Unit srcUnit, float range){ return GetUnitsWithinRange(srcUnit.GetPos(), range); }
-		public static List<Unit> GetUnitsWithinRange(Vector3 pos, float range){
-			List<UnitTower> unitList=GetActiveTowerList();	List<Unit> tgtList=new List<Unit>();
-			for(int i=0; i<unitList.Count; i++){
-				if(Vector3.Distance(pos, unitList[i].GetPos())<range+unitList[i].GetRadius()) 
-					tgtList.Add(unitList[i]);
-			}
-			return tgtList;
+		public static List<Unit> GetUnitsWithinRange(Vector3 pos, float range)
+		{
+			List<UnitTower> unitList = GetActiveTowerList();
+			return Functions.GetUnitsWithinRange(pos, range, unitList.Cast<Unit>().ToList());
 		}
 		
 		

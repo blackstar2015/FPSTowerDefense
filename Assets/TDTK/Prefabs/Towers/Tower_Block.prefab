@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 0
   prefabID: 7
   instanceID: -1
   unitName: Block

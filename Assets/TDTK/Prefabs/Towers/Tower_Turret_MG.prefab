@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 0
   prefabID: 0
   instanceID: -1
   unitName: MG Tower

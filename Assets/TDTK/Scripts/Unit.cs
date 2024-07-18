@@ -54,11 +54,11 @@ namespace TDTK{
 		[Space(5)]
 		public bool resetTargetOnAttack=false;
 		private bool targetReset=true;
-		
-		
-		
-		
-		
+		public bool attacksPlayer = false;
+
+
+
+
 		//for tower only
 		public virtual UnitTower._TargetGroup GetTargetGroup(){ return UnitTower._TargetGroup.All; }
 		
@@ -234,6 +234,17 @@ namespace TDTK{
 			if(cooldownMine>0)	cooldownMine-=Time.fixedDeltaTime;
 			if(!SpawnManager.IsBetweenWaves() && cooldownRsc>0)	cooldownRsc-=Time.fixedDeltaTime;
 			
+			if (attacksPlayer)
+            {
+				var foundPlayer = ScanForPlayer();
+
+				if (foundPlayer)
+                {
+					Attack();
+					return;
+                }
+            }
+
 			if(IsTurret()){
 				ScanForTarget();
 				Attack();
@@ -321,82 +332,131 @@ namespace TDTK{
 			LayerMask mask=1<<TDTK.GetLayerTower() | 1<<TDTK.GetLayerCreep();
 			return !Physics.Linecast(GetTargetPoint(), tgtUnit.GetTargetPoint(), out hitInfo, ~mask);
 		}
-		
+
+		public bool ScanForPlayer()
+		{
+			RemoveOutOfDateTargets();
+
+			var returnVal = false;
+			var unitList = PlayerManager.GetUnitsWithinRange(this, GetAttackRange());
+
+			if (unitList.Count > 0)
+			{
+				foreach (Unit unit in unitList)
+					if (!attackTargetList.Contains(unit))
+					{
+						attackTargetList.Add(unit);
+						returnVal = true;
+					}
+
+				//if (snapAiming) 
+					Aim();
+			}
+
+			return returnVal;
+		}
+
+		void RemoveOutOfDateTargets()
+        {
+			for (int i = 0; i < attackTargetList.Count; i++)
+			{
+				bool removeTarget = false;
+
+				if (!removeTarget && attackTargetList[i] == null) removeTarget = true;
+
+				if (!removeTarget && attackTargetList[i].IsDestroyed()) removeTarget = true;
+
+				if (!removeTarget)
+				{
+					float dist = Vector3.Distance(GetPos(), attackTargetList[i].GetPos());
+					if (dist > GetDetectionRange(attackTargetList[i])) removeTarget = true;
+				}
+
+				if (!removeTarget && useLOSTargeting && !CheckTargetLOS(attackTargetList[i])) removeTarget = true;
+
+				if (removeTarget)
+				{
+					attackTargetList.RemoveAt(i); i -= 1; continue;
+				}
+			}
+		}
+
 		//Credit to Nameless Game for contributing the code for targeting multiple target
-		public void ScanForTarget(){
-			for(int i=0; i<attackTargetList.Count; i++){
-				bool removeTarget=false;
-				
-				if(!removeTarget && attackTargetList[i]==null) removeTarget=true;
-				
-				if(!removeTarget &&  attackTargetList[i].IsDestroyed()) removeTarget=true;
-				
-				if(!removeTarget){
-					float dist=Vector3.Distance(GetPos(), attackTargetList[i].GetPos());
-					if(dist>GetDetectionRange(attackTargetList[i])) removeTarget=true;
-				}
-				
-				if(!removeTarget && useLOSTargeting && !CheckTargetLOS(attackTargetList[i])) removeTarget=true;
-				
-				if(removeTarget){
-					attackTargetList.RemoveAt(i);	i-=1;		continue;
-				}
-			}
-			
-			if(attackTargetList.Count>=targetCountPerAttack) return;
-			
-			if(CreepIsOnAttackCD()) return;	//for creep only
-			
-			List<Unit> unitList=null;
-			if(IsTower()) unitList=SpawnManager.GetUnitsWithinRange(this, GetAttackRange(), GetTargetGroup());
-			else unitList=TowerManager.GetUnitsWithinRange(this, GetAttackRange());
-			
-			for(int i=0; i<unitList.Count; i++){
-				if(!unitList[i].canBeTargeted || attackTargetList.Contains(unitList[i])){
-					unitList.RemoveAt(i);	i-=1;
+		public void ScanForTarget()
+		{
+			RemoveOutOfDateTargets();
+
+			if (attackTargetList.Count >= targetCountPerAttack) return;
+
+			if (CreepIsOnAttackCD()) return;    //for creep only
+
+			List<Unit> unitList = null;
+
+			if (IsTower())
+				unitList = SpawnManager.GetUnitsWithinRange(this, GetAttackRange(), GetTargetGroup());
+			else
+				unitList = TowerManager.GetUnitsWithinRange(this, GetAttackRange());
+
+			for (int i = 0; i < unitList.Count; i++)
+			{
+				if (!unitList[i].canBeTargeted || attackTargetList.Contains(unitList[i]))
+				{
+					unitList.RemoveAt(i); i -= 1;
 				}
 			}
-			
-			if(targetingFov>0 && targetingFov<360){
-				Quaternion curDir=thisT.rotation*Quaternion.Euler(0, targetingDir, 0);
-				for(int i=0; i<unitList.Count; i++){
-					Quaternion dirToTarget=Quaternion.LookRotation(unitList[i].GetPos()-GetPos());
-					if(Quaternion.Angle(curDir, dirToTarget)>targetingFov*0.5f){ unitList.RemoveAt(i);	i-=1; }
+
+			if (targetingFov > 0 && targetingFov < 360)
+			{
+				Quaternion curDir = thisT.rotation * Quaternion.Euler(0, targetingDir, 0);
+				for (int i = 0; i < unitList.Count; i++)
+				{
+					Quaternion dirToTarget = Quaternion.LookRotation(unitList[i].GetPos() - GetPos());
+					if (Quaternion.Angle(curDir, dirToTarget) > targetingFov * 0.5f) { unitList.RemoveAt(i); i -= 1; }
 				}
 			}
-			
-			if(useLOSTargeting){
-				for(int i=0; i<unitList.Count; i++){
-					if(CheckTargetLOS(unitList[i])) continue;
-					unitList.RemoveAt(i); i-=1;
+
+			if (useLOSTargeting)
+			{
+				for (int i = 0; i < unitList.Count; i++)
+				{
+					if (CheckTargetLOS(unitList[i])) continue;
+					unitList.RemoveAt(i); i -= 1;
 				}
 			}
-			
-			if(unitList.Count<=0) return;
-			
-			if(IsCreep() && targetMode==_TargetMode.NearestToDestination) targetMode=_TargetMode.Random;
-			
-			int requiredTargetCount=targetCountPerAttack-attackTargetList.Count;
-			int tmpTargetIdx=-1;
+
+			if (unitList.Count <= 0) return;
+
+			if (IsCreep() && targetMode == _TargetMode.NearestToDestination) targetMode = _TargetMode.Random;
+
+			int requiredTargetCount = targetCountPerAttack - attackTargetList.Count;
+			int tmpTargetIdx = -1;
 			List<int> newTargetsIdx = new List<int>();
-			
-			if (unitList.Count <= requiredTargetCount) {
-				for (int i = 0; i < unitList.Count; i++) {
+
+			if (unitList.Count <= requiredTargetCount)
+			{
+				for (int i = 0; i < unitList.Count; i++)
+				{
 					newTargetsIdx.Add(i);
 				}
 			}
-			else if (targetMode == _TargetMode.Random) {
-				for (int i = 0; i < requiredTargetCount; i++) {
-					do {
+			else if (targetMode == _TargetMode.Random)
+			{
+				for (int i = 0; i < requiredTargetCount; i++)
+				{
+					do
+					{
 						tmpTargetIdx = Random.Range(0, unitList.Count);
 					} while (newTargetsIdx.Contains(tmpTargetIdx));
 					newTargetsIdx.Add(tmpTargetIdx);
 				}
 			}
-			else if (targetMode == _TargetMode.NearestToSelf) {
-				for (int i = 0; i < requiredTargetCount; i++) {
+			else if (targetMode == _TargetMode.NearestToSelf)
+			{
+				for (int i = 0; i < requiredTargetCount; i++)
+				{
 					float nearest = Mathf.Infinity;
-					for (int j = 0; j < unitList.Count; j++) {
+					for (int j = 0; j < unitList.Count; j++)
+					{
 						if (newTargetsIdx.Contains(j)) continue;
 						float dist = Vector3.Distance(GetPos(), unitList[j].GetPos());
 						if (dist < nearest) { tmpTargetIdx = j; nearest = dist; }
@@ -404,30 +464,39 @@ namespace TDTK{
 					newTargetsIdx.Add(tmpTargetIdx);
 				}
 			}
-			else if (targetMode == _TargetMode.MostHP) {
-				for (int i = 0; i < requiredTargetCount; i++) {
+			else if (targetMode == _TargetMode.MostHP)
+			{
+				for (int i = 0; i < requiredTargetCount; i++)
+				{
 					float mostHP = 0;
-					for (int j = 0; j < unitList.Count; j++) {
+					for (int j = 0; j < unitList.Count; j++)
+					{
 						if (newTargetsIdx.Contains(j)) continue;
 						if (unitList[j].hp + unitList[j].sh > mostHP) { tmpTargetIdx = j; mostHP = unitList[j].hp + unitList[j].sh; }
 					}
 					newTargetsIdx.Add(tmpTargetIdx);
 				}
 			}
-			else if (targetMode == _TargetMode.LeastHP) {
-				for (int i = 0; i < requiredTargetCount; i++) {
+			else if (targetMode == _TargetMode.LeastHP)
+			{
+				for (int i = 0; i < requiredTargetCount; i++)
+				{
 					float leastHP = Mathf.Infinity;
-					for (int j = 0; j < unitList.Count; j++) {
+					for (int j = 0; j < unitList.Count; j++)
+					{
 						if (newTargetsIdx.Contains(j)) continue;
 						if (unitList[j].hp + unitList[j].sh < leastHP) { tmpTargetIdx = j; leastHP = unitList[j].hp + unitList[j].sh; }
 					}
 					newTargetsIdx.Add(tmpTargetIdx);
 				}
 			}
-			else if (targetMode == _TargetMode.NearestToDestination) {
-				for (int i = 0; i < requiredTargetCount; i++) {
+			else if (targetMode == _TargetMode.NearestToDestination)
+			{
+				for (int i = 0; i < requiredTargetCount; i++)
+				{
 					float pathDist = Mathf.Infinity; int furthestWP = 0; int furthestSubWP = 0; float distToDest = Mathf.Infinity;
-					for (int j = 0; j < unitList.Count; j++) {
+					for (int j = 0; j < unitList.Count; j++)
+					{
 						if (newTargetsIdx.Contains(j)) continue;
 
 						float pDist = unitList[j].GetPathDist();
@@ -435,18 +504,24 @@ namespace TDTK{
 						int subWpIdx = unitList[j].GetSubWPIdx();
 						float tgtDistToDest = unitList[j].GetDistToTargetPos();
 
-						if (pDist < pathDist) {
+						if (pDist < pathDist)
+						{
 							tmpTargetIdx = j; pathDist = pDist; furthestWP = wpIdx; furthestSubWP = subWpIdx; distToDest = tgtDistToDest;
 						}
-						else if (pDist == pathDist) {
-							if (furthestWP < wpIdx) {
+						else if (pDist == pathDist)
+						{
+							if (furthestWP < wpIdx)
+							{
 								tmpTargetIdx = j; pathDist = pDist; furthestWP = wpIdx; furthestSubWP = subWpIdx; distToDest = tgtDistToDest;
 							}
-							else if (furthestWP == wpIdx) {
-								if (furthestSubWP < subWpIdx) {
+							else if (furthestWP == wpIdx)
+							{
+								if (furthestSubWP < subWpIdx)
+								{
 									tmpTargetIdx = j; pathDist = pDist; furthestWP = wpIdx; furthestSubWP = subWpIdx; distToDest = tgtDistToDest;
 								}
-								else if (furthestSubWP == subWpIdx && tgtDistToDest < distToDest) {
+								else if (furthestSubWP == subWpIdx && tgtDistToDest < distToDest)
+								{
 									tmpTargetIdx = j; pathDist = pDist; furthestWP = wpIdx; furthestSubWP = subWpIdx; distToDest = tgtDistToDest;
 								}
 							}
@@ -455,12 +530,14 @@ namespace TDTK{
 					newTargetsIdx.Add(tmpTargetIdx);
 				}
 			}
-			
-			if(newTargetsIdx.Count>0) {
-				foreach(int targetIdx in newTargetsIdx) {
+
+			if (newTargetsIdx.Count > 0)
+			{
+				foreach (int targetIdx in newTargetsIdx)
+				{
 					attackTargetList.Add(unitList[targetIdx]);
 				}
-				if(snapAiming) Aim();
+				if (snapAiming) Aim();
 			}
 		}
 		

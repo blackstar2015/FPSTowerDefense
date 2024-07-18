@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 1
+  attacksPlayer: 0
   prefabID: 2
   instanceID: -1
   unitName: Laser Tower

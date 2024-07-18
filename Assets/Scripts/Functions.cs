@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TDTK;
 using UnityEngine;
 
 public static class Functions
@@ -19,5 +20,18 @@ public static class Functions
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+    }
+
+    public static List<Unit> GetUnitsWithinRange(Vector3 pos, float range, List<Unit> unitList)
+    {
+        List<Unit> tgtList = new List<Unit>();
+
+        for (int i = 0; i < unitList.Count; i++)
+        {
+            if (Vector3.Distance(pos, unitList[i].GetPos()) < range + unitList[i].GetRadius())
+                tgtList.Add(unitList[i]);
+        }
+
+        return tgtList;
     }
 }

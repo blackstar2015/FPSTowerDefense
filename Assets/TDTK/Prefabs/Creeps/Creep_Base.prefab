@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 1
   prefabID: 0
   instanceID: -1
   unitName: Transport
@@ -155,7 +156,8 @@ MonoBehaviour:
     rscGain: []
   effectImmunityList: 
   attackTargetList: []
-  shootObject: {fileID: 0}
+  shootObject: {fileID: 114266115900946412, guid: 09a463b997518ca4ba2b0574c697a0c1,
+    type: 3}
   shootPoint: []
   shootPointSpacing: 0.2
   shootEffObj_AOE:
