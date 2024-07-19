@@ -1295,12 +1295,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1202976195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1529185344240321177, guid: 05a01f50f03c5244f8e25433331b2b33,
-    type: 3}
-  m_PrefabInstance: {fileID: 3217985337102002024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1254527769
 Mesh:
   m_ObjectHideFlags: 0
@@ -1539,16 +1533,6 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[2]
       value: 
       objectReference: {fileID: 950532261}
-    - target: {fileID: 8336742179539559381, guid: f2f03919017e63640a6c7cd3f89da466,
-        type: 3}
-      propertyPath: crosshair
-      value: 
-      objectReference: {fileID: 1202976195}
-    - target: {fileID: 8336742179539559381, guid: f2f03919017e63640a6c7cd3f89da466,
-        type: 3}
-      propertyPath: crosshairCharge
-      value: 
-      objectReference: {fileID: 1846135808}
     - target: {fileID: 8336742179539559381, guid: f2f03919017e63640a6c7cd3f89da466,
         type: 3}
       propertyPath: overheadViewObjects.Array.data[0]
@@ -1953,12 +1937,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1846135808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5918143583953165033, guid: 05a01f50f03c5244f8e25433331b2b33,
-    type: 3}
-  m_PrefabInstance: {fileID: 3217985337102002024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1851689042
 Mesh:
   m_ObjectHideFlags: 0

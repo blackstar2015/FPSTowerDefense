@@ -25,6 +25,21 @@ public class ToggleViewControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(UIPrefab != null)
+        {
+            crosshair = GameObject.Find("UI Variant/UICamera_Screen/Canvas_HUD/Crosshair");
+            crosshairCharge = GameObject.Find("UI Variant/UICamera_Screen/Canvas_HUD/CrosshairCharging");
+        }
+
+        if(crosshair == null)
+        {
+            Debug.Log("Crosshair not found.");
+        }
+
+        if (crosshairCharge == null)
+        {
+            Debug.Log("CrosshairCharge not found.");
+        }
         SetViewValues();
         SetMouseLookEvents();
     }

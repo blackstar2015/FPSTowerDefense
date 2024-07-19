@@ -570,7 +570,8 @@ MonoBehaviour:
   - {fileID: 0}
   firstPersonViewObjects:
   - {fileID: 5867738439710604489}
-  UIPrefab: {fileID: 0}
+  UIPrefab: {fileID: 4710623830615814823, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+    type: 3}
   inFirstPerson: 1
   mouseLocked: 1
   crosshair: {fileID: 0}
