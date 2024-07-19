@@ -13,7 +13,7 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] private UIControl UIPrefab;
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] bool mouseLocked;
-    [SerializeField] bool disableMouseLookInMouseCursorMode;
+    //[SerializeField] bool disableMouseLookInMouseCursorMode;
 
 
 
@@ -21,6 +21,7 @@ public class ToggleViewControl : MonoBehaviour
     void Start()
     {
         SetViewValues();
+        SetMouseLookEvents();
     }
 
     // Update is called once per frame
@@ -65,6 +66,25 @@ public class ToggleViewControl : MonoBehaviour
         }
     }
 
+    void SetMouseLookEvents()
+    {
+
+        Functions.OnMouseLocked.AddListener(SetMouseLookOn);
+        Functions.OnMouseReleased.AddListener(SetMouseLookOff);
+    }
+
+    void SetMouseLookOn()
+    {
+        var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+        cinemachineInputProvider.enabled = true;
+    }
+
+    void SetMouseLookOff()
+    {
+        var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+        cinemachineInputProvider.enabled = false;
+    }
+
     void ToggleGameObjects(List<GameObject> list, bool activateThem)
     {
         foreach (GameObject gameObject in list)
@@ -80,14 +100,14 @@ public class ToggleViewControl : MonoBehaviour
     void SetMouse(bool toLocked)
     {        
         Functions.SetMouse(toLocked);
-        var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
+        //var cinemachineInputProvider = firstPersonViewObjects[0].GetComponentInChildren<CinemachineInputProvider>();
 
-        if (!disableMouseLookInMouseCursorMode)
-            return;
+        //if (!disableMouseLookInMouseCursorMode)
+        //    return;
 
-        if (!toLocked)
-            cinemachineInputProvider.enabled = false;
-        else
-            cinemachineInputProvider.enabled = true;
+        //if (!toLocked)
+        //    cinemachineInputProvider.enabled = false;
+        //else
+        //    cinemachineInputProvider.enabled = true;
     }
 }
