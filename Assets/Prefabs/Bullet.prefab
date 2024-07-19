@@ -164,3 +164,4 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  enemyHitAudioClip: {fileID: 8300000, guid: e546b59457cc46b43837832300aa1fe5, type: 3}
