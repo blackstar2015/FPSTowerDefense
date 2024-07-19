@@ -5,20 +5,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using TDTK;
+using GameEvents;
 
 namespace TDTK{
 
 	public class UIGameOverScreen : UIScreen {
 		
 		public Text lbGameOverMsg;
-		
+		public BoolEventAsset GameOverEvent;
 		public UIButton buttonContinue;
 		public UIButton buttonRestart;
 		public UIButton buttonMainMenu;
 		
 		private static UIGameOverScreen instance;
-		
-		public override void Awake(){
+        private void OnEnable()
+        {
+			GameOverEvent.Invoke(false);
+        }
+        private void OnDisable()
+        {
+			GameOverEvent.Invoke(true);            
+        }
+        public override void Awake(){
 			base.Awake();
 			
 			instance=this;
