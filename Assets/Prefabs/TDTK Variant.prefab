@@ -25295,12 +25295,12 @@ PrefabInstance:
     - target: {fileID: 243263727783873761, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: life
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 243263727783873761, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: lifeCap
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 243263727783873761, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
@@ -25985,7 +25985,7 @@ PrefabInstance:
     - target: {fileID: 5946226093892002187, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5946833843974886791, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
