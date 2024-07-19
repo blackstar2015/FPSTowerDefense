@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 666477973760673217}
 --- !u!81 &919087665256415985
 AudioListener:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666477973760673217}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &2340128566759823940
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +573,7 @@ MonoBehaviour:
   UIPrefab: {fileID: 4710623830615814823, guid: b6ad1ac811cdefc4ea72a372a72dd299,
     type: 3}
   inFirstPerson: 1
+  InFirstPersonEvent: {fileID: 11400000, guid: fcff46c4dbbf10644b248a2f32dee6a8, type: 2}
   mouseLocked: 1
   crosshair: {fileID: 0}
   crosshairCharge: {fileID: 0}
@@ -826,6 +827,31 @@ PrefabInstance:
         type: 3}
       propertyPath: _projectileSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Path
+      value: event:/PLAYER/Weapons/ply_weapon_slingshot_shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data1
+      value: -888877673
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data2
+      value: 1151632503
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data3
+      value: 194982569
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data4
+      value: 660589014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
