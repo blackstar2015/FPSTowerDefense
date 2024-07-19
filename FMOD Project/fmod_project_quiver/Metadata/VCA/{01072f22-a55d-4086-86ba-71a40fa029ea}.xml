@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="MixerVCA" id="{abae6fb3-6560-469a-bdbc-97066a506ad3}">
-		<property name="note">
-			<value>This VCA involves:
-- Attacks
-- Movement
-- DX
-- Actions</value>
-		</property>
+	<object class="MixerVCA" id="{01072f22-a55d-4086-86ba-71a40fa029ea}">
 		<property name="name">
-			<value>Global Enemies</value>
+			<value>DX</value>
 		</property>
 		<relationship name="mixer">
 			<destination>{5c9389e6-e786-4d5f-8ea8-1b8c6e56df38}</destination>

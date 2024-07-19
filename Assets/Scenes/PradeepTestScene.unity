@@ -1130,6 +1130,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1066854858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 666477973760673217, guid: f2f03919017e63640a6c7cd3f89da466,
+    type: 3}
+  m_PrefabInstance: {fileID: 1317800298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1194387638
 Mesh:
   m_ObjectHideFlags: 0
@@ -1473,6 +1479,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonMode
       objectReference: {fileID: 0}
+    - target: {fileID: 919087665256415985, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Path
+      value: event:/PLAYER/Weapons/ply_weapon_slingshot_shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Path
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data1
+      value: -888877673
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data2
+      value: 1151632503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data3
+      value: 194982569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <FireBulletSFX>k__BackingField.Guid.Data4
+      value: 660589014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900454553137937593, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445634753660095794, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 1066854858}
     - target: {fileID: 4193874368046817576, guid: f2f03919017e63640a6c7cd3f89da466,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2802,6 +2868,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1851689042}
+    - target: {fileID: 3415624168360528159, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3440286222778029717, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
