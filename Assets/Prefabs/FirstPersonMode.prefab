@@ -798,6 +798,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8236199093487307237}
+    - targetCorrespondingSourceObject: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4570969328269764308}
   m_SourcePrefab: {fileID: 100100000, guid: 03aab3a1768909143a21ffe8c7788ea3, type: 3}
 --- !u!114 &2900454553137937593 stripped
 MonoBehaviour:
@@ -844,6 +848,36 @@ MonoBehaviour:
       - m_Target: {fileID: 2900454553137937593}
         m_TargetAssemblyTypeName: WeaponRangedProjectile, Assembly-CSharp
         m_MethodName: SetChargeCrosshair
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4570969328269764308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546996804492896039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1ab41dee2ab2a4b8f93871bf440136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEventAsset: {fileID: 11400000, guid: d37516d5909217c49bef44ba8a5da3fd, type: 2}
+  _useFilter: 0
+  _filterValues: 
+  OnGameEventInvoked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7546996804492896039}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
