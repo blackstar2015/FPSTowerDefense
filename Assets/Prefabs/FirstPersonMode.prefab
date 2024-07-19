@@ -573,6 +573,8 @@ MonoBehaviour:
   UIPrefab: {fileID: 0}
   inFirstPerson: 1
   mouseLocked: 1
+  crosshair: {fileID: 0}
+  crosshairCharge: {fileID: 0}
 --- !u!114 &3490121788960726918
 MonoBehaviour:
   m_ObjectHideFlags: 0

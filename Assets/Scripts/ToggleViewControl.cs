@@ -13,6 +13,11 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] private UIControl UIPrefab;
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] bool mouseLocked;
+
+    [SerializeField]
+    private GameObject crosshair;
+    [SerializeField]
+    private GameObject crosshairCharge;
     //[SerializeField] bool disableMouseLookInMouseCursorMode;
 
 
@@ -35,6 +40,12 @@ public class ToggleViewControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
             SpawnManager.Spawn();
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            crosshair.SetActive(!crosshair.activeSelf);
+            crosshairCharge.SetActive(!crosshairCharge.activeSelf);
+        }
     }
 
     void ToggleView()
