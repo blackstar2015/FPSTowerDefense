@@ -207,7 +207,7 @@ namespace TDTK {
 				startY=DrawVisualObject(startX, startY+=spaceY+10, item.shootEffObj_Resource, "Shoot Effect (Rsc):", "", false);
 				item.shootEffObj_Resource.autoDestroy=true;
 			}
-			if(item.IsTurret()){
+			if(true){//item.IsTurret()){ // since all creeps attack the player regardless of if they're turrets, we want to always display this. --djoe 7/2024
 				startY+=10;
 				
 				GUIStyle style=item.shootObject==null ? TDE.conflictS : null;

@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTargetOnAttack: 0
+  attacksPlayer: 1
   prefabID: 1
   instanceID: -1
   unitName: Speeder
@@ -123,8 +124,8 @@ MonoBehaviour:
     cooldown_Rsc: 1
     rscGain: []
   effectImmunityList: 0000000005000000
-  attackTargetList: []
-  shootObject: {fileID: 0}
+  shootObject: {fileID: 114266115900946412, guid: 09a463b997518ca4ba2b0574c697a0c1,
+    type: 3}
   shootPoint: []
   shootPointSpacing: 0.2
   shootEffObj_AOE:
