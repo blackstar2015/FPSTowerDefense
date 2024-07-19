@@ -139,8 +139,6 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 7099228217217645586}
-  - {fileID: 0}
-  - {fileID: 0}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -222,7 +220,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666477973760673217}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!1 &2340128566759823940
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2051194586584577888, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
