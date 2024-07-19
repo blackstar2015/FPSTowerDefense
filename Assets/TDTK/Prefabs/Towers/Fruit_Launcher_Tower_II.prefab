@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 114541810645508154}
   - component: {fileID: 135533310359063602}
   m_Layer: 28
-  m_Name: Tower_Turret_Cannon II
+  m_Name: Fruit_Launcher_Tower_II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   attacksPlayer: 0
   prefabID: 8
   instanceID: -1
-  unitName: Cannon Tower II
+  unitName: Fruit Launcher Tower
   icon: {fileID: 21300000, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
   desp: A standard cannon turret with decent damage and range. Deal aoe damage.
   canBeAttacked: 1
@@ -541,12 +541,6 @@ MonoBehaviour:
     obj: {fileID: 0}
     autoDestroy: 1
     duration: 1.5
-  soundBuilding: {fileID: 0}
-  soundBuilt: {fileID: 0}
-  soundUpgrading: {fileID: 0}
-  soundUpgraded: {fileID: 0}
-  soundSold: {fileID: 0}
-  soundDestroyed: {fileID: 0}
   radius: 0.5
   supportTgtList: []
   supportSrcList: []
