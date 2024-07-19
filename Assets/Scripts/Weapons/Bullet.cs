@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
     [field: SerializeField, BoxGroup("SFX")] public EventReference BulletDestroyedSFX { get; protected set; }
     [field: SerializeField, BoxGroup("SFX")] public EventReference EnemyHitSFX { get; protected set; }
 
+    [SerializeField] AudioClip enemyHitAudioClip;
 
     private void Awake()
     {
@@ -49,6 +50,9 @@ public class Bullet : MonoBehaviour
         if (!EnemyHitSFX.IsNull) RuntimeManager.PlayOneShot(EnemyHitSFX, transform.position);
 
         creep.ApplyEffect(Effect_DB.GetPrefab(8)); // 8 is 3-second stun. Effects are defined in Resources/DB/EffectDB. Really needs a better system.  --djoe 7/2024
+        
+        if (enemyHitAudioClip != null)
+            AudioSource.PlayClipAtPoint(enemyHitAudioClip, transform.position);
 
         Cleanup();
     }

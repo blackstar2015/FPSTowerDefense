@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 1
   autoAdjustTextureToGrid: 1
-  unavailablePrefabIDList: 0500000006000000
+  unavailablePrefabIDList: 0500000006000000040000000700000003000000
   buildableList: []
   sampleList: []
   activeTowerList: []
@@ -11643,12 +11643,12 @@ PrefabInstance:
     - target: {fileID: 4887865187629294897, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4887865187629294897, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4887898152041916585, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
@@ -17140,6 +17140,11 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[2]
       value: 
       objectReference: {fileID: 1380412329}
+    - target: {fileID: 8336742179539559381, guid: f2f03919017e63640a6c7cd3f89da466,
+        type: 3}
+      propertyPath: disableMouseLookInMouseCursorMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8336742179539559381, guid: f2f03919017e63640a6c7cd3f89da466,
         type: 3}
       propertyPath: overheadViewObjects.Array.data[0]
@@ -22833,7 +22838,7 @@ MonoBehaviour:
     - unitPrefabID: 1
       prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
         type: 3}
-      enabled: 0
+      enabled: 1
       minWave: 0
       maxWave: -1
       attOdds:
@@ -22884,7 +22889,7 @@ MonoBehaviour:
     - unitPrefabID: 2
       prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
         type: 3}
-      enabled: 0
+      enabled: 1
       minWave: 2
       maxWave: -1
       attOdds:
@@ -22935,7 +22940,7 @@ MonoBehaviour:
     - unitPrefabID: 3
       prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
         type: 3}
-      enabled: 0
+      enabled: 1
       minWave: 3
       maxWave: -1
       attOdds:
@@ -23037,7 +23042,7 @@ MonoBehaviour:
     - unitPrefabID: 5
       prefab: {fileID: 114049506200566766, guid: d6cd206db468caa4e95412e4a16cabd4,
         type: 3}
-      enabled: 0
+      enabled: 1
       minWave: 0
       maxWave: -1
       attOdds:
