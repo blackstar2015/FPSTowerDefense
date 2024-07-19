@@ -1,5 +1,4 @@
 using Cinemachine;
-using GameEvents;
 using System.Collections;
 using System.Collections.Generic;
 using TDTK;
@@ -11,9 +10,10 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] List<GameObject> overheadViewObjects;
     [Tooltip("Specify objects to be enabled if and only if in first person view. First object in list must contain the camera in its hierarchy.")]
     [SerializeField] List<GameObject> firstPersonViewObjects;
+    [SerializeField] private UIControl UIPrefab;
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] bool mouseLocked;
-    [SerializeField] BoolEventAsset InFirstPersonEvent;
+
     [SerializeField]
     private GameObject crosshair;
     [SerializeField]
@@ -65,7 +65,6 @@ public class ToggleViewControl : MonoBehaviour
         {
             SetMouse(mouseLocked);
             CameraControl.mainCam = firstPersonViewObjects[0].GetComponentInChildren<Camera>();
-            InFirstPersonEvent.Invoke(true);
             //UIPrefab.usePieMenuForBuild = true;
             //UIPrefab.buildMode = UIControl._BuildMode.PointNBuild;
         }
@@ -73,7 +72,6 @@ public class ToggleViewControl : MonoBehaviour
         {
             SetMouse(false); // mouse is always on in Overview mode.
             CameraControl.mainCam = overheadViewObjects[0].GetComponentInChildren<Camera>();
-            InFirstPersonEvent.Invoke(false);
             //UIPrefab.usePieMenuForBuild = false;
             //UIPrefab.buildMode = UIControl._BuildMode.DragNDrop;
         }
