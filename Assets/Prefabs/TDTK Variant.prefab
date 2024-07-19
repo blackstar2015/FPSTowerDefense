@@ -25356,6 +25356,11 @@ PrefabInstance:
       propertyPath: mainMenuName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 811934438400636029, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1139676701460317306, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: m_LocalScale.x
