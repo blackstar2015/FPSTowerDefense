@@ -20,27 +20,14 @@ public class GammaSetting : FloatSetting
     {
         base.SetValue(newValue);
 
-#if USING_URP
-    if (_volumeProfile.TryGet(out UnityEngine.Rendering.Universal.LiftGammaGain urpLiftGammaGain))
-    {
-        urpLiftGammaGain.gamma.value = Vector4.one * newValue;
-    }
-    else
-    {
-        Debug.LogWarning($"Volume Profile: {_volumeProfile.name} is missing Lift Gamma Gain component.", _volumeProfile);
-    }
-#endif
-
-#if USING_HDRP
-    if (_volumeProfile.TryGet(out UnityEngine.Rendering.HighDefinition.LiftGammaGain hdrpLiftGammaGain))
-    {
-        hdrpLiftGammaGain.gamma.value = Vector4.one * newValue;
-    }
-    else
-    {
-        Debug.LogWarning($"Volume Profile: {_volumeProfile.name} is missing Lift Gamma Gain component.", _volumeProfile);
-    }
-#endif
+        if (_volumeProfile.TryGet(out UnityEngine.Rendering.Universal.LiftGammaGain urpLiftGammaGain))
+        {
+            urpLiftGammaGain.gamma.value = Vector4.one * newValue;
+        }
+        else
+        {
+            Debug.LogWarning($"Volume Profile: {_volumeProfile.name} is missing Lift Gamma Gain component.", _volumeProfile);
+        }
     }
 
 }

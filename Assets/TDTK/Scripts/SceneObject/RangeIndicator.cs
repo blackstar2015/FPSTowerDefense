@@ -42,7 +42,7 @@ namespace TDTK{
 			
 			refreshEveryFrame=activeUnit.IsTower() && activeUnit.GetTower().isPreview;
 			
-			thisT.position=unit.GetPos();
+			thisT.position=unit.GetPos() ;
 			CreatePoints (unit);
 			thisObj.SetActive(true);
 		}
@@ -54,7 +54,7 @@ namespace TDTK{
 			if(activeUnit==null) Hide();
 			
 			if(refreshEveryFrame){
-				thisT.position=activeUnit.GetPos();
+				thisT.position=activeUnit.GetPos() + Vector3.up* .25f;
 				CreatePoints(activeUnit);
 			}
 		}
