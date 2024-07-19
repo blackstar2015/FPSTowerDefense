@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TDTK;
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.VFX;
 
 public class Bullet : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private bool UseGravity;
     [field: SerializeField, BoxGroup("SFX")] public EventReference BulletDestroyedSFX { get; protected set; }
     [field: SerializeField, BoxGroup("SFX")] public EventReference EnemyHitSFX { get; protected set; }
+    [field: SerializeField, BoxGroup("VFX")] public VisualEffect BulletDestroyedVFX { get; protected set; }
+    [field: SerializeField, BoxGroup("VFX")] public VisualEffect EnemyHitVFX { get; protected set; }
 
     [SerializeField] AudioClip enemyHitAudioClip;
 
@@ -37,6 +40,7 @@ public class Bullet : MonoBehaviour
         {
             //SFX and other effects when not hitting enemy
             if (!BulletDestroyedSFX.IsNull) RuntimeManager.PlayOneShot(BulletDestroyedSFX, transform.position);
+            if (BulletDestroyedVFX != null) BulletDestroyedVFX.Play();
             Cleanup();
             return;
         }
@@ -53,7 +57,7 @@ public class Bullet : MonoBehaviour
         
         if (enemyHitAudioClip != null)
             AudioSource.PlayClipAtPoint(enemyHitAudioClip, transform.position);
-
+        if (EnemyHitVFX != null) EnemyHitVFX.Play();
         Cleanup();
     }
 
