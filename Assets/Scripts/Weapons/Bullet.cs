@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
         {
             //SFX and other effects when not hitting enemy
             if (!BulletDestroyedSFX.IsNull) RuntimeManager.PlayOneShot(BulletDestroyedSFX, transform.position);
-            Cleanup();
+            //Cleanup();
             return;
         }
         HitEnemy(creep);

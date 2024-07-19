@@ -9,7 +9,7 @@ public class WeaponRangedProjectile : Weapon
 {
     [field: SerializeField, BoxGroup("Weapon")] private Transform _muzzle;
     [field: SerializeField, BoxGroup("Weapon")] private Bullet _bulletPrefab;
-    [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; }
+    [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; } 
     [field: SerializeField, BoxGroup("Weapon")] private float _projectileSpeed = 25f;
     [field: SerializeField, BoxGroup("Weapon")] private float _chargingFactor = 2f;
     [field: SerializeField, BoxGroup("Weapon")] public float Damage { get; protected set; } = 5f;
