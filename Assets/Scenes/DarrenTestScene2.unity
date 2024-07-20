@@ -783,6 +783,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &450594017 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6390130866468992244, guid: 05a01f50f03c5244f8e25433331b2b33,
+    type: 3}
+  m_PrefabInstance: {fileID: 1004643327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &487038899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5334296995772794498, guid: 05a01f50f03c5244f8e25433331b2b33,
@@ -962,6 +968,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 32207907615132144, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: rscList.Array.data[0]
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 433281501991953492, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
@@ -1275,7 +1286,7 @@ PrefabInstance:
     - target: {fileID: 1487705846817097522, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00048828125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1487781309543311346, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
@@ -1592,6 +1603,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1597834704313298950, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: m_Size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597834704313298950, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1766407280751571505, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
@@ -1692,6 +1713,720 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].clean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].clean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].clean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].clean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].waveIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].waveIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].waveIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].waveIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].timeToNextWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].timeToNextWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].timeToNextWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].timeToNextWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].timeToNextWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].perkRscGainOnCleared
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[1].perkRscGainOnCleared
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].perkRscGainOnCleared
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[3].perkRscGainOnCleared
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].perkRscGainOnCleared
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].rscGainOnCleared.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].rscGainOnCleared.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].rscGainOnCleared.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].rscGainOnCleared.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].HP
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].SH
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].rscGainOnCleared.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[1].rscGainOnCleared.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].rscGainOnCleared.Array.data[0]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].delay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].delay
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].delay
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].delay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[0].delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].delay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].speed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].prefab
+      value: 
+      objectReference: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[3].subWaveList.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 114528667568048320, guid: d3320175d3a0e2d41abf4e4121b105ef,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].spacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[1].subWaveList.Array.data[0].spacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[0].spacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].spacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[3].subWaveList.Array.data[0].spacing
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[0].spacing
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].spacing
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].spacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].spawnCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[1].subWaveList.Array.data[0].spawnCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[0].spawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].spawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].spawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].spawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[3].subWaveList.Array.data[0].spawnCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[0].spawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].spawnCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].overrideRscGain
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].rscGain.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[1].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[2].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[3].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[4].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[2].subWaveList.Array.data[5].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[4].subWaveList.Array.data[1].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[5].subWaveList.Array.data[0].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[6].subWaveList.Array.data[0].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[7].subWaveList.Array.data[0].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].rscGain.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404278902207249911, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: waveList.Array.data[8].subWaveList.Array.data[0].rscGain.Array.data[1]
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5433533009339644680, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
@@ -1787,6 +2522,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 82496159}
+    - target: {fileID: 6692832224189426666, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7733387140197557222, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
@@ -1823,8 +2563,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6692832224189426666, guid: 05a01f50f03c5244f8e25433331b2b33, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6390130866468992244, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1961041497}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a01f50f03c5244f8e25433331b2b33, type: 3}
 --- !u!43 &1045042846
@@ -2628,6 +3373,683 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1961041496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961041497}
+  - component: {fileID: 1961041498}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961041497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961041496}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 450594017}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961041498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961041496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09415289fb4ebfd46b7447a62e09bde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endlessMode: 0
+  spawnCDType: 1
+  skippable: 1
+  genWaveOnStart: 1
+  autoStart: 0
+  startTimer: 5
+  pathList:
+  - {fileID: 0}
+  waveList:
+  - waveIdx: 0
+    subWaveList:
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 0
+      spawnCount: 8
+      spacing: 0.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 20
+    - 0
+    perkRscGainOnCleared: 2
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
+        type: 3}
+      delay: 0
+      spawnCount: 10
+      spacing: 0.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 20
+    - 0
+    perkRscGainOnCleared: 2
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 0
+      spawnCount: 2
+      spacing: 0.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+      delay: 1.5
+      spawnCount: 1
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 2
+      spawnCount: 2
+      spacing: 0.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 6
+      spawnCount: 2
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+      delay: 7.5
+      spawnCount: 1
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 8
+      spawnCount: 2
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 30
+    - 0
+    perkRscGainOnCleared: 2
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
+        type: 3}
+      delay: 0
+      spawnCount: 5
+      spacing: 1.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    - 0
+    perkRscGainOnCleared: 2
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 114528667568048320, guid: d3320175d3a0e2d41abf4e4121b105ef,
+        type: 3}
+      delay: 0
+      spawnCount: 2
+      spacing: 8
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      delay: 2
+      spawnCount: 6
+      spacing: 0.5
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffffffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    - 0
+    perkRscGainOnCleared: 2
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 0}
+      delay: 0
+      spawnCount: 1
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: 
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared: []
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 0}
+      delay: 0
+      spawnCount: 1
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: 
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared: []
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 0}
+      delay: 0
+      spawnCount: 1
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: 
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared: []
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  generator:
+    attSubWaveCount:
+      startValue: 2
+      incrementRate: 0.5
+      deviation: 0.5
+      limitMin: 1
+      limitMax: 1
+    attTotalUnitCount:
+      startValue: 6
+      incrementRate: 2
+      deviation: 0.25
+      limitMin: 1
+      limitMax: -1
+    attLifeGainOnCleared:
+      startValue: 0
+      incrementRate: 0
+      deviation: 0
+      limitMin: -1
+      limitMax: -1
+    attRscGainOnCleared:
+    - startValue: 35
+      incrementRate: 2
+      deviation: 0
+      limitMin: -1
+      limitMax: -1
+    - startValue: 0
+      incrementRate: 0
+      deviation: 0
+      limitMin: -1
+      limitMax: -1
+    attPerkRscGainOnCleared:
+      startValue: 1
+      incrementRate: 1
+      deviation: 0
+      limitMin: -1
+      limitMax: -1
+    attAbilityRscGainOnCleared:
+      startValue: 1
+      incrementRate: 1
+      deviation: 0
+      limitMin: -1
+      limitMax: -1
+    waveIntervalMin: 5
+    waveIntervalMax: 5
+    useAllPath: 0
+    limitSubWaveCountToPath: 0
+    similarSubWave: 0
+    genItemList:
+    - unitPrefabID: 0
+      prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      enabled: 1
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.1
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 10
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 1
+      prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
+        type: 3}
+      enabled: 1
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.1
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 2
+      prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+      enabled: 1
+      minWave: 2
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 2
+        incrementRate: 0
+        deviation: 0
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 3
+      prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
+        type: 3}
+      enabled: 1
+      minWave: 3
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.5
+        incrementRate: 0
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 4
+      prefab: {fileID: 114528667568048320, guid: d3320175d3a0e2d41abf4e4121b105ef,
+        type: 3}
+      enabled: 1
+      minWave: 3
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 2
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 5
+      prefab: {fileID: 114049506200566766, guid: d6cd206db468caa4e95412e4a16cabd4,
+        type: 3}
+      enabled: 1
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.05
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+  activeUnitList: []
+  overrideHP:
+    startValue: 1
+    incrementRate: 1
+    deviation: 0
+    limitMin: -1
+    limitMax: -1
+  overrideSH:
+    startValue: 1
+    incrementRate: 1
+    deviation: 0
+    limitMin: -1
+    limitMax: -1
+  overrideSpd:
+    startValue: 1
+    incrementRate: 1
+    deviation: 0
+    limitMin: -1
+    limitMax: -1
+  overrideWaveSpacing: -1
+  overrideType: 1
 --- !u!20 &2031481661 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1725307196198956398, guid: 05a01f50f03c5244f8e25433331b2b33,
