@@ -139,6 +139,8 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 7099228217217645586}
+  - {fileID: 0}
+  - {fileID: 0}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -730,6 +732,21 @@ PrefabInstance:
         type: 3}
       propertyPath: <Radius>k__BackingField
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 852859570131891669, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.041670978
+      objectReference: {fileID: 0}
+    - target: {fileID: 852859570131891669, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.033033133
+      objectReference: {fileID: 0}
+    - target: {fileID: 852859570131891669, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.561
       objectReference: {fileID: 0}
     - target: {fileID: 913755488788806708, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
