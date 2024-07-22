@@ -688,7 +688,7 @@ MonoBehaviour:
     ignoreSource: 0
     stackable: 0
     duration: 3
-    durationRemain: -0.039997704
+    durationRemain: 2.2800007
     effType: 1
     stun: 1
     stats:
