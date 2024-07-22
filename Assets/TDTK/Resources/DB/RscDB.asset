@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: RscDB
   m_EditorClassIdentifier: 
   rscList:
-  - name: Cash
-    icon: {fileID: 21300060, guid: d138993b3dd86764ba142a07cff82937, type: 3}
-    enableCarry: 1
-  - name: Parts
+  - name: Toy Parts
     icon: {fileID: 21300056, guid: d138993b3dd86764ba142a07cff82937, type: 3}
     enableCarry: 1
   copiedFromOldDB: 0
