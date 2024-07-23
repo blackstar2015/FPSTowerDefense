@@ -4,6 +4,7 @@ using UnityEngine;
 using CharacterMovement;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
+using Cinemachine;
 
 public class PlayerControllerFPSTD : PlayerController
 {
@@ -15,6 +16,7 @@ public class PlayerControllerFPSTD : PlayerController
     private bool IsActive;
     private bool _isFiring;
     private GameObject _currentWeapon;
+    [SerializeField] private CinemachineVirtualCamera _camera;
 
     protected override void Awake()
     {
@@ -29,16 +31,17 @@ public class PlayerControllerFPSTD : PlayerController
         if (!weaponRangedProjectile.isActiveAndEnabled) return;
         weaponRangedProjectile.IsCharging = true;
         weaponRangedProjectile.ChargeAttack();
-        
+        _camera.m_Lens.FieldOfView = Mathf.Lerp(90, 60, 100/weaponRangedProjectile.CurrentCharge);
     }
 
     public void OnReleaseAttack(InputValue value)
     {
         if (!weaponRangedProjectile.isActiveAndEnabled) return;
                    
-            weaponRangedProjectile.IsCharging = false;
-            weaponRangedProjectile.CalculateBulletDirection();
-            weaponRangedProjectile.CurrentCharge = 0f;
+        weaponRangedProjectile.IsCharging = false;
+        weaponRangedProjectile.CalculateBulletDirection();
+        weaponRangedProjectile.CurrentCharge = 0f;
+        _camera.m_Lens.FieldOfView = 90;
     }
     public void OnShoot(InputValue value)
     {
