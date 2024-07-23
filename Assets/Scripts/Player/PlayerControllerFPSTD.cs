@@ -10,53 +10,67 @@ public class PlayerControllerFPSTD : PlayerController
     private Vector3 _aimPosition;
 
     [field: Header("Weapons")]
-    [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected Weapon[] Weapons { get; private set; }
+    [field: SerializeField] protected WeaponRangedProjectile weaponRangedProjectile{ get; private set; }
+    [field: SerializeField] protected WeaponRangedHitScan weaponRangedHitScan{ get; private set; }
     private bool IsActive;
+    private bool _isFiring;
+    private GameObject _currentWeapon;
 
     protected override void Awake()
     {
         base.Awake();
-        IsActive = Weapons[0].gameObject.activeSelf;
+        Cursor.lockState = CursorMode;
+        _currentWeapon = weaponRangedProjectile.gameObject;
+        IsActive = _currentWeapon.gameObject.activeSelf;
     }
 
     public  void OnChargeAttack(InputValue value)
     {
-        if (!Weapons[0].isActiveAndEnabled) return;
-        if(Weapons[0].TryGetComponent(out WeaponRangedProjectile projectileWeapon))
-        {
-            projectileWeapon.IsCharging = true;
-            projectileWeapon.ChargeAttack();
-        }
+        if (!weaponRangedProjectile.isActiveAndEnabled) return;
+        weaponRangedProjectile.IsCharging = true;
+        weaponRangedProjectile.ChargeAttack();
+        
     }
 
     public void OnReleaseAttack(InputValue value)
     {
-        if (!Weapons[0].isActiveAndEnabled) return;
-        if (Weapons[0].TryGetComponent(out WeaponRangedProjectile projectileWeapon))
-        {            
-            projectileWeapon.IsCharging = false;
-            projectileWeapon.CalculateBulletDirection();
-            projectileWeapon.CurrentCharge = 0f;
-
-        }
+        if (!weaponRangedProjectile.isActiveAndEnabled) return;
+                   
+            weaponRangedProjectile.IsCharging = false;
+            weaponRangedProjectile.CalculateBulletDirection();
+            weaponRangedProjectile.CurrentCharge = 0f;
     }
     public void OnShoot(InputValue value)
     {
-        if (!Weapons[0].isActiveAndEnabled) return;
-        if (Weapons[0].TryGetComponent(out WeaponRangedHitScan hitScanWeapon))
-        {
-            hitScanWeapon.Fire();
-        }
+        Debug.Log("input");
+        if (!weaponRangedHitScan.isActiveAndEnabled) return;
+        _isFiring = value.isPressed;
+        weaponRangedHitScan.Fire(_isFiring);
     }
-    // call from inspector button
-    private void FindWeapons()
+
+    public void OnSwitchWeapons()
     {
-        Weapons = GetComponentsInChildren<WeaponRangedProjectile>();
+        if (_currentWeapon == weaponRangedProjectile.gameObject)
+        {
+            weaponRangedProjectile.gameObject.SetActive(false);
+            weaponRangedHitScan.gameObject.SetActive(true);
+            _currentWeapon = weaponRangedHitScan.gameObject;
+        }
+        else
+        {
+            weaponRangedHitScan.gameObject.SetActive(false);
+            weaponRangedProjectile.gameObject.SetActive(true);
+            _currentWeapon = weaponRangedProjectile.gameObject;
+        }
     }
 
     public void OnToggleWeapon(InputValue value)
     {
         IsActive = !IsActive;
-        Weapons[0].gameObject.SetActive(IsActive);
+        _currentWeapon.gameObject.SetActive(IsActive);
+    }
+    protected override void Update()
+    {
+        base.Update();
     }
 }

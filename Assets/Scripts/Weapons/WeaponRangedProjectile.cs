@@ -15,13 +15,17 @@ public class WeaponRangedProjectile : Weapon
 
     private float _minCharge = 0f;
     private float _maxCharge = 100f;
+    public float CurrentCharge { get; set; } = 0f;
+    public bool IsCharging { get; set; } = false;
+
+
     public float ChargePercentage => CurrentCharge/_maxCharge;
     
     private float _lastAttackTime;
 
     public void ChargeAttack()
     {
-        if(!enabled) return;
+        //if(!enabled) return;
         StartCoroutine(ChargeWeaponRoutine());
     }
 
@@ -44,8 +48,7 @@ public class WeaponRangedProjectile : Weapon
 
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
 
-        rb.velocity = direction * _projectileSpeed * ChargePercentage;
-        Debug.Log(rb.velocity);
+        rb.velocity = direction * _projectileSpeed + direction * _projectileSpeed * ChargePercentage;
     }
 
     private Rigidbody SpawnProjectile()

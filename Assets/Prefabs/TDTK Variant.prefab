@@ -4945,7 +4945,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1121
+  m_VersionIndex: 1124
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5507,7 +5507,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 851
+  m_VersionIndex: 854
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5862,7 +5862,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1565
+  m_VersionIndex: 1568
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6547,7 +6547,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 585
+  m_VersionIndex: 588
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6950,7 +6950,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1350
+  m_VersionIndex: 1353
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7872,7 +7872,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1834
+  m_VersionIndex: 1837
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18033,7 +18033,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 931
+  m_VersionIndex: 934
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18458,7 +18458,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 953
+  m_VersionIndex: 956
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -19748,7 +19748,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1158
+  m_VersionIndex: 1161
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -25253,7 +25253,7 @@ PrefabInstance:
     - target: {fileID: 1777305644896789110, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: _raiseEvent
-      value: 32
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 2019817397695899001, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
@@ -25320,10 +25320,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Press G to spawn next wave
 
-        Right-click to toggle gun
+        Press H to toggle crosshair
 
-        Press
-        H to toggle crosshair'
+        Right-click
+        to toggle Weapon
+
+        Press E to switch weapons'
       objectReference: {fileID: 0}
     - target: {fileID: 3064468971087983457, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
@@ -26099,6 +26101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768696077307218345, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9999924
       objectReference: {fileID: 0}
     - target: {fileID: 5768727543307502791, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}

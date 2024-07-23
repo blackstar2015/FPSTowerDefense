@@ -18,10 +18,9 @@ public class Weapon : MonoBehaviour
     [field: SerializeField, BoxGroup("SFX")] public EventReference FireBulletSFX { get; protected set; }
     [field: SerializeField, BoxGroup("Animation")] public Animator Animator { get; protected set; }
     [field: SerializeField, BoxGroup("Animation")] public string AnimationTrigger { get; protected set; }
-
     protected GameObject ChargingCrosshair;
-    public bool IsCharging { get; set; } = false;
-    public float CurrentCharge { get; set; } = 0f;
+
+
 
 
     public void SetChargeCrosshair(GameObject crosshair)
