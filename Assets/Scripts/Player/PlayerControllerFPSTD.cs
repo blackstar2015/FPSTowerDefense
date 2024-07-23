@@ -10,33 +10,44 @@ public class PlayerControllerFPSTD : PlayerController
     private Vector3 _aimPosition;
 
     [field: Header("Weapons")]
-    [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected WeaponRangedProjectile[] Weapons { get; private set; }
+    [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected Weapon[] Weapons { get; private set; }
     private bool IsActive;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         IsActive = Weapons[0].gameObject.activeSelf;
     }
 
     public  void OnChargeAttack(InputValue value)
     {
-        // assume weapon 0 is shotgun
         if (!Weapons[0].isActiveAndEnabled) return;
-        WeaponRangedProjectile currentWeapon = Weapons[0];
-        currentWeapon.IsCharging = true;
-        currentWeapon.ChargeAttack();
-        //currentWeapon.TryAttack(_aimPosition, gameObject);
+        if(Weapons[0].TryGetComponent(out WeaponRangedProjectile projectileWeapon))
+        {
+            projectileWeapon.IsCharging = true;
+            projectileWeapon.ChargeAttack();
+        }
     }
 
     public void OnReleaseAttack(InputValue value)
     {
         if (!Weapons[0].isActiveAndEnabled) return;
-        WeaponRangedProjectile currentWeapon = Weapons[0];
-        currentWeapon.IsCharging = false;
-        currentWeapon.CalculateBulletDirection();
-        currentWeapon.CurrentCharge = 0f;
-    }
+        if (Weapons[0].TryGetComponent(out WeaponRangedProjectile projectileWeapon))
+        {            
+            projectileWeapon.IsCharging = false;
+            projectileWeapon.CalculateBulletDirection();
+            projectileWeapon.CurrentCharge = 0f;
 
+        }
+    }
+    public void OnShoot(InputValue value)
+    {
+        if (!Weapons[0].isActiveAndEnabled) return;
+        if (Weapons[0].TryGetComponent(out WeaponRangedHitScan hitScanWeapon))
+        {
+            hitScanWeapon.Fire();
+        }
+    }
     // call from inspector button
     private void FindWeapons()
     {

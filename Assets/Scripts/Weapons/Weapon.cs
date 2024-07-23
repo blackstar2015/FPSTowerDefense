@@ -12,17 +12,29 @@ using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
-    //[field: SerializeField, BoxGroup("SFX")] public EventReference AttackSFX { get; protected set; }
+    [field: SerializeField, BoxGroup("Weapon")] protected Transform _muzzle;
+    [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; }
+    [field: SerializeField, BoxGroup("Weapon")] public float Range { get; protected set; } = 5f;
+    [field: SerializeField, BoxGroup("SFX")] public EventReference FireBulletSFX { get; protected set; }
+    [field: SerializeField, BoxGroup("Animation")] public Animator Animator { get; protected set; }
+    [field: SerializeField, BoxGroup("Animation")] public string AnimationTrigger { get; protected set; }
 
-    // TODO: sound FX
-    // TODO: VFX
-    // TODO: animation
+    protected GameObject ChargingCrosshair;
+    public bool IsCharging { get; set; } = false;
+    public float CurrentCharge { get; set; } = 0f;
 
 
-   
+    public void SetChargeCrosshair(GameObject crosshair)
+    {
+        ChargingCrosshair = crosshair;
+    }
 
     protected virtual void Update()
     {
-       
+        transform.rotation = Camera.main.transform.rotation;
+        WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);
+        Functions.SetMouse(this.gameObject.activeSelf);    
     }
+
+    public virtual void CalculateBulletDirection() { }
 }
