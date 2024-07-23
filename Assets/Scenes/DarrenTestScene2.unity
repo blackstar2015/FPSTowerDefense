@@ -1678,36 +1678,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1045042846}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.data[3]
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.data[6]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016802320808105773, guid: 05a01f50f03c5244f8e25433331b2b33,
-        type: 3}
-      propertyPath: unavailablePrefabIDList.Array.data[7]
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4165528691754261920, guid: 05a01f50f03c5244f8e25433331b2b33,
         type: 3}
       propertyPath: m_Mesh
