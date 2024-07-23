@@ -231,7 +231,7 @@ MonoBehaviour:
   attacksPlayer: 0
   prefabID: 1
   instanceID: -1
-  unitName: Fruit Launcher Tower
+  unitName: P_Fruit Launcher Tower
   icon: {fileID: 21300000, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
   desp: Launches Fruits like watermelons at the enemies
   canBeAttacked: 1
@@ -546,7 +546,7 @@ MonoBehaviour:
   nodeID: 0
   unlockUpgradeViaPerk: 0
   upgradeTowerList:
-  - {fileID: 114541810645508154, guid: 9296eb95e6ad99c4aaa9046a333c5792, type: 3}
+  - {fileID: 3087236025576135370, guid: 628c423abb975cf46a1889b6c82329c1, type: 3}
 --- !u!135 &135533310359063602
 SphereCollider:
   m_ObjectHideFlags: 0

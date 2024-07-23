@@ -204,9 +204,9 @@ MonoBehaviour:
     dmgReduc: 0
     critReduc: 0
     hit: 1
-    damageMin: 1
-    damageMax: 3
-    attackRange: 2.5
+    damageMin: 0.25
+    damageMax: 1
+    attackRange: 1.5
     aoeRange: 0
     cooldown: 1.5
     critChance: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   lifeGainedOnDestroyedChance: 0
   lifeGainedOnDestroyed: 0
   expGainOnDestroyed: 0
-  rscGainOnDestroyed: 0200000000000000
+  rscGainOnDestroyed: 02000000
   lifeLostOnDestination: 1
   effectSpawn:
     obj: {fileID: 0}
