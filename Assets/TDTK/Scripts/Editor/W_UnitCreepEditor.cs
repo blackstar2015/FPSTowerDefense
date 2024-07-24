@@ -271,7 +271,10 @@ namespace TDTK {
 			if(!foldBasicSetting) return startY;
 			
 			startX+=12;
-			
+
+			TDE.Label(startX, startY += spaceY, width, height, "Player attack radius:", "");			
+			unit.statsList[0].attackRange = EditorGUI.DelayedFloatField(new Rect(startX + spaceX, startY, widthS, height), unit.statsList[0].attackRange);
+
 			//~ TDE.Label(startX, startY+=spaceY, width, height, "Flying:", "Check to set the creep as flying unit");
 			//~ unit.flying=EditorGUI.Toggle(new Rect(startX+spaceX, startY, widthS, height), unit.flying);
 			//~ TDE.Label(startX, startY+=spaceY, width, height, "Turret:", "");
@@ -282,7 +285,7 @@ namespace TDTK {
 			//~ unit.isSupport=EditorGUI.Toggle(new Rect(startX+spaceX, startY, widthS, height), unit.isSupport);
 			//~ TDE.Label(startX, startY+=spaceY, width, height, "Spawner:", "");
 			//~ unit.isSpawner=EditorGUI.Toggle(new Rect(startX+spaceX, startY, widthS, height), unit.isSpawner);
-			
+
 			TDE.Label(startX, startY+=spaceY, width, height, "Can Be Attacked:", "Check if the unit is immuned to all form of attack");
 			unit.canBeAttacked=EditorGUI.Toggle(new Rect(startX+spaceX, startY, widthS, height), unit.canBeAttacked);
 			
