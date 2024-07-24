@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using FMODUnity;
+using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -94,11 +96,14 @@ namespace TDTK{
 		public AudioClip soundSpawn;
 		public AudioClip soundDestroyed;
 		public AudioClip soundDestination;
-		
-		
-		//for override default value, called from SpawnManager, the cached value are the default value for prefab, 
-		//so that the prefab value is used instead of any override value when the instance is recycled by ObjectPoolManager
-		private float cachedHP=-1;
+
+
+		[SerializeField, FoldoutGroup("SFX")] public EventReference SpawnSFX { get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference DestroyedSFX { get; protected set; }
+		[SerializeField, FoldoutGroup("SFX")] public EventReference DestinationSFX { get; protected set; }
+        //for override default value, called from SpawnManager, the cached value are the default value for prefab, 
+        //so that the prefab value is used instead of any override value when the instance is recycled by ObjectPoolManager
+        private float cachedHP=-1;
 		private float cachedSH=-1;
 		private float cachedSpd=-1;
 		private List<int> cachedRscOnDestroy=new List<int>();

@@ -13,6 +13,10 @@ public class Bullet : MonoBehaviour
     public PlayerControllerFPSTD Player {  get; set; }
     [field: SerializeField] public float lifetime { get; protected set; } = 3f;
     [SerializeField] private bool UseGravity;
+    [field: SerializeField, BoxGroup("SFX")] public EventReference BulletDestroyedSFX { get; protected set; }
+    [field: SerializeField, BoxGroup("SFX")] public EventReference EnemyHitSFX { get; protected set; }
+
+    [SerializeField] AudioClip enemyHitAudioClip;
 
     private void Awake()
     {
@@ -32,7 +36,8 @@ public class Bullet : MonoBehaviour
         if (!other.gameObject.TryGetComponent(out UnitCreep creep))
         {
             //SFX and other effects when not hitting enemy
-            Cleanup();
+            if (!BulletDestroyedSFX.IsNull) RuntimeManager.PlayOneShot(BulletDestroyedSFX, transform.position);
+            //Cleanup();
             return;
         }
         HitEnemy(creep);
@@ -42,12 +47,18 @@ public class Bullet : MonoBehaviour
     {
         //SFX and other effects when hitting enemy
         Debug.Log($"Hit enemy {creep.gameObject.name}");
+        if (!EnemyHitSFX.IsNull) RuntimeManager.PlayOneShot(EnemyHitSFX, transform.position);
+
+        creep.ApplyEffect(Effect_DB.GetPrefab(8)); // 8 is 3-second stun. Effects are defined in Resources/DB/EffectDB. Really needs a better system.  --djoe 7/2024
+        
+        if (enemyHitAudioClip != null)
+            AudioSource.PlayClipAtPoint(enemyHitAudioClip, transform.position);
+
         Cleanup();
     }
 
     private void Cleanup()
     {
-        //SFX and other effects when bullet is destroyed
         Destroy(this.gameObject);
     }
     private void Update()

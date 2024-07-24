@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{36ef4422-3f78-47eb-b096-e3b31ae846aa}">
+		<property name="name">
+			<value>slingshot_charging_factor</value>
+		</property>
+		<relationship name="folder">
+			<destination>{744003dd-467d-4c89-aae1-4d168d12e7f2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{70371161-9b53-4aed-b5ca-14ca61fd1369}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{70371161-9b53-4aed-b5ca-14ca61fd1369}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

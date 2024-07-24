@@ -148,6 +148,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fb3c90198ec644fb137d36a9fdc0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   <lifetime>k__BackingField: 5
   UseGravity: 1
+  <BulletDestroyedSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <EnemyHitSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enemyHitAudioClip: {fileID: 8300000, guid: e546b59457cc46b43837832300aa1fe5, type: 3}

@@ -11,7 +11,12 @@ public class PlayerControllerFPSTD : PlayerController
 
     [field: Header("Weapons")]
     [field: SerializeField, InlineButton(nameof(FindWeapons), Label = "Find")] protected WeaponRangedProjectile[] Weapons { get; private set; }
-    private bool IsActive = true;
+    private bool IsActive;
+
+    private void Awake()
+    {
+        IsActive = Weapons[0].gameObject.activeSelf;
+    }
 
     public  void OnChargeAttack(InputValue value)
     {
