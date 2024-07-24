@@ -7,25 +7,31 @@ using UnityEngine.InputSystem;
 
 public class WeaponRangedHitScan : Weapon
 {
-    [SerializeField]private LayerMask _creepLayer;
-    public bool IsCharging { get; set; } = false;
-    public float CurrentCharge { get; set; } = 0f;
-    [SerializeField]private bool _isFiring = false;
     [SerializeField] private GameObject _waterSprayVFXGO;
+    [SerializeField] private float _shotTime = 2f;
+    [SerializeField] private float _rechargeRate = 5f;
+    [SerializeField] private bool _isFiring = false;
+    [SerializeField] private bool _isDoneFiring;
+    private float _timeSinceStartedShooting = 0f;
+
     public void Fire(bool isPressed)
     {
-        _isFiring = isPressed;
+        if (isPressed && !_isDoneFiring)
+        {
+            _isFiring = true;
+        }
+        else _isFiring = false;
         StartCoroutine(FireWeaponRoutine());
-        //CalculateBulletDirection();
     }
 
     private IEnumerator FireWeaponRoutine()
-    {
-        while (_isFiring)
+    {        
+        while (_isFiring && _isDoneFiring == false)
         {
             CalculateBulletDirection();
             yield return null;
         }
+        _waterSprayVFXGO.SetActive(false);
     }
 
     public override void CalculateBulletDirection()
@@ -40,7 +46,8 @@ public class WeaponRangedHitScan : Weapon
 
         _waterSprayVFXGO.transform.position = _muzzle.transform.position;
         _waterSprayVFXGO.transform.rotation = Quaternion.LookRotation(direction);
-
+        Debug.DrawRay(_muzzle.transform.position, direction, Color.red);
+        _waterSprayVFXGO.SetActive(_isFiring);
         if (!Physics.Raycast(_muzzle.transform.position, direction, out RaycastHit hitInfo, Range)) return;
          if (hitInfo.collider.gameObject.TryGetComponent(out UnitCreep creep))
          {
@@ -50,7 +57,9 @@ public class WeaponRangedHitScan : Weapon
     protected override void Update()
     {
         base.Update();
-        _waterSprayVFXGO.SetActive(_isFiring);
-        //ChargingCrosshair.transform.localScale = Vector3.one;
+        _isDoneFiring = _timeSinceStartedShooting >= _shotTime;
+        if(_isFiring) _timeSinceStartedShooting += Time.deltaTime;
+        else if(!_isFiring || _isDoneFiring) _timeSinceStartedShooting -= Time.deltaTime * _rechargeRate;
+        _timeSinceStartedShooting = Mathf.Clamp(_timeSinceStartedShooting, 0f, _shotTime);
     }
 }

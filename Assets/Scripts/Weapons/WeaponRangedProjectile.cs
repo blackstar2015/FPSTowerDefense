@@ -1,3 +1,4 @@
+using Cinemachine;
 using FMODUnity;
 using GameEvents;
 using Sirenix.OdinInspector;
@@ -12,7 +13,9 @@ public class WeaponRangedProjectile : Weapon
     [field: SerializeField, BoxGroup("Weapon")] private float _chargingFactor = 2f;    
     [field: SerializeField, BoxGroup("Weapon")] public float Cooldown { get; protected set; } = 0.5f;
     [field: SerializeField, BoxGroup("SFX")] public EventReference ChargeAttackSFX { get; protected set; }
-
+    [SerializeField, BoxGroup("Camera")] private float _minFOV = 30f;
+    [SerializeField, BoxGroup("Camera")] private float _maxFOV = 60f;
+    [SerializeField, BoxGroup("Camera")] private CinemachineVirtualCamera _camera;
     private float _minCharge = 0f;
     private float _maxCharge = 100f;
     public float CurrentCharge { get; set; } = 0f;
@@ -57,6 +60,7 @@ public class WeaponRangedProjectile : Weapon
         Bullet projectile = Instantiate(_bulletPrefab, _muzzle.position, Quaternion.identity);
         projectile.Player = this.GetComponentInParent<PlayerControllerFPSTD>();
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        _camera.m_Lens.FieldOfView = _maxFOV;
         return rb;
     }
 
@@ -67,6 +71,7 @@ public class WeaponRangedProjectile : Weapon
             if (!ChargeAttackSFX.IsNull) RuntimeManager.PlayOneShot(ChargeAttackSFX, transform.position);
             CurrentCharge += _chargingFactor * Time.deltaTime;
             CurrentCharge = Mathf.Clamp(CurrentCharge, _minCharge, _maxCharge);
+            _camera.m_Lens.FieldOfView = Mathf.Lerp(_maxFOV, _minFOV, CurrentCharge / 100);
             yield return null;
         }
 

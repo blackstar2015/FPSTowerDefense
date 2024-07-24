@@ -13,10 +13,10 @@ public class PlayerControllerFPSTD : PlayerController
     [field: Header("Weapons")]
     [field: SerializeField] protected WeaponRangedProjectile weaponRangedProjectile{ get; private set; }
     [field: SerializeField] protected WeaponRangedHitScan weaponRangedHitScan{ get; private set; }
+    
     private bool IsActive;
     private bool _isFiring;
     private GameObject _currentWeapon;
-    [SerializeField] private CinemachineVirtualCamera _camera;
 
     protected override void Awake()
     {
@@ -31,7 +31,6 @@ public class PlayerControllerFPSTD : PlayerController
         if (!weaponRangedProjectile.isActiveAndEnabled) return;
         weaponRangedProjectile.IsCharging = true;
         weaponRangedProjectile.ChargeAttack();
-        _camera.m_Lens.FieldOfView = Mathf.Lerp(90, 60, 100/weaponRangedProjectile.CurrentCharge);
     }
 
     public void OnReleaseAttack(InputValue value)
@@ -41,7 +40,6 @@ public class PlayerControllerFPSTD : PlayerController
         weaponRangedProjectile.IsCharging = false;
         weaponRangedProjectile.CalculateBulletDirection();
         weaponRangedProjectile.CurrentCharge = 0f;
-        _camera.m_Lens.FieldOfView = 90;
     }
     public void OnShoot(InputValue value)
     {
