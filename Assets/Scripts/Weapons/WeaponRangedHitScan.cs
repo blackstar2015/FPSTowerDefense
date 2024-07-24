@@ -64,6 +64,6 @@ public class WeaponRangedHitScan : Weapon
         if(_isFiring) _timeSinceStartedShooting += Time.deltaTime;
         else if(!_isFiring || _isDoneFiring) _timeSinceStartedShooting -= Time.deltaTime * _rechargeRate;
         _timeSinceStartedShooting = Mathf.Clamp(_timeSinceStartedShooting, 0f, _shotTime);
-        _waterLevelPercentageAsset.Invoke(WaterLevelsPercentage);
+        _waterLevelPercentageAsset.Invoke(1 - WaterLevelsPercentage);
     }
 }
