@@ -238,6 +238,8 @@ namespace TDTK{
 					UIBuildButton.Show(sInfo);
 					SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
 				}
+				else
+					GameControl.InvalidAction("Invalid Build Point");
 			}
 			
 			// if we clicked but we're not buliding, meaning we just selected a tower to build? -- djoe
