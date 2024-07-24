@@ -23,7 +23,7 @@ public class WeaponRangedProjectile : Weapon
     [field: SerializeField, BoxGroup("Animation")] public string AnimationTrigger { get; protected set; }
 
     private GameObject ChargingCrosshair;
-    private float _minCharge = 0f;
+    [SerializeField] private float _minCharge = 0f;
     private float _maxCharge = 100f;
     public float CurrentCharge { get; set; } = 0f;
     public float ChargePercentage => CurrentCharge/_maxCharge;
