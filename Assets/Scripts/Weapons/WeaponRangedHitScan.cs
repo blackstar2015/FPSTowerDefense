@@ -11,7 +11,7 @@ public class WeaponRangedHitScan : Weapon
     public bool IsCharging { get; set; } = false;
     public float CurrentCharge { get; set; } = 0f;
     [SerializeField]private bool _isFiring = false;
-
+    [SerializeField] private GameObject _waterSprayVFXGO;
     public void Fire(bool isPressed)
     {
         _isFiring = isPressed;
@@ -44,10 +44,10 @@ public class WeaponRangedHitScan : Weapon
         }
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
         
-        Debug.DrawRay(_muzzle.transform.position, direction * Range, Color.red, .5f);
+        //Debug.DrawRay(_muzzle.transform.position, direction * Range, Color.red, .5f);
         if (Physics.Raycast(_muzzle.transform.position, direction, out RaycastHit hitInfo, Range))
         {
-            Debug.Log(hitInfo.transform.name);
+            //Debug.Log(hitInfo.transform.name);
             if (hitInfo.collider.gameObject.TryGetComponent(out UnitCreep creep))
             {
                 creep.ApplyEffect(Effect_DB.GetPrefab(5)); //5 is the slow down effect
@@ -57,6 +57,7 @@ public class WeaponRangedHitScan : Weapon
     protected override void Update()
     {
         base.Update();
+        _waterSprayVFXGO.SetActive(_isFiring);
         //ChargingCrosshair.transform.localScale = Vector3.one;
     }
 }
