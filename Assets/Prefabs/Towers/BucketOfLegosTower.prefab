@@ -169,8 +169,8 @@ MonoBehaviour:
   unitName: Bucket of Building Blocks
   icon: {fileID: 21300006, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
   desp: 'Tosses building blocks around itself. Warning: Stepping on building blocks
-    without foot protection is not recommended and may result in dramatically hindered
-    travel speed due to acute foot pain followed by impolite language.'
+    without foot protection may result in dramatically hindered travel speed due
+    to acute foot pain followed by impolite language.'
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
@@ -220,7 +220,7 @@ MonoBehaviour:
     hit_AOE: 1
     damageMin_AOE: 0
     damageMax_AOE: 0.05
-    attackRange_AOE: 2.5
+    attackRange_AOE: 1
     cooldown_AOE: 0.25
     critChance_AOE: 0
     critMultiplier_AOE: 0
