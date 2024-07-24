@@ -109,7 +109,7 @@ MonoBehaviour:
     ignoreSource: 0
     stackable: 0
     duration: 5
-    durationRemain: 1
+    durationRemain: 0.5000043
     effType: 1
     stun: 0
     stats:
@@ -174,11 +174,10 @@ MonoBehaviour:
       - 1
       - 1
     hitVisualEffect:
-      obj: {fileID: 0}
+      obj: {fileID: 1283697688278706, guid: 5ff509818bdf57f41b72b8aefcf6151e, type: 3}
       autoDestroy: 1
       duration: 1.5
-    activeVisualEffect: {fileID: 4441788593414716, guid: 5ff509818bdf57f41b72b8aefcf6151e,
-      type: 3}
+    activeVisualEffect: {fileID: 0}
   - prefabID: 1
     instanceID: -1
     icon: {fileID: 21300052, guid: d138993b3dd86764ba142a07cff82937, type: 3}

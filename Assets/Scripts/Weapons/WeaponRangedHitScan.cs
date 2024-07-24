@@ -32,27 +32,20 @@ public class WeaponRangedHitScan : Weapon
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
-        Vector3 targetPoint;
-        
-        if (Physics.Raycast(ray, out hit))
-        {
-            targetPoint = hit.point;
-        }
-        else
-        {
-            targetPoint = ray.GetPoint(Range);
-        }
+        Vector3 targetPoint;        
+        if (Physics.Raycast(ray, out hit))  targetPoint = hit.point;
+        else targetPoint = ray.GetPoint(Range);
+
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
-        
-        //Debug.DrawRay(_muzzle.transform.position, direction * Range, Color.red, .5f);
-        if (Physics.Raycast(_muzzle.transform.position, direction, out RaycastHit hitInfo, Range))
-        {
-            //Debug.Log(hitInfo.transform.name);
-            if (hitInfo.collider.gameObject.TryGetComponent(out UnitCreep creep))
-            {
-                creep.ApplyEffect(Effect_DB.GetPrefab(5)); //5 is the slow down effect
-            }
-        }
+
+        _waterSprayVFXGO.transform.position = _muzzle.transform.position;
+        _waterSprayVFXGO.transform.rotation = Quaternion.LookRotation(direction);
+
+        if (!Physics.Raycast(_muzzle.transform.position, direction, out RaycastHit hitInfo, Range)) return;
+         if (hitInfo.collider.gameObject.TryGetComponent(out UnitCreep creep))
+         {
+             creep.ApplyEffect(Effect_DB.GetPrefab(5));          //5 is the slow down effect
+         }
     }
     protected override void Update()
     {

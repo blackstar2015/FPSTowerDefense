@@ -45,7 +45,6 @@ public class PlayerControllerFPSTD : PlayerController
     }
     public void OnShoot(InputValue value)
     {
-        Debug.Log("input");
         if (!weaponRangedHitScan.isActiveAndEnabled) return;
         _isFiring = value.isPressed;
         weaponRangedHitScan.Fire(_isFiring);

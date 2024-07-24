@@ -2090,7 +2090,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.TArcCircle, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"circle":{"transform":{"position":{"x":0.0,"y":0.0,"z":0.0},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}},"radius":1.0},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"circle":{"transform":{"position":{"x":9.112955012824387e-8,"y":-0.0000017576894606463612,"z":1.0166996717453004},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":0.009999999776482582,"y":0.009999999776482582,"z":0.009999999776482582}},"radius":0.10000000149011612},"arc":6.28000020980835}'
     m_Space: 0
   m_Property:
     name: arcCircle
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614633}
   - {fileID: 8926484042661614637}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614626}
   m_MasterData:
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614639}
   - {fileID: 8926484042661614640}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614626}
   m_MasterData:
@@ -2718,7 +2718,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614648}
       inputSlot: {fileID: 8926484042661614641}
-    position: {x: 747, y: 724}
+    position: {x: 747, y: 723}
     expandedSlots: []
     expanded: 0
 --- !u!114 &8926484042661614648
@@ -3440,7 +3440,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: True
+      m_SerializableObject: False
     m_Space: 2147483647
   m_Property:
     name: _vfx_enabled
