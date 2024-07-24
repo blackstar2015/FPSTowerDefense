@@ -1,3 +1,4 @@
+using Cinemachine;
 using FMODUnity;
 using GameEvents;
 using Sirenix.OdinInspector;
@@ -7,36 +8,31 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class WeaponRangedProjectile : Weapon
 {
-    [field: SerializeField, BoxGroup("Weapon")] private Transform _muzzle;
     [field: SerializeField, BoxGroup("Weapon")] private Bullet _bulletPrefab;
-    [field: SerializeField, BoxGroup("Weapon")] public BoolEventAsset WeaponEnabledEvent { get; protected set; } 
     [field: SerializeField, BoxGroup("Weapon")] private float _projectileSpeed = 25f;
-    [field: SerializeField, BoxGroup("Weapon")] private float _chargingFactor = 2f;
-    [field: SerializeField, BoxGroup("Weapon")] public float Damage { get; protected set; } = 5f;
-    [field: SerializeField, BoxGroup("Weapon")] public float Range { get; protected set; } = 5f;
+    [field: SerializeField, BoxGroup("Weapon")] private float _chargingFactor = 2f;    
     [field: SerializeField, BoxGroup("Weapon")] public float Cooldown { get; protected set; } = 0.5f;
-
     [field: SerializeField, BoxGroup("SFX")] public EventReference ChargeAttackSFX { get; protected set; }
-    [field: SerializeField, BoxGroup("SFX")] public EventReference FireBulletSFX { get; protected set; }
-
-    [field: SerializeField, BoxGroup("Animation")] public Animator Animator { get; protected set; }
-    [field: SerializeField, BoxGroup("Animation")] public string AnimationTrigger { get; protected set; }
-
-    private GameObject ChargingCrosshair;
-    [SerializeField] private float _minCharge = 0f;
+    [SerializeField, BoxGroup("Camera")] private float _minFOV = 30f;
+    [SerializeField, BoxGroup("Camera")] private float _maxFOV = 60f;
+    [SerializeField, BoxGroup("Camera")] private CinemachineVirtualCamera _camera;
+    private float _minCharge = 0f;
     private float _maxCharge = 100f;
     public float CurrentCharge { get; set; } = 0f;
-    public float ChargePercentage => CurrentCharge/_maxCharge;
     public bool IsCharging { get; set; } = false;
 
 
+    public float ChargePercentage => CurrentCharge/_maxCharge;
+    
     private float _lastAttackTime;
+
     public void ChargeAttack()
     {
+        //if(!enabled) return;
         StartCoroutine(ChargeWeaponRoutine());
     }
 
-    public void CalculateBulletDirection()
+    public override void CalculateBulletDirection()
     {
         Rigidbody rb = SpawnProjectile();
 
@@ -55,8 +51,7 @@ public class WeaponRangedProjectile : Weapon
 
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
 
-        rb.velocity = direction * _projectileSpeed * ChargePercentage;
-        Debug.Log(rb.velocity);
+        rb.velocity = direction * _projectileSpeed + direction * _projectileSpeed * ChargePercentage;
     }
 
     private Rigidbody SpawnProjectile()
@@ -65,6 +60,7 @@ public class WeaponRangedProjectile : Weapon
         Bullet projectile = Instantiate(_bulletPrefab, _muzzle.position, Quaternion.identity);
         projectile.Player = this.GetComponentInParent<PlayerControllerFPSTD>();
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        _camera.m_Lens.FieldOfView = _maxFOV;
         return rb;
     }
 
@@ -75,21 +71,17 @@ public class WeaponRangedProjectile : Weapon
             if (!ChargeAttackSFX.IsNull) RuntimeManager.PlayOneShot(ChargeAttackSFX, transform.position);
             CurrentCharge += _chargingFactor * Time.deltaTime;
             CurrentCharge = Mathf.Clamp(CurrentCharge, _minCharge, _maxCharge);
+            _camera.m_Lens.FieldOfView = Mathf.Lerp(_maxFOV, _minFOV, CurrentCharge / 100);
             yield return null;
         }
 
     }
 
-    public void SetChargeCrosshair(GameObject crosshair)
-    {
-        ChargingCrosshair = crosshair;
-    }
+    
 
     protected override void Update()
     {
-        transform.rotation = Camera.main.transform.rotation;
-        WeaponEnabledEvent.Invoke(!this.gameObject.activeSelf);
-        Functions.SetMouse(this.gameObject.activeSelf);
+        base.Update();
         ChargingCrosshair.transform.localScale = Vector3.one * ChargePercentage;
     }
 }
