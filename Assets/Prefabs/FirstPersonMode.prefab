@@ -1310,6 +1310,18 @@ PrefabInstance:
       objectReference: {fileID: 2744616252152189250}
     - target: {fileID: 7061935359971371776, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
+      propertyPath: _hitScanEnabledEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fcd13fbcd6656a4b9b111576b425c90,
+        type: 2}
+    - target: {fileID: 7061935359971371776, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: _ProjectileEnabledEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 9878a9797824a7047a42ff9bb2ba9085,
+        type: 2}
+    - target: {fileID: 7061935359971371776, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
       propertyPath: <weaponRangedHitScan>k__BackingField
       value: 
       objectReference: {fileID: 2071040125915475626}

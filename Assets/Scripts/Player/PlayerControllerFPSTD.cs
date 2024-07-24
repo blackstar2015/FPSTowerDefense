@@ -5,6 +5,7 @@ using CharacterMovement;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
 using Cinemachine;
+using GameEvents;
 
 public class PlayerControllerFPSTD : PlayerController
 {
@@ -13,7 +14,11 @@ public class PlayerControllerFPSTD : PlayerController
     [field: Header("Weapons")]
     [field: SerializeField] protected WeaponRangedProjectile weaponRangedProjectile{ get; private set; }
     [field: SerializeField] protected WeaponRangedHitScan weaponRangedHitScan{ get; private set; }
-    
+
+    [SerializeField, FoldoutGroup("Events")] private BoolEventAsset _hitScanEnabledEvent;
+    [SerializeField, FoldoutGroup("Events")] private BoolEventAsset _ProjectileEnabledEvent;
+
+
     private bool IsActive;
     private bool _isFiring;
     private GameObject _currentWeapon;
@@ -72,5 +77,7 @@ public class PlayerControllerFPSTD : PlayerController
     protected override void Update()
     {
         base.Update();
+        _hitScanEnabledEvent.Invoke(weaponRangedHitScan.gameObject.activeSelf);
+        _ProjectileEnabledEvent.Invoke(weaponRangedProjectile.gameObject.activeSelf);
     }
 }

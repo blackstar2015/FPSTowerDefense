@@ -207,8 +207,14 @@ namespace TDTK{
 		#region piemenu
 		void Update()
 		{
-			//building using button press
-			for (int i = (int)KeyCode.Alpha0; i < (int)KeyCode.Alpha9; ++i)
+            int pointerID = Input.touchCount == 0 ? -1 : 0;
+
+            if (Input.GetMouseButtonDown(0) && !UI.IsCursorOnUI(pointerID))
+            {
+				instance._Hide(true);
+            }
+            //building using button press
+            for (int i = (int)KeyCode.Alpha0; i < (int)KeyCode.Alpha9; ++i)
             {
                 if (Input.GetKeyDown((KeyCode)i))
                 {

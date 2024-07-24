@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4b1e5deed4a6cb4ea2212e6a22c6d59, type: 3}
-  m_Name: GameOverEvent
+  m_Name: HitScanEnabledEvent
   m_EditorClassIdentifier: 
-  _log: 0
+  _log: 1
   _currentValue: 1
   OnInvoked:
     m_PersistentCalls:
