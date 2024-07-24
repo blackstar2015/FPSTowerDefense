@@ -619,10 +619,9 @@ MonoBehaviour:
     groupID: 0
     hideInInspector: 0
     autoUnlockOnLevel: -1
-    autoUnlockOnWave: 3
+    autoUnlockOnWave: 0
     cost: 0
     costRsc:
-    - 0
     - 0
     minLevel: 0
     minWave: 3
@@ -980,7 +979,6 @@ MonoBehaviour:
     cost: 1
     costRsc:
     - 0
-    - 0
     minLevel: 0
     minWave: 0
     minPerkCount: 0
@@ -1021,7 +1019,6 @@ MonoBehaviour:
         sellDuration: 0
         expToNextUpgrade: 10
         cost:
-        - 0
         - 0
         sellValue: []
         hp: 0
@@ -1072,7 +1069,6 @@ MonoBehaviour:
         effectOnHitIDList_Support: 
         cooldown_Rsc: 0
         rscGain:
-        - 0
         - 0
       hitVisualEffect:
         obj: {fileID: 0}
