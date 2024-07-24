@@ -1132,6 +1132,8 @@ MonoBehaviour:
   _rechargeRate: 5
   _isFiring: 0
   _isDoneFiring: 0
+  _waterLevelPercentageAsset: {fileID: 11400000, guid: 5e4690921f627b949a5d344be3c0666e,
+    type: 2}
 --- !u!4 &9167879981569757033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4900187679885519741, guid: 70aa5d4fb8e4dbb4ebb58d715255961d,

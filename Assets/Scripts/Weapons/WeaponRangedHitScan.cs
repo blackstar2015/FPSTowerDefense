@@ -1,3 +1,4 @@
+using GameEvents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,9 @@ public class WeaponRangedHitScan : Weapon
     [SerializeField] private float _rechargeRate = 5f;
     [SerializeField] private bool _isFiring = false;
     [SerializeField] private bool _isDoneFiring;
+    [SerializeField] private FloatEventAsset _waterLevelPercentageAsset;
     private float _timeSinceStartedShooting = 0f;
+    public float WaterLevelsPercentage => _timeSinceStartedShooting / _shotTime;
 
     public void Fire(bool isPressed)
     {
@@ -61,5 +64,6 @@ public class WeaponRangedHitScan : Weapon
         if(_isFiring) _timeSinceStartedShooting += Time.deltaTime;
         else if(!_isFiring || _isDoneFiring) _timeSinceStartedShooting -= Time.deltaTime * _rechargeRate;
         _timeSinceStartedShooting = Mathf.Clamp(_timeSinceStartedShooting, 0f, _shotTime);
+        _waterLevelPercentageAsset.Invoke(WaterLevelsPercentage);
     }
 }
