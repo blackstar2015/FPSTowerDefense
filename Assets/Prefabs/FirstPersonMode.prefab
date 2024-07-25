@@ -103,7 +103,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 90
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
+  m_IgnoreTimeScale: 1
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
@@ -222,7 +222,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666477973760673217}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &2340128566759823940
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 3485216213636528127}
   m_Lens:
-    FieldOfView: 90
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1285,6 +1285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Path
+      value: event:/PLAYER/Weapons/ply_weapon_slingshot_charge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
       propertyPath: <FireBulletSFX>k__BackingField.Guid.Data1
       value: -888877673
       objectReference: {fileID: 0}
@@ -1302,6 +1307,26 @@ PrefabInstance:
         type: 3}
       propertyPath: <FireBulletSFX>k__BackingField.Guid.Data4
       value: 660589014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data1
+      value: 1635869579
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data2
+      value: 1140283704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data3
+      value: 1264466094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345104549335264496, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <ChargeAttackSFX>k__BackingField.Guid.Data4
+      value: -1636873115
       objectReference: {fileID: 0}
     - target: {fileID: 7061935359971371776, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
