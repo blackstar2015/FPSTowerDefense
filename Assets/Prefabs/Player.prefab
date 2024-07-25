@@ -160,6 +160,8 @@ MonoBehaviour:
   <Movement>k__BackingField: {fileID: 451838707955803502}
   <weaponRangedProjectile>k__BackingField: {fileID: 6345104549335264496}
   <weaponRangedHitScan>k__BackingField: {fileID: 0}
+  _hitScanEnabledEvent: {fileID: 0}
+  _ProjectileEnabledEvent: {fileID: 0}
 --- !u!114 &451838707955803502
 MonoBehaviour:
   m_ObjectHideFlags: 0
