@@ -89,7 +89,7 @@ namespace TDTK{
 				GameObject obj=new GameObject("AudioSource"+(i+1));
 				
 				AudioSource src=obj.AddComponent<AudioSource>();
-				src.playOnAwake=false; src.loop=false; src.volume=1; //src.spatialBlend=.75f;
+				src.playOnAwake=false; src.loop=false; src.volume=1; src.spatialBlend=1f;
 				obj.transform.parent=transform; obj.transform.localPosition=Vector3.zero;
 				
 				audioSourceList.Add(src);
