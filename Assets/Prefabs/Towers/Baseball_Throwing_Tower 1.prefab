@@ -636,7 +636,7 @@ MonoBehaviour:
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
-  targetPoint: {fileID: 0}
+  targetPoint: {fileID: 5465300252899090250}
   hp: 10
   sh: 10
   shStagger: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
     autoDestroy: 1
     duration: 1.5
   shootEffectDuration: 0
-  turretPivot: {fileID: 0}
+  turretPivot: {fileID: 6485377372839437120}
   barrelPivot: {fileID: 6550739265597067209}
   aimInXAxis: 1
   snapAiming: 1

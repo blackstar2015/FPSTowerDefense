@@ -20,6 +20,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
+      propertyPath: targetPoint
+      value: 
+      objectReference: {fileID: 3973112547252350937}
+    - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
       propertyPath: lifeLostOnDestination
       value: 3
       objectReference: {fileID: 0}
@@ -108,3 +113,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d80483aa2e95b49b9cc8ad93b660f9, type: 3}
+--- !u!4 &3973112547252350937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4011216911885139206, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 38808674913506015}
+  m_PrefabAsset: {fileID: 0}

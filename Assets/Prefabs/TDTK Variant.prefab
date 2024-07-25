@@ -25481,6 +25481,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651636363260261979, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: newWave
+      value: 
+      objectReference: {fileID: 8300000, guid: cd576999687395d4fab3776b5ea062b2, type: 3}
+    - target: {fileID: 1651636363260261979, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: lostLife
+      value: 
+      objectReference: {fileID: 8300000, guid: 7aa5a385280ef4647888349ad41d5749, type: 3}
+    - target: {fileID: 1651636363260261979, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: playerWon
+      value: 
+      objectReference: {fileID: 8300000, guid: bdcaf42ab76c03a4583d49cbf5f93a0c, type: 3}
+    - target: {fileID: 1651636363260261979, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
+      propertyPath: playerLost
+      value: 
+      objectReference: {fileID: 8300000, guid: 90966bc4155115a4799268c659c19dbf, type: 3}
     - target: {fileID: 1777305644896789110, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: _raiseEvent

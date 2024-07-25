@@ -265,7 +265,7 @@ MonoBehaviour:
     duration: 1.5
   shootEffectDuration: 0
   turretPivot: {fileID: 1667976544932186270}
-  barrelPivot: {fileID: 0}
+  barrelPivot: {fileID: 5497058886709795777}
   aimInXAxis: 1
   snapAiming: 1
   aimSpeed: 20
