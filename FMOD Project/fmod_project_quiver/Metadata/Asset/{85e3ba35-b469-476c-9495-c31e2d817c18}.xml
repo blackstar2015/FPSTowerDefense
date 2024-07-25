@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{85e3ba35-b469-476c-9495-c31e2d817c18}">
+		<property name="assetPath">
+			<value>SFX/Weapons/Slingshot/Impact/Enemy/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0d64e92c-f65c-4afc-8bb4-76ac062cb82f}</destination>
+		</relationship>
+	</object>
+</objects>

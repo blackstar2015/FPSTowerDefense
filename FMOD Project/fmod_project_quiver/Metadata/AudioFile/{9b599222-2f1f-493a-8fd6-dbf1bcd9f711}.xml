@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9b599222-2f1f-493a-8fd6-dbf1bcd9f711}">
+		<property name="assetPath">
+			<value>SFX/Weapons/Slingshot/Impact/Enemy/SFX_playerWeapon_slingshot_Impact_enemy-004.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.55381250000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0d64e92c-f65c-4afc-8bb4-76ac062cb82f}</destination>
+		</relationship>
+	</object>
+</objects>

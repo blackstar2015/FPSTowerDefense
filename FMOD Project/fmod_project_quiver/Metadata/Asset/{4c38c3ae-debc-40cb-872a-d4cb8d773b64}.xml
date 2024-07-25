@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{4c38c3ae-debc-40cb-872a-d4cb8d773b64}">
+		<property name="assetPath">
+			<value>SFX/Tower Defenses/Plate Thrower/Attack/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0d64e92c-f65c-4afc-8bb4-76ac062cb82f}</destination>
+		</relationship>
+	</object>
+</objects>
