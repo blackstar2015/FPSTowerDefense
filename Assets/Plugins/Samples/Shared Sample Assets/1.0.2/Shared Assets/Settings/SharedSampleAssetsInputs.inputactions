@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "ea02c9e3-9580-44c0-9f70-e1b4663c2ed6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "b0777439-4ac9-49a5-b13f-b40ca2715e00",
@@ -63,6 +72,15 @@
                     "name": "ToggleWeapon",
                     "type": "Button",
                     "id": "2f26a6f3-a8e0-4e63-a3c0-be50c66ed37b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchWeapons",
+                    "type": "Button",
+                    "id": "7a4f4e80-320b-4c27-b172-fbb8f89b3dd3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -232,6 +250,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "ReleaseAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "722d9db3-20a8-4251-acfe-6590d3c8e632",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2642e9af-2bbb-4194-b691-5933c8252372",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchWeapons",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

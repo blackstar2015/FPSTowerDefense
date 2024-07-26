@@ -1,5 +1,7 @@
 using Cinemachine;
+using FMODUnity;
 using GameEvents;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using TDTK;
@@ -15,6 +17,7 @@ public class ToggleViewControl : MonoBehaviour
     [SerializeField] bool inFirstPerson = false; //ViewEnum currentView = ViewEnum.Overhead;
     [SerializeField] BoolEventAsset InFirstPersonEvent;
     [SerializeField] bool mouseLocked;
+    [field: SerializeField, BoxGroup("SFX")] public EventReference ToggleViewSFX { get; protected set; }
 
     [SerializeField]
     private GameObject crosshair;
@@ -69,6 +72,8 @@ public class ToggleViewControl : MonoBehaviour
     {
         inFirstPerson = !inFirstPerson;
         SetViewValues();
+        if (!ToggleViewSFX.IsNull) RuntimeManager.PlayOneShot(ToggleViewSFX, transform.position);
+
     }
 
     void SetViewValues()

@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8961211038191917450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1460238369207030, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_Name
+      value: Matryoshka Doll Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338577678939698, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.418
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: desp
+      value: It's what's inside that counts.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: prefabID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: unitName
+      value: Matryoshka Doll Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: isSpawner
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: targetPoint
+      value: 
+      objectReference: {fileID: 8958772485501693880}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: spawnOnDestroyed
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: statsList.Array.data[0].speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: rscGainOnDestroyed.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      propertyPath: statsList.Array.data[0].attackRange
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1849425225598372, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8052509375548429760}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
+--- !u!4 &8956723191413370652 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4558284745832086, guid: dce61169ecc869f4594a7e45d0265c7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8961211038191917450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8958772485501693880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4338577678939698, guid: dce61169ecc869f4594a7e45d0265c7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8961211038191917450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9135298141011387802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8956723191413370652}
+    m_Modifications:
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.516
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7032911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.70304567
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.07453947
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.07451346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 12.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895042866282261216, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianDoll02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b51c1be0cddd6ee47ace652650ae9876, type: 3}
+--- !u!4 &8052509375548429760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+    type: 3}
+  m_PrefabInstance: {fileID: 9135298141011387802}
+  m_PrefabAsset: {fileID: 0}

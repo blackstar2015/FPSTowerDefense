@@ -174,7 +174,7 @@ MonoBehaviour:
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
-  targetPoint: {fileID: 0}
+  targetPoint: {fileID: 603914854849101985}
   hp: 10
   sh: 10
   shStagger: 0
@@ -191,9 +191,9 @@ MonoBehaviour:
     sellDuration: 0.5
     expToNextUpgrade: 10
     cost:
-    - 20
+    - 25
     sellValue:
-    - 20
+    - 25
     hp: 10
     sh: 0
     shRegen: 0.5

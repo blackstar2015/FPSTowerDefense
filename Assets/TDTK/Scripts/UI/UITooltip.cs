@@ -51,7 +51,7 @@ namespace TDTK{
 		
 		
 		public static void Show(UnitTower tower){
-			instance.rectT.localPosition= (Camera.main.ViewportToScreenPoint(new Vector3(.25f,.25f,Camera.main.nearClipPlane)) + Input.mousePosition)/2;
+			instance.rectT.localPosition= (Camera.main.ViewportToScreenPoint(new Vector3(.25f,.25f,Camera.main.nearClipPlane)))/2;
 			instance._Show(tower, instance.rectT.position, 0, Vector3.zero);
 		}
 		

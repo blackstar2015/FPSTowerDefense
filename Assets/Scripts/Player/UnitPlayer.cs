@@ -19,6 +19,7 @@ public class UnitPlayer : MonoBehaviour, IUnit
     public void ApplyAttack(AttackInfo aInfo)
     {
         RscManager.SpendRsc(new List<float>() { resourcesLostOnHit });
+        TDTK.TDTK.PopupMessage(string.Format("Ouch! I dropped {0} toy parts!", resourcesLostOnHit));
         audioSource?.Play();
     }
 

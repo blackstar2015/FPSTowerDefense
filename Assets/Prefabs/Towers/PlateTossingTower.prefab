@@ -186,7 +186,7 @@ MonoBehaviour:
   level: 0
   statsList:
   - editTurret: 1
-    editAOE: 0
+    editAOE: 1
     editMine: 1
     buildDuration: 1.5
     sellDuration: 0.5
@@ -209,10 +209,10 @@ MonoBehaviour:
     critReduc: 0
     hit: 1
     damageMin: 1
-    damageMax: 3
+    damageMax: 2
     attackRange: 3.5
     aoeRange: 3
-    cooldown: 1.5
+    cooldown: 3
     critChance: 0
     critMultiplier: 0
     effectOnHitChance: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
     duration: 1.5
   shootEffectDuration: 0
   turretPivot: {fileID: 1667976544932186270}
-  barrelPivot: {fileID: 0}
+  barrelPivot: {fileID: 5497058886709795777}
   aimInXAxis: 1
   snapAiming: 1
   aimSpeed: 20
@@ -447,7 +447,7 @@ MonoBehaviour:
   clipDeconstruct: {fileID: 0}
   towerType: 0
   isTurret: 1
-  isAOE: 1
+  isAOE: 0
   isSupport: 0
   isResource: 0
   isMine: 0
