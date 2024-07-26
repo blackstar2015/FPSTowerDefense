@@ -212,8 +212,13 @@ PrefabInstance:
       objectReference: {fileID: 4011216911885139206}
     - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}
+      propertyPath: spawnOnDestroyed
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
       propertyPath: statsList.Array.data[0].hp
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}

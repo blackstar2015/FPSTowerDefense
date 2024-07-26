@@ -20,9 +20,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
+      propertyPath: unitRadius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
       propertyPath: targetPoint
       value: 
       objectReference: {fileID: 3973112547252350937}
+    - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      propertyPath: spawnOnDestroyed
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
       propertyPath: lifeLostOnDestination
@@ -36,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
       propertyPath: rscGainOnDestroyed.Array.data[0]
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4008464778847156674, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
