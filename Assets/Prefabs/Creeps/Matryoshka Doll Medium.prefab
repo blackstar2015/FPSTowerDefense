@@ -111,6 +111,26 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
         type: 3}
+      propertyPath: sodOverride.mulHP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
+        type: 3}
+      propertyPath: sodOverride.mulSH
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
+        type: 3}
+      propertyPath: sodOverride.mulRsc
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
+        type: 3}
+      propertyPath: sodOverride.mulSpd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
+        type: 3}
       propertyPath: lifeLostOnDestination
       value: 2
       objectReference: {fileID: 0}
