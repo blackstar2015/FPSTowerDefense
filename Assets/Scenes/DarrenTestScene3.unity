@@ -12448,6 +12448,74 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1270029918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6209017161199694861, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianDoll02 (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6414967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.3876338
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.432943
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ecd816ab8c54e244ca98705585304f1d, type: 3}
 --- !u!1 &1350697035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8222906921873589867, guid: 05a01f50f03c5244f8e25433331b2b33,
@@ -22426,6 +22494,74 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1004643327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2060348528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.001912
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.387634
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.818472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227050436084904026, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895042866282261216, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianDoll02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b51c1be0cddd6ee47ace652650ae9876, type: 3}
 --- !u!43 &2108641477
 Mesh:
   m_ObjectHideFlags: 0
@@ -25297,6 +25433,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5dce4457df97cf419e39ef0aa061d36, type: 3}
+--- !u!1001 &3136768393927757438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.185738
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.387634
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.283497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813745715763615404, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621771676478229526, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_Name
+      value: RussianDoll02 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f31dc63a7206afe4fbd6ff5672b9398d, type: 3}
 --- !u!1001 &8226801599795705532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26976,3 +27180,6 @@ SceneRoots:
   - {fileID: 1004643327}
   - {fileID: 1604528297}
   - {fileID: 8226801599795705532}
+  - {fileID: 3136768393927757438}
+  - {fileID: 1270029918}
+  - {fileID: 2060348528}
