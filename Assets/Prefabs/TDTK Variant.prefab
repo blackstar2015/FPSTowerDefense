@@ -47563,6 +47563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4961832066328959101, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
+      propertyPath: sellValueMultiplier
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961832066328959101, guid: 8393ca45b1ae5624c89beea91ff1b89a,
+        type: 3}
       propertyPath: rscList.Array.data[0]
       value: 100
       objectReference: {fileID: 0}
