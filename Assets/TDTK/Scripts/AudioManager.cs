@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TDTK{
+using FMOD;
+using FMODUnity;
+
+namespace TDTK
+{
 
 	public class AudioManager : MonoBehaviour {
 
@@ -25,8 +30,6 @@ namespace TDTK{
 			
 			
 		//~ }
-		
-		
 		public Transform cameraT;
 		
 		public void Awake(){
@@ -38,9 +41,7 @@ namespace TDTK{
 			CreateAudioSource();
 			
 			cameraT=Camera.main.transform;
-		}
-		
-		
+		}		
 		
 		public const string vol_SaveString_SFX="TDTK_Volume_SFX";
 		public const string vol_SaveString_UI="TDTK_Volume_UI";
@@ -61,9 +62,7 @@ namespace TDTK{
 				for(int i=0; i<instance.audioSourceList_UI.Count; i++) instance.audioSourceList_UI[i].volume=value;
 			}
 			PlayerPrefs.SetFloat(vol_SaveString_UI, value);
-		}
-		
-		
+		}		
 		
 		/*
 		public static AudioManager Init(){
@@ -79,8 +78,7 @@ namespace TDTK{
 			
 			return instance;
 		}
-		*/
-		
+		*/		
 		
 		//private bool init=false;
 		void CreateAudioSource(){
@@ -105,8 +103,7 @@ namespace TDTK{
 				
 				audioSourceList_UI.Add(src);
 			}
-		}
-		
+		}		
 		
 		//call to play a specific clip
 		public static void PlaySound(AudioClip clip, Vector3 pos=default(Vector3)){ if(instance!=null) instance._PlaySound(clip, pos); }
@@ -121,63 +118,101 @@ namespace TDTK{
 		private int GetUnusedAudioSourceIdx(){
 			for(int i=0; i<audioSourceList.Count; i++){ if(!audioSourceList[i].isPlaying) return i; }
 			return 0;	//if everything is used up, use item number zero
-		}
-		
-		
-		
-		public static void PlayUISound(AudioClip clip){ if(instance!=null) instance._PlayUISound(clip); }
-		public void _PlayUISound(AudioClip clip){
-			if(clip==null) return;
-			int Idx=GetUnusedUIAudioSourceIdx();
-			audioSourceList_UI[Idx].transform.position=cameraT.position;
-			audioSourceList_UI[Idx].clip=clip;		audioSourceList_UI[Idx].Play();
-		}
-		
+		}	
+
 		private int GetUnusedUIAudioSourceIdx(){
 			for(int i=0; i<audioSourceList_UI.Count; i++){ if(!audioSourceList_UI[i].isPlaying) return i; }
 			return 0;
 		}
-		
-		
-		
-		
-		[Header("Sound Effect")]
-		public AudioClip playerWon;
-		public static void OnPlayerWon(){ if(instance!=null && instance.playerWon!=null) PlayUISound(instance.playerWon); }
-		public AudioClip playerLost;
-		public static void OnPlayerLost(){ if(instance!=null && instance.playerLost!=null) PlayUISound(instance.playerLost); }
-		
-		public AudioClip lostLife;
-		public static void OnLostLife(){ if(instance!=null && instance.lostLife!=null) PlayUISound(instance.lostLife); }
-		
-		public AudioClip newWave;
-		public AudioClip waveCleared;
-		public static void OnNewWave(){ if(instance!=null && instance.newWave!=null) PlayUISound(instance.newWave); }
-		public static void OnWaveCleared(){ if(instance!=null && instance.waveCleared!=null) PlayUISound(instance.waveCleared); }
-		
-		
-		public AudioClip buildStart;
-		public AudioClip buildComplete;
-		public static void OnBuildStart(){ if(instance!=null && instance.buildStart!=null) PlayUISound(instance.buildStart); }
-		public static void OnBuildComplete(){ if(instance!=null && instance.buildComplete!=null) PlayUISound(instance.buildComplete); }
-		
-		public AudioClip upgradeStart;
-		public AudioClip upgradeComplete;
-		public static void OnUpgradeStart(){ if(instance!=null && instance.upgradeStart!=null) PlayUISound(instance.upgradeStart); }
-		public static void OnUpgradeComplete(){ if(instance!=null && instance.upgradeComplete!=null) PlayUISound(instance.upgradeComplete); }
-		
-		public AudioClip towerSold;
-		public static void OnTowerSold(){ if(instance!=null && instance.towerSold!=null) PlayUISound(instance.towerSold); }
-		
-		
-		public AudioClip perkPurchased;
-		public static void OnPerkPurchased(){ if(instance!=null && instance.perkPurchased!=null) PlayUISound(instance.perkPurchased); }
-		
-		
-		public AudioClip invalidAction;
-		public static void OnInvalidAction(){ if(instance!=null && instance.invalidAction!=null) PlayUISound(instance.invalidAction); }
-		
-		
-	}
+
+		///UNCOMMENT THIS TO ENABLE FMOD SOUNDS
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference playerWon { get; protected set; }
+		//public  void OnPlayerWon(){ if(instance!=null ) PlayUISound(playerWon); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference playerLost { get; protected set; }
+		//public  void OnPlayerLost(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference lostLife { get; protected set; }
+		//public  void OnLostLife(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference newWave { get; protected set; }
+		//public  void OnNewWave(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference waveCleared { get; protected set; }
+		//public  void OnWaveCleared(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference buildStart { get; protected set; }
+		//public  void OnBuildStart(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference buildComplete { get; protected set; }
+		//public  void OnBuildComplete(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference upgradeStart { get; protected set; }
+		//public  void OnUpgradeStart(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference upgradeComplete { get; protected set; }
+		//public  void OnUpgradeComplete(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference towerSold { get; protected set; }
+		//public  void OnTowerSold(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference perPurchased { get; protected set; }
+		//public  void OnPerkPurchased(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//[field: SerializeField, BoxGroup("SFX")] public EventReference invalidAction { get; protected set; }
+		//public  void OnInvalidAction(){ if(instance!=null ) PlayUISound(playerLost); }
+
+		//public static void PlayUISound(EventReference eventReference) { if (instance != null) instance._PlayUISound(eventReference); }
+		//public void PlayUISound(EventReference eventReference)
+		//{
+		//          if (!eventReference.IsNull) RuntimeManager.PlayOneShot(eventReference, transform.position);
+		// }
+
+		//COMMENT THE REST OUT IF USING FMOD SOUNDS!
+        [Header("Sound Effect")]
+        public AudioClip playerWon;
+        public static void OnPlayerWon() { if (instance != null && instance.playerWon != null) PlayUISound(instance.playerWon); }
+        public AudioClip playerLost;
+        public static void OnPlayerLost() { if (instance != null && instance.playerLost != null) PlayUISound(instance.playerLost); }
+
+        public AudioClip lostLife;
+        public static void OnLostLife() { if (instance != null && instance.lostLife != null) PlayUISound(instance.lostLife); }
+
+        public AudioClip newWave;
+        public AudioClip waveCleared;
+        public static void OnNewWave() { if (instance != null && instance.newWave != null) PlayUISound(instance.newWave); }
+        public static void OnWaveCleared() { if (instance != null && instance.waveCleared != null) PlayUISound(instance.waveCleared); }
+
+
+        public AudioClip buildStart;
+        public AudioClip buildComplete;
+        public static void OnBuildStart() { if (instance != null && instance.buildStart != null) PlayUISound(instance.buildStart); }
+        public static void OnBuildComplete() { if (instance != null && instance.buildComplete != null) PlayUISound(instance.buildComplete); }
+
+        public AudioClip upgradeStart;
+        public AudioClip upgradeComplete;
+        public static void OnUpgradeStart() { if (instance != null && instance.upgradeStart != null) PlayUISound(instance.upgradeStart); }
+        public static void OnUpgradeComplete() { if (instance != null && instance.upgradeComplete != null) PlayUISound(instance.upgradeComplete); }
+
+        public AudioClip towerSold;
+        public static void OnTowerSold() { if (instance != null && instance.towerSold != null) PlayUISound(instance.towerSold); }
+
+
+        public AudioClip perkPurchased;
+        public static void OnPerkPurchased() { if (instance != null && instance.perkPurchased != null) PlayUISound(instance.perkPurchased); }
+
+
+        public AudioClip invalidAction;
+        public static void OnInvalidAction() { if (instance != null && instance.invalidAction != null) PlayUISound(instance.invalidAction); }
+        public static void PlayUISound(AudioClip clip) { if (instance != null) instance._PlayUISound(clip); }
+        public void _PlayUISound(AudioClip clip)
+        {
+            if (clip == null) return;
+            int Idx = GetUnusedUIAudioSourceIdx();
+            audioSourceList_UI[Idx].transform.position = cameraT.position;
+            audioSourceList_UI[Idx].clip = clip; audioSourceList_UI[Idx].Play();
+        }
+    }
 
 }
