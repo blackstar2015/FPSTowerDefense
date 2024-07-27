@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2618933257437320466}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endlessMode: 0
-  spawnCDType: 0
+  spawnCDType: 1
   skippable: 1
   genWaveOnStart: 0
   autoStart: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
       speed: -1
       overrideRscGain: 0
       rscGain: ffffffff
-    timeToNextWave: 7
+    timeToNextWave: 5
     activeUnitCount: 0
     spawned: 0
     cleared: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
       speed: -1
       overrideRscGain: 0
       rscGain: ffffffff
-    timeToNextWave: 7
+    timeToNextWave: 5
     activeUnitCount: 0
     spawned: 0
     cleared: 0
@@ -101,11 +101,11 @@ MonoBehaviour:
     lifeGainOnCleared: 0
   - waveIdx: -1
     subWaveList:
-    - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+    - prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
         type: 3}
       delay: 0
-      spawnCount: 1
-      spacing: 1.5
+      spawnCount: 5
+      spacing: 1
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -119,7 +119,313 @@ MonoBehaviour:
     clean: 1
     rscGainOnCleared:
     - 0
-    perkRscGainOnCleared: 2
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      delay: 0
+      spawnCount: 33
+      spacing: 0.25
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
+        type: 3}
+      delay: 0
+      spawnCount: 10
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
+        type: 3}
+      delay: 0
+      spawnCount: 15
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
+        type: 3}
+      delay: 0
+      spawnCount: 3
+      spacing: 2
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+        type: 3}
+      delay: 0
+      spawnCount: 8
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
+        type: 3}
+      delay: 0
+      spawnCount: 20
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      delay: 0
+      spawnCount: 22
+      spacing: 0.25
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      delay: 0
+      spawnCount: 33
+      spacing: 0.25
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+        type: 3}
+      delay: 0
+      spawnCount: 8
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
+        type: 3}
+      delay: 0
+      spawnCount: 8
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
+        type: 3}
+      delay: 0
+      spawnCount: 15
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      delay: 0
+      spawnCount: 33
+      spacing: 0.25
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+        type: 3}
+      delay: 0
+      spawnCount: 12
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
+        type: 3}
+      delay: 0
+      spawnCount: 15
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
+    abilityRscGainOnCleared: 0
+    lifeGainOnCleared: 0
+  - waveIdx: -1
+    subWaveList:
+    - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
+        type: 3}
+      delay: 0
+      spawnCount: 10
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+        type: 3}
+      delay: 0
+      spawnCount: 10
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
+        type: 3}
+      delay: 0
+      spawnCount: 20
+      spacing: 1
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
+        type: 3}
+      delay: 0
+      spawnCount: 50
+      spacing: 0.25
+      path: {fileID: 0}
+      HP: -1
+      SH: -1
+      speed: -1
+      overrideRscGain: 0
+      rscGain: ffffffff
+    timeToNextWave: 5
+    activeUnitCount: 0
+    spawned: 0
+    cleared: 0
+    clean: 1
+    rscGainOnCleared:
+    - 0
+    perkRscGainOnCleared: 0
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   generator:
@@ -165,282 +471,6 @@ MonoBehaviour:
     limitSubWaveCountToPath: 0
     similarSubWave: 0
     genItemList:
-    - unitPrefabID: 0
-      prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
-        type: 3}
-      enabled: 1
-      minWave: 0
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 1.2
-        incrementRate: -0.1
-        deviation: 0.2
-        limitMin: 0.5
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 10
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-    - unitPrefabID: 1
-      prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
-        type: 3}
-      enabled: 1
-      minWave: 0
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 1.2
-        incrementRate: -0.1
-        deviation: 0.2
-        limitMin: 0.5
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-    - unitPrefabID: 2
-      prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
-        type: 3}
-      enabled: 1
-      minWave: 2
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 2
-        incrementRate: 0
-        deviation: 0
-        limitMin: 0.5
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-    - unitPrefabID: 3
-      prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
-        type: 3}
-      enabled: 1
-      minWave: 3
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 1.5
-        incrementRate: 0
-        deviation: 0.2
-        limitMin: 0.5
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-    - unitPrefabID: 4
-      prefab: {fileID: 114528667568048320, guid: d3320175d3a0e2d41abf4e4121b105ef,
-        type: 3}
-      enabled: 1
-      minWave: 3
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 2
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-    - unitPrefabID: 5
-      prefab: {fileID: 114049506200566766, guid: d6cd206db468caa4e95412e4a16cabd4,
-        type: 3}
-      enabled: 1
-      minWave: 0
-      maxWave: -1
-      attOdds:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attInterval:
-        startValue: 1.2
-        incrementRate: -0.05
-        deviation: 0.2
-        limitMin: 0.5
-        limitMax: -1
-      enableHPOverride: 0
-      enableSHOverride: 0
-      enableSpeedOverride: 0
-      enableRscOverride: 0
-      attHP:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSH:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attSpeed:
-        startValue: 1
-        incrementRate: 1
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
-      attRscGain:
-      - startValue: 0
-        incrementRate: 0
-        deviation: 0
-        limitMin: -1
-        limitMax: -1
     - unitPrefabID: 6
       prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -491,6 +521,98 @@ MonoBehaviour:
       prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
       enabled: 1
+      minWave: 1
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 1
+      enableSHOverride: 1
+      enableSpeedOverride: 1
+      enableRscOverride: 1
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 8
+      prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
+        type: 3}
+      enabled: 1
+      minWave: 4
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 1
+      enableSHOverride: 1
+      enableSpeedOverride: 1
+      enableRscOverride: 1
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 11
+      prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
+        type: 3}
+      enabled: 1
       minWave: 0
       maxWave: -1
       attOdds:
@@ -509,6 +631,374 @@ MonoBehaviour:
       enableSHOverride: 1
       enableSpeedOverride: 1
       enableRscOverride: 1
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 10
+      prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
+        type: 3}
+      enabled: 1
+      minWave: 2
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 1
+      enableSHOverride: 1
+      enableSpeedOverride: 1
+      enableRscOverride: 1
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 9
+      prefab: {fileID: 8984355149651803277, guid: d7f60d5187f10da4d9e794d523b93766,
+        type: 3}
+      enabled: 1
+      minWave: -1
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 1
+      enableSHOverride: 1
+      enableSpeedOverride: 1
+      enableRscOverride: 1
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 0
+      prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
+        type: 3}
+      enabled: 0
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.1
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 10
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 1
+      prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
+        type: 3}
+      enabled: 0
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.1
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 2
+      prefab: {fileID: 114818404139447466, guid: f57e1c3f2013b554c8fecb97ec3fbecd,
+        type: 3}
+      enabled: 0
+      minWave: 2
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 2
+        incrementRate: 0
+        deviation: 0
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 3
+      prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
+        type: 3}
+      enabled: 0
+      minWave: 3
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.5
+        incrementRate: 0
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 4
+      prefab: {fileID: 114528667568048320, guid: d3320175d3a0e2d41abf4e4121b105ef,
+        type: 3}
+      enabled: 0
+      minWave: 3
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 2
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
+      attHP:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSH:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attSpeed:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attRscGain:
+      - startValue: 0
+        incrementRate: 0
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+    - unitPrefabID: 5
+      prefab: {fileID: 114049506200566766, guid: d6cd206db468caa4e95412e4a16cabd4,
+        type: 3}
+      enabled: 0
+      minWave: 0
+      maxWave: -1
+      attOdds:
+        startValue: 1
+        incrementRate: 1
+        deviation: 0
+        limitMin: -1
+        limitMax: -1
+      attInterval:
+        startValue: 1.2
+        incrementRate: -0.05
+        deviation: 0.2
+        limitMin: 0.5
+        limitMax: -1
+      enableHPOverride: 0
+      enableSHOverride: 0
+      enableSpeedOverride: 0
+      enableRscOverride: 0
       attHP:
         startValue: 1
         incrementRate: 1
