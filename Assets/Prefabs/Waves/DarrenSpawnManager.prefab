@@ -54,11 +54,12 @@ MonoBehaviour:
   - {fileID: 0}
   waveList:
   - waveIdx: 0
+    message: Toy soldiers incoming! Use artillery!
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
       delay: 0
-      spawnCount: 16
+      spawnCount: 12
       spacing: 0.25
       path: {fileID: 0}
       HP: -1
@@ -77,11 +78,12 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: RC cars incoming! Slow them down!
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
       delay: 0
-      spawnCount: 10
+      spawnCount: 8
       spacing: 1
       path: {fileID: 0}
       HP: -1
@@ -100,6 +102,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 'Matryoshka dolls: More than meets the eye.'
     subWaveList:
     - prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
         type: 3}
@@ -123,6 +126,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -157,6 +161,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -191,6 +196,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
         type: 3}
@@ -214,6 +220,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -248,6 +255,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -282,6 +290,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}
@@ -305,6 +314,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}
@@ -339,6 +349,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
         type: 3}
@@ -373,6 +384,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}

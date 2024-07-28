@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1281094897003320, guid: c405c9710e70a1946a823c5b43df017f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1456966481899002, guid: c405c9710e70a1946a823c5b43df017f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -346,6 +350,11 @@ PrefabInstance:
       propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114144783681268084, guid: c405c9710e70a1946a823c5b43df017f,
+        type: 3}
+      propertyPath: m_Text
+      value: '[G key] Spawn'
+      objectReference: {fileID: 0}
     - target: {fileID: 114314280835547418, guid: c405c9710e70a1946a823c5b43df017f,
         type: 3}
       propertyPath: touchMode
@@ -354,6 +363,11 @@ PrefabInstance:
     - target: {fileID: 114314280835547418, guid: c405c9710e70a1946a823c5b43df017f,
         type: 3}
       propertyPath: usePieMenuForBuild
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453539743715450, guid: c405c9710e70a1946a823c5b43df017f,
+        type: 3}
+      propertyPath: m_ChildAlignment
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114599087155050624, guid: c405c9710e70a1946a823c5b43df017f,

@@ -22640,31 +22640,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[0].message
-      value: Toy soldiers incoming! Use artillery!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[1].message
-      value: RC cars incoming! Slow them down!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[2].message
-      value: 'Matryoshka dolls: More than meets the eye.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[0].subWaveList.Array.data[0].spawnCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[1].subWaveList.Array.data[0].spawnCount
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
