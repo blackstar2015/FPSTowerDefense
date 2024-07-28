@@ -1167,6 +1167,16 @@ PrefabInstance:
       propertyPath: <Radius>k__BackingField
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 451838707955803502, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <JumpHeight>k__BackingField
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 451838707955803502, guid: 03aab3a1768909143a21ffe8c7788ea3,
+        type: 3}
+      propertyPath: <GroundMask>k__BackingField.m_Bits
+      value: 2214592512
+      objectReference: {fileID: 0}
     - target: {fileID: 852859570131891669, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -212,8 +212,7 @@ MonoBehaviour:
   unitName: High Speed Fruit Dispenser
   icon: {fileID: 21300004, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
   desp: 'Dispenses fruit at unsafe consumption speeds. Warning: Failure to catch
-    fruit will result in serious injury. Powerful but slow to reload. Can be upgraded
-    to dispense larger fruits.'
+    fruit will result in serious injury. Powerful but slow to reload.'
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
@@ -250,8 +249,8 @@ MonoBehaviour:
     dmgReduc: 0
     critReduc: 0
     hit: 1
-    damageMin: 3
-    damageMax: 7
+    damageMin: 6
+    damageMax: 8
     attackRange: 3
     aoeRange: 0
     cooldown: 4

@@ -439,7 +439,11 @@ namespace TDTK {
 				
 				if(waveFoldList[i]){
 					startX+=15;
-					
+
+					startY += 20;
+					TDE.Label(startX, startY, width*10, height, "Message: ", "Message displayed at start of wave.");
+					wave.message = EditorGUI.DelayedTextField(new Rect(startX + 60, startY, widthS + 200, height), wave.message);
+
 					TDE.Label(startX, startY+=spaceY, width, 15, "SubWave ("+wave.subWaveList.Count+"):");
 					if(GUI.Button(new Rect(startX+spaceX, startY-1, widthS, 15), "-1"))
 						if(wave.subWaveList.Count>1) wave.subWaveList.RemoveAt(wave.subWaveList.Count-1);
@@ -477,8 +481,7 @@ namespace TDTK {
 					startX+=widthS*1.5f;
 					TDE.Label(startX, startY, width, height, "Ability rsc: ", "");
 					TDE.DrawSprite(new Rect(startX+=65, startY, height, height), Ability_DB.GetRscIcon());
-					wave.abilityRscGainOnCleared=EditorGUI.DelayedIntField(new Rect(startX+height, startY, widthS-height, height), wave.abilityRscGainOnCleared);
-					
+					wave.abilityRscGainOnCleared=EditorGUI.DelayedIntField(new Rect(startX+height, startY, widthS-height, height), wave.abilityRscGainOnCleared);					
 					startX=cachedX;
 					
 					startY+=spaceY*2f;

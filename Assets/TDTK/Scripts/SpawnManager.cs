@@ -199,6 +199,9 @@ namespace TDTK{
 			//if(onSpawningE!=null) onSpawningE();
 			
 			Debug.Log("Spawning wave-"+wave.waveIdx);
+
+			if (wave.message != null)
+				TDTK.PopupMessage(wave.message);
 			
 			subSpawning=wave.subWaveList.Count;
 			
@@ -371,6 +374,7 @@ namespace TDTK{
 	
 	[System.Serializable] public class Wave{
 		public int waveIdx=-1;
+		public string message;
 		public List<SubWave> subWaveList=new List<SubWave>{ new SubWave() };
 		public float timeToNextWave=5;
 		
