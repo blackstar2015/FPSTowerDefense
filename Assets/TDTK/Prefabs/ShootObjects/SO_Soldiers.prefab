@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4965113119739782}
   - component: {fileID: 114266115900946412}
   m_Layer: 0
-  m_Name: SO_Projectile
+  m_Name: SO_Soldiers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     obj: {fileID: 1888339307800580, guid: 439933d22f2298844a57e463ab5a80a7, type: 3}
     autoDestroy: 1
     duration: 1.5
-  shootSound: {fileID: 8300000, guid: e546b59457cc46b43837832300aa1fe5, type: 3}
+  shootSound: {fileID: 8300000, guid: a0c8dd91cb860fc4f802a382308d5e00, type: 3}
   hitSound: {fileID: 0}
   tgtRadius: 0
   targetPos: {x: 0, y: 0, z: 0}

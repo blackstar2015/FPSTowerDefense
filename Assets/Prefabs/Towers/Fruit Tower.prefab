@@ -518,6 +518,12 @@ MonoBehaviour:
     obj: {fileID: 0}
     autoDestroy: 1
     duration: 1.5
+  soundBuilding: {fileID: 0}
+  soundBuilt: {fileID: 0}
+  soundUpgrading: {fileID: 0}
+  soundUpgraded: {fileID: 0}
+  soundSold: {fileID: 0}
+  soundDestroyed: {fileID: 0}
   radius: 0.5
   supportTgtList: []
   supportSrcList: []
