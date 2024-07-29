@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  straightProjectile: 0
-  speed: 20
+  straightProjectile: 1
+  speed: 10
   elevation: 1
   falloffRange: 3
   useTrajectoryCurve: 1
