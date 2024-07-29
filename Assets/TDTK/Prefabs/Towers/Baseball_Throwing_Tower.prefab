@@ -431,7 +431,7 @@ MonoBehaviour:
   prefabID: 0
   instanceID: -1
   unitName: P_Baseball Tower
-  icon: {fileID: 21300000, guid: 0e36ea9d2b410ea44aeafc80a349f09a, type: 3}
+  icon: {fileID: 21300000, guid: 516df1d99ed088d479d32e5227019e3b, type: 3}
   desp: fires baseballs at the enemies
   canBeAttacked: 1
   canBeTargeted: 1
