@@ -39573,6 +39573,7 @@ MonoBehaviour:
   loadFromCache: 0
   cacheOnLevelWon: 0
   cacheOnRestart: 0
+  audioManager: {fileID: 0}
   useRscManagerForCost: 0
   rsc: 3
   unavailablePrefabIDList: 
@@ -44893,10 +44894,12 @@ MonoBehaviour:
   genWaveOnStart: 0
   autoStart: 0
   startTimer: 5
+  audioManager: {fileID: 0}
   pathList:
   - {fileID: 0}
   waveList:
   - waveIdx: 0
+    message: 
     subWaveList:
     - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}
@@ -44921,6 +44924,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
         type: 3}
@@ -44945,6 +44949,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 114548261379056564, guid: 315d6b468e677c94aa54b5c2c3f8bd16,
         type: 3}
@@ -44969,6 +44974,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 114089636255029794, guid: 930e6406997a27542a548b66c144e9b5,
         type: 3}
@@ -44993,6 +44999,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
+    message: 
     subWaveList:
     - prefab: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}
@@ -52009,7 +52016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2019817397695899001}
+  m_Father: {fileID: 2663987510127651186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1651636363260261979
 MonoBehaviour:
@@ -52024,18 +52031,90 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraT: {fileID: 0}
-  playerWon: {fileID: 0}
-  playerLost: {fileID: 0}
-  lostLife: {fileID: 0}
-  newWave: {fileID: 0}
-  waveCleared: {fileID: 0}
-  buildStart: {fileID: 0}
-  buildComplete: {fileID: 0}
-  upgradeStart: {fileID: 0}
-  upgradeComplete: {fileID: 0}
-  towerSold: {fileID: 0}
-  perkPurchased: {fileID: 0}
-  invalidAction: {fileID: 0}
+  playerWon:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <playerLost>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <lostLife>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <newWave>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <waveCleared>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <buildStart>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <buildComplete>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <upgradeStart>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <upgradeComplete>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <towerSold>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <perkPurchased>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <invalidAction>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2724691630349440211
 GameObject:
   m_ObjectHideFlags: 0
@@ -72976,6 +73055,38 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &3784672349827634280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2663987510127651186}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2663987510127651186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784672349827634280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5707309769701810147}
+  m_Father: {fileID: 2019817397695899001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3836614097130467752
 GameObject:
   m_ObjectHideFlags: 0
@@ -144827,7 +144938,7 @@ Transform:
   - {fileID: 8046366784318983573}
   - {fileID: 7928011875426417057}
   - {fileID: 4659869489581830374}
-  - {fileID: 5707309769701810147}
+  - {fileID: 2663987510127651186}
   - {fileID: 1305190919752730639}
   - {fileID: 8591959556636014487}
   - {fileID: 2395423618236709113}
@@ -154661,6 +154772,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2019817397695899001}
     m_Modifications:
+    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3724951152503028796, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_Color.b

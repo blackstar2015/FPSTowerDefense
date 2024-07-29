@@ -211,7 +211,7 @@ namespace TDTK
             if (clip == null) return;
             int Idx = GetUnusedUIAudioSourceIdx();
             audioSourceList_UI[Idx].transform.position = cameraT.position;
-            audioSourceList_UI[Idx].clip = clip; audioSourceList_UI[Idx].Play();
+            audioSourceList_UI[Idx].clip = clip; audioSourceList_UI[Idx].PlayOneShot(clip);
         }
     }
 
