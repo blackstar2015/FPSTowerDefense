@@ -146,6 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
         type: 3}
+      propertyPath: effectImmunityList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
+        type: 3}
       propertyPath: statsList.Array.data[0].speed
       value: 1
       objectReference: {fileID: 0}
