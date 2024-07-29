@@ -168,7 +168,35 @@ namespace TDTK{
 			timeToNextWave-=Time.fixedDeltaTime;
 			if(timeToNextWave<=0) SpawnNextWave();
 		}
-		
+
+		public static string GetNextWaveMessage()
+		{
+			if (instance.currentWaveIdx >= instance.waveList.Count)
+				return null;
+
+			var nextWave = instance.waveList[instance.currentWaveIdx + 1];
+			var message = nextWave.message;
+
+			if (message != null && message != string.Empty)
+				return message;
+
+			return ConstructMessage(nextWave);
+		}
+
+		static string ConstructMessage(Wave nextWave)
+        {
+			List<string> unitNames = new List<string>();
+
+			foreach (SubWave subWave in nextWave.subWaveList)
+			{
+				unitNames.Add(subWave.prefab.unitName + "s");
+			}
+
+			var message = "Incoming: " + string.Join(", ", unitNames);
+			return message;
+        }
+
+
 		private void SpawnNextWave(){	//actual function to spawn next wave
 			if(!GameControl.HasGameStarted()) GameControl.StartGame();
 			
@@ -199,9 +227,6 @@ namespace TDTK{
 			//if(onSpawningE!=null) onSpawningE();
 			
 			Debug.Log("Spawning wave-"+wave.waveIdx);
-
-			if (wave.message != null)
-				TDTK.PopupMessage(wave.message);
 			
 			subSpawning=wave.subWaveList.Count;
 			

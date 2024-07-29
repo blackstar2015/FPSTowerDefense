@@ -211,7 +211,7 @@ MonoBehaviour:
   instanceID: -1
   unitName: High Speed Fruit Dispenser
   icon: {fileID: 21300004, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
-  desp: 'HEAVY TOWER, 6-8 Damage.                  Dispenses fruit at unsafe consumption
+  desp: 'HEAVY TOWER, 10-12 Damage.                  Dispenses fruit at unsafe consumption
     speeds. '
   canBeAttacked: 1
   canBeTargeted: 1
@@ -249,8 +249,8 @@ MonoBehaviour:
     dmgReduc: 0
     critReduc: 0
     hit: 1
-    damageMin: 6
-    damageMax: 8
+    damageMin: 10
+    damageMax: 12
     attackRange: 3
     aoeRange: 0
     cooldown: 4

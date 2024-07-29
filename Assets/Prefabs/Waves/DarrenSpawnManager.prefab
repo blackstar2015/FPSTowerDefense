@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 0}
   waveList:
   - waveIdx: 0
-    message: Toy soldiers incoming! Use artillery!
+    message: Toy soldiers incoming! Use area attack!
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -67,7 +67,7 @@ MonoBehaviour:
       speed: -1
       overrideRscGain: 0
       rscGain: ffffffff
-    timeToNextWave: 5
+    timeToNextWave: 8
     activeUnitCount: 0
     spawned: 0
     cleared: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
       delay: 0
-      spawnCount: 8
+      spawnCount: 4
       spacing: 1
       path: {fileID: 0}
       HP: -1
@@ -102,7 +102,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 'Matryoshka dolls: More than meets the eye.'
+    message: 'Matryoshka dolls: Hit them hard, then hit them again!'
     subWaveList:
     - prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
         type: 3}
@@ -121,29 +121,18 @@ MonoBehaviour:
     cleared: 0
     clean: 1
     rscGainOnCleared:
-    - 0
+    - 50
     perkRscGainOnCleared: 0
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: You can build in the toys' way to change their path
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
       delay: 0
       spawnCount: 33
       spacing: 0.25
-      path: {fileID: 0}
-      HP: -1
-      SH: -1
-      speed: -1
-      overrideRscGain: 0
-      rscGain: ffffffff
-    - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
-        type: 3}
-      delay: 0
-      spawnCount: 10
-      spacing: 1
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -166,7 +155,7 @@ MonoBehaviour:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
       delay: 0
-      spawnCount: 15
+      spawnCount: 10
       spacing: 1
       path: {fileID: 0}
       HP: -1
@@ -196,13 +185,13 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: 'Giant Toy Soldiers: Hit them hard and heavy!'
     subWaveList:
     - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
         type: 3}
       delay: 0
-      spawnCount: 8
-      spacing: 1
+      spawnCount: 4
+      spacing: 2
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -272,7 +261,7 @@ MonoBehaviour:
         type: 3}
       delay: 0
       spawnCount: 8
-      spacing: 1
+      spacing: 2
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -355,7 +344,7 @@ MonoBehaviour:
         type: 3}
       delay: 0
       spawnCount: 12
-      spacing: 1
+      spacing: 2
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -401,7 +390,7 @@ MonoBehaviour:
         type: 3}
       delay: 0
       spawnCount: 10
-      spacing: 1
+      spacing: 2
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -714,8 +703,7 @@ MonoBehaviour:
         limitMin: -1
         limitMax: -1
     - unitPrefabID: 9
-      prefab: {fileID: 8984355149651803277, guid: d7f60d5187f10da4d9e794d523b93766,
-        type: 3}
+      prefab: {fileID: 0}
       enabled: 1
       minWave: -1
       maxWave: -1

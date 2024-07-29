@@ -47079,18 +47079,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2335195856318882246, guid: 8393ca45b1ae5624c89beea91ff1b89a,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Press G to spawn next wave
-
-        Press H to toggle crosshair
-
-        Right-click
-        to toggle Weapon
-
-        Press E to switch weapons'
-      objectReference: {fileID: 0}
     - target: {fileID: 2335902911483298514, guid: 8393ca45b1ae5624c89beea91ff1b89a,
         type: 3}
       propertyPath: m_LocalPosition.x
