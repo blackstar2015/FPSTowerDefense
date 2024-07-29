@@ -22658,6 +22658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3673153887555998599, guid: 09ccf04b0eb476a4da93874f1d2ef7a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 9167714841271973047, guid: 09ccf04b0eb476a4da93874f1d2ef7a2,
         type: 3}
       propertyPath: m_LocalPosition.x

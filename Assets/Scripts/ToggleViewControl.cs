@@ -52,8 +52,8 @@ public class ToggleViewControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-            ToggleView();
+        //if (Input.GetKeyDown(KeyCode.Tab))
+        //    ToggleView();
 
         if (inFirstPerson && Input.GetKeyDown(KeyCode.X))
             ToggleMouse();
