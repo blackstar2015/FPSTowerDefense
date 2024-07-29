@@ -284,7 +284,8 @@ namespace TDTK{
 		
 		private bool ValidForInteraction(){ return Time.time-showTime>0; }
 		
-		private float showTime=0;
+		private float showTime=0;		
+
 		public static void Show(SelectInfo info, bool instant=false){ if(instance!=null) instance._Show(info, instant); }
 		public void _Show(SelectInfo info, bool instant=false){
 			showTime=Time.time;
@@ -293,6 +294,22 @@ namespace TDTK{
 			UpdateDisplay();
 			base._Show();
 			//base._Show(instant);
+			HoldNode();
+			FindObjectOfType<PlayerControllerFPSTD>().enabled = false;
+		}
+
+		void HoldNode()
+        {
+			sInfo.Hold();
+			sInfo.platform.UpdatePath();
+			TDTK.OnNewTower(null);
+		}
+
+		void ReleaseNode()
+        {
+			sInfo.Release();
+			sInfo.platform.UpdatePath();
+			TDTK.OnNewTower(null);
 		}
 		public static void Hide(bool instant=false){
 			if(instance==null || !instance.thisObj.activeInHierarchy) return;
@@ -301,9 +318,17 @@ namespace TDTK{
 			
 			instance.ClearTouchModeSelect();
 			instance._Hide(true);
+			instance.ReleaseNode();
+			FindObjectOfType<PlayerControllerFPSTD>().enabled = true;
 		}
-		
-		public static bool IsActive(){ return instance!=null && instance.thisObj.activeInHierarchy; }
+
+        public override void _Hide(float duration = 0.25F)
+        {
+            base._Hide(duration);
+			//instance.ReleaseNode();
+		}
+
+        public static bool IsActive(){ return instance!=null && instance.thisObj.activeInHierarchy; }
 		
 	}
 

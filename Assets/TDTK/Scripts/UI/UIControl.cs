@@ -227,7 +227,7 @@ namespace TDTK{
 			bool select=false;
 			bool build=false;
 			
-			if(sInfo.HasValidPoint()){
+			if(!UIBuildButton.IsActive() && sInfo.HasValidPoint()){
 				if(sInfo.GetTower()!=null){
 					select=true;
 					SelectControl.SelectUnit(sInfo.GetTower());

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
 using Cinemachine;
 using GameEvents;
+using TDTK;
 
 public class PlayerControllerFPSTD : PlayerController
 {
@@ -72,8 +73,14 @@ public class PlayerControllerFPSTD : PlayerController
 
     public void OnToggleWeapon(InputValue value)
     {
+        if (!enabled)
+            return;
+
         IsActive = !IsActive;
         _currentWeapon.gameObject.SetActive(IsActive);
+
+        var uiControl = FindObjectOfType<UIControl>();
+        uiControl.enabled = !IsActive;
     }
     protected override void Update()
     {

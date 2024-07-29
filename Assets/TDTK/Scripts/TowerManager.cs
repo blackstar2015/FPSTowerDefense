@@ -641,6 +641,17 @@ namespace TDTK{
 			if(TowerManager.UseFreeFormMode()) return !invalidPoint;
 			return !platform.GetNode(nodeID).IsBlockedForTower() && GetTower()==null && !platform.GetNode(nodeID).IsOccupied();
 		}
+
+		public void Hold()
+        {
+			platform.GetNode(nodeID).SetWalkable(false);
+        }
+
+		public void Release()
+        {
+			platform.GetNode(nodeID).SetWalkable(true);
+        }
+
 		public bool PathBlocked(){
 			return !platform.CheckForNode(nodeID);
 		}
