@@ -30,8 +30,7 @@ Transform:
   m_LocalPosition: {x: -0, y: -0.0000019073486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5648735770379950941}
+  m_Children: []
   m_Father: {fileID: 6513958321540153906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3068982513311066255
@@ -249,7 +248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4353934098852498000
 Transform:
   m_ObjectHideFlags: 0
@@ -339,12 +338,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4536600270662104168}
   serializedVersion: 2
-  m_LocalRotation: {x: 4.3297803e-17, y: -0.7071067, z: -0.7071068, w: -4.3297803e-17}
-  m_LocalPosition: {x: 0, y: 0.89999956, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.000000057601248, y: -0.70710576, z: 0.00000005760109, w: 0.7071079}
+  m_LocalPosition: {x: -0.00901, y: -0.00037, z: -0.00001}
+  m_LocalScale: {x: 0.009999997, y: 0.01, z: 0.009999996}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2988476421159095808}
+  m_Father: {fileID: 8696666575888101114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5460646128343952241
 GameObject:
@@ -363,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5318103039593041918
 Transform:
   m_ObjectHideFlags: 0
@@ -491,6 +490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8696666575888101114}
   - {fileID: 5318103039593041918}
   m_Father: {fileID: 6485377372839437120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -630,7 +630,7 @@ MonoBehaviour:
   prefabID: 9
   instanceID: -1
   unitName: Baseball Pitching Machine
-  icon: {fileID: 21300002, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
+  icon: {fileID: 21300000, guid: 516df1d99ed088d479d32e5227019e3b, type: 3}
   desp: 'BASIC TOWER, 1-2 Damage.        Rapid fire baseball pitching machine. '
   canBeAttacked: 1
   canBeTargeted: 1
@@ -706,7 +706,7 @@ MonoBehaviour:
     - 0
     - 0
   effectImmunityList: 
-  shootObject: {fileID: 114266115900946412, guid: 0a7192722c7813b4d90ad76ef51b55c3,
+  shootObject: {fileID: 114266115900946412, guid: 39c1171a1cc91ca4aa14d1a2ae87648d,
     type: 3}
   shootPoint:
   - {fileID: 5648735770379950941}
@@ -966,3 +966,81 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!1001 &9167777782597404945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6550739265597067209}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0009999956
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.048999906
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.004838183
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000057601248
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000005760109
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_Name
+      value: TurretGunBaseball02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5648735770379950941}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33bb057cbe82baf44aeb18ba338b62ad, type: 3}
+--- !u!4 &8696666575888101114 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 9167777782597404945}
+  m_PrefabAsset: {fileID: 0}
