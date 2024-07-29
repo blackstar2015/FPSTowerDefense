@@ -69,7 +69,7 @@ PrefabInstance:
     - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}
       propertyPath: unitName
-      value: Matryoshka Doll Small
+      value: Small Matryoshka Doll
       objectReference: {fileID: 0}
     - target: {fileID: 114762694574170050, guid: dce61169ecc869f4594a7e45d0265c7a,
         type: 3}

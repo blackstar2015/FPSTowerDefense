@@ -168,9 +168,8 @@ MonoBehaviour:
   instanceID: -1
   unitName: Bucket of Building Blocks
   icon: {fileID: 21300006, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
-  desp: 'Tosses building blocks around itself. Warning: Stepping on building blocks
-    without foot protection may result in dramatically hindered travel speed due
-    to acute foot pain followed by impolite language.'
+  desp: SLOWDOWN TOWER, 0 Damage.                     Tosses building blocks around
+    itself.
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25

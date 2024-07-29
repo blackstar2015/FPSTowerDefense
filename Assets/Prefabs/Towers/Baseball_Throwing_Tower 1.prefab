@@ -631,8 +631,7 @@ MonoBehaviour:
   instanceID: -1
   unitName: Baseball Pitching Machine
   icon: {fileID: 21300002, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
-  desp: 'Rapid fire baseball pitching machine. Warning: Do not aim machine directly
-    at persons.'
+  desp: 'BASIC TOWER, 1-2 Damage.        Rapid fire baseball pitching machine. '
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
