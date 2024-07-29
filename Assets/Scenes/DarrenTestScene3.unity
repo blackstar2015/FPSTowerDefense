@@ -12152,7 +12152,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1362932821}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5334296995772794498, guid: 05a01f50f03c5244f8e25433331b2b33,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 05a01f50f03c5244f8e25433331b2b33, type: 3}
 --- !u!43 &1043587968
 Mesh:
@@ -12826,6 +12830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RussianDoll02 (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209017161199694861, guid: ecd816ab8c54e244ca98705585304f1d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6728673176033488567, guid: ecd816ab8c54e244ca98705585304f1d,
         type: 3}
@@ -23569,6 +23578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RussianDoll02
       objectReference: {fileID: 0}
+    - target: {fileID: 1895042866282261216, guid: b51c1be0cddd6ee47ace652650ae9876,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24370,6 +24384,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RussianDoll02 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6621771676478229526, guid: f31dc63a7206afe4fbd6ff5672b9398d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24437,6 +24456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RCToyCar01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249129815941633432, guid: 289c800e3b3d62c44a5627a50605e3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24584,6 +24608,11 @@ PrefabInstance:
       propertyPath: overheadViewObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1350697035}
+    - target: {fileID: 8283028319429628961, guid: bc4096980527cd84a924188b81223677,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8548288082513755900, guid: bc4096980527cd84a924188b81223677,
         type: 3}
       propertyPath: m_Cameras.Array.data[1]
