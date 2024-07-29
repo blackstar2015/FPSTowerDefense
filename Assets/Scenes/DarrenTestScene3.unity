@@ -24163,6 +24163,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
         type: 3}
+      propertyPath: waveList.Array.data[8].message
+      value: Big & medium matryoshka dolls are immune to slowdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
+        type: 3}
+      propertyPath: waveList.Array.data[9].message
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
+        type: 3}
       propertyPath: waveList.Array.data[3].subWaveList.Array.data[1].spawnCount
       value: 5
       objectReference: {fileID: 0}
