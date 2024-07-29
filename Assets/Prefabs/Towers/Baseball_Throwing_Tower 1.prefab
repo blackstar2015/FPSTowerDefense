@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6485377372839437120
 Transform:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8872910045107516229
 Transform:
   m_ObjectHideFlags: 0
@@ -611,6 +611,7 @@ Transform:
   - {fileID: 8872910045107516229}
   - {fileID: 6485377372839437120}
   - {fileID: 5465300252899090250}
+  - {fileID: 8696666575888101114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7755215025628276647
@@ -630,7 +631,7 @@ MonoBehaviour:
   prefabID: 9
   instanceID: -1
   unitName: Baseball Pitching Machine
-  icon: {fileID: 21300002, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
+  icon: {fileID: 21300000, guid: 516df1d99ed088d479d32e5227019e3b, type: 3}
   desp: 'BASIC TOWER, 1-2 Damage.        Rapid fire baseball pitching machine. '
   canBeAttacked: 1
   canBeTargeted: 1
@@ -966,3 +967,77 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!1001 &9167777782597404945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8714593711478894293}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.836
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0048381835
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000081460335
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+        type: 3}
+      propertyPath: m_Name
+      value: TurretGunBaseball02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33bb057cbe82baf44aeb18ba338b62ad, type: 3}
+--- !u!4 &8696666575888101114 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33bb057cbe82baf44aeb18ba338b62ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 9167777782597404945}
+  m_PrefabAsset: {fileID: 0}
