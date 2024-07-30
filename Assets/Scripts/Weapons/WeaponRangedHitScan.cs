@@ -16,7 +16,7 @@ public class WeaponRangedHitScan : Weapon
     [SerializeField] private bool _isFiring = false;
     [SerializeField] private bool _isDoneFiring;
     [SerializeField] private FloatEventAsset _waterLevelPercentageAsset;
-    [field: SerializeField, BoxGroup("SFX")] public EventReference ReloadWaterSFX { get; protected set; }
+
     private float _timeSinceStartedShooting = 0f;
     public float WaterLevelsPercentage => (1 -  _timeSinceStartedShooting / _shotTime);
 
@@ -34,7 +34,6 @@ public class WeaponRangedHitScan : Weapon
     {        
         while (_isFiring && _isDoneFiring == false)
         {
-            if (!FireBulletSFX.IsNull) RuntimeManager.PlayOneShot(FireBulletSFX, transform.position);
             CalculateBulletDirection();
             yield return null;
         }
@@ -68,7 +67,6 @@ public class WeaponRangedHitScan : Weapon
         if (_isFiring) _timeSinceStartedShooting += Time.deltaTime;
         else if (!_isFiring || _isDoneFiring)
         {
-            if (!FireBulletSFX.IsNull) RuntimeManager.PlayOneShot(FireBulletSFX, transform.position);
             _timeSinceStartedShooting -= Time.deltaTime * _rechargeRate;
         }
         _timeSinceStartedShooting = Mathf.Clamp(_timeSinceStartedShooting, 0f, _shotTime);
