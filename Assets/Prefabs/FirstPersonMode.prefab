@@ -825,19 +825,16 @@ PrefabInstance:
       propertyPath: <Range>k__BackingField
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 6494707592670228787, guid: 9441735d81d75c84bbf78cf7f50ff428,
-        type: 3}
-      propertyPath: <ShootWater>k__BackingField
-      value: 
-      objectReference: {fileID: 2075487262280283753}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2043172256228946847, guid: 9441735d81d75c84bbf78cf7f50ff428, type: 3}
+    - {fileID: 8385795553958424017, guid: 9441735d81d75c84bbf78cf7f50ff428, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4405621673244037374, guid: 9441735d81d75c84bbf78cf7f50ff428,
+    - targetCorrespondingSourceObject: {fileID: 8814045097191037794, guid: 9441735d81d75c84bbf78cf7f50ff428,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2075487262280283753}
+      addedObject: {fileID: 4478566150328355306}
   m_SourcePrefab: {fileID: 100100000, guid: 9441735d81d75c84bbf78cf7f50ff428, type: 3}
 --- !u!114 &2071040125915475626 stripped
 MonoBehaviour:
@@ -845,30 +842,30 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5087948416380673945}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917109331939856231}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d9988b658889494184aa42edd288bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8917109331939856231 stripped
+--- !u!1 &4381370705820370171 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4405621673244037374, guid: 9441735d81d75c84bbf78cf7f50ff428,
+  m_CorrespondingSourceObject: {fileID: 8814045097191037794, guid: 9441735d81d75c84bbf78cf7f50ff428,
     type: 3}
   m_PrefabInstance: {fileID: 5087948416380673945}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &2075487262280283753
+--- !u!82 &4478566150328355306
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917109331939856231}
+  m_GameObject: {fileID: 4381370705820370171}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3adb4f57085241e4dbb8e2139034ad3b, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1010,7 +1007,7 @@ PrefabInstance:
     - target: {fileID: 1797634920628762478, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2051194586584577888, guid: 03aab3a1768909143a21ffe8c7788ea3,
         type: 3}

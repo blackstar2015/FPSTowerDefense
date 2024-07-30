@@ -18,4 +18,12 @@ public class SetCursorLockMode : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+    public void SetCursorVisible()
+    {
+        Cursor.visible = true;
+    }
+    public void SetCursorInvisible()
+    {
+        Cursor.visible = false;
+    }
 }
