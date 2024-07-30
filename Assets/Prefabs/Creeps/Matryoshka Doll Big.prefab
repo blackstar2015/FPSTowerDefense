@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
         type: 3}
       propertyPath: sodOverride.mulSpd
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9064380344705369672, guid: 759e20b799da74c44b3fc7ad9bc71c46,
         type: 3}

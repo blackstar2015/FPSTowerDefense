@@ -126,7 +126,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: You can build in the toys' way to change their path
+    message: You can build in the toys' way to change their path. Use with caution!
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -150,7 +150,8 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: 'Incoming: RC Cars & Matryoshka dolls. Larger matryoshka dolls are immune
+      to slowdown.'
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -209,7 +210,8 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: 'Incoming: RC Cars & Toy Soldiers. The secret to success: Redirect the
+      toys'' path in ways that keep them in range of your towers longer.'
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}

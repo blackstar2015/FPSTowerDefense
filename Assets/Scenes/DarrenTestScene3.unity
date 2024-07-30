@@ -24311,11 +24311,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6228346346526588250, guid: c5dce4457df97cf419e39ef0aa061d36,
-        type: 3}
-      propertyPath: waveList.Array.data[3].subWaveList.Array.data[1].spawnCount
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
