@@ -18,10 +18,11 @@ public class PlayerControllerFPSTD : PlayerController
     [SerializeField, FoldoutGroup("Events")] private BoolEventAsset _hitScanEnabledEvent;
     [SerializeField, FoldoutGroup("Events")] private BoolEventAsset _ProjectileEnabledEvent;
 
-
     private bool IsActive;
     private bool _isFiring;
     private GameObject _currentWeapon;
+    private float _nextAttackTime;
+    private float _coolDown => weaponRangedProjectile.Cooldown;
 
     protected override void Awake()
     {
@@ -33,18 +34,18 @@ public class PlayerControllerFPSTD : PlayerController
 
     public  void OnChargeAttack(InputValue value)
     {
-        if (!weaponRangedProjectile.isActiveAndEnabled) return;
+        if (!weaponRangedProjectile.isActiveAndEnabled || Time.time < _nextAttackTime) return;
         weaponRangedProjectile.IsCharging = true;
         weaponRangedProjectile.ChargeAttack();
     }
 
     public void OnReleaseAttack(InputValue value)
     {
-        if (!weaponRangedProjectile.isActiveAndEnabled) return;
-                   
+        if (!weaponRangedProjectile.isActiveAndEnabled || Time.time < _nextAttackTime) return;
         weaponRangedProjectile.IsCharging = false;
         weaponRangedProjectile.CalculateBulletDirection();
         weaponRangedProjectile.CurrentCharge = 0f;
+        _nextAttackTime = Time.time + _coolDown;
     }
     public void OnShoot(InputValue value)
     {

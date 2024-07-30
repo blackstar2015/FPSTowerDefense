@@ -149,6 +149,7 @@ Transform:
   - {fileID: 5071174216822565388}
   - {fileID: 1667976544932186270}
   - {fileID: 5857101372991372110}
+  - {fileID: 4098882240823272475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6657892016746632887
@@ -168,10 +169,9 @@ MonoBehaviour:
   prefabID: 10
   instanceID: -1
   unitName: Plate Tossing Machine
-  icon: {fileID: 21300000, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
-  desp: 'Tosses plates to your dinner guests for their convenience. Warning: If guests
-    fail to catch plates, plates may shatter and cause injury to the guest and others
-    around them.'
+  icon: {fileID: 21300000, guid: 0e36ea9d2b410ea44aeafc80a349f09a, type: 3}
+  desp: 'AREA ATTACK, 1-2 Damage.                    Tosses plates to your dinner
+    guests for their convenience. '
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
@@ -603,7 +603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5071174216822565388
 Transform:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667976544932186270
 Transform:
   m_ObjectHideFlags: 0
@@ -799,3 +799,112 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &4569076451492545520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7537359678052519597}
+    m_Modifications:
+    - target: {fileID: -9217504310866516389, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8280656
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3681313143100036015, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3681313143100036015, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01266022
+      objectReference: {fileID: 0}
+    - target: {fileID: -2683905252601196981, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.012660459
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.67453784
+      objectReference: {fileID: 0}
+    - target: {fileID: -2484921068739079471, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3236034
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_Name
+      value: PlateThrowTurret01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124304185407515435, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.06
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a665fa78c8a36fa4ab5d0190df7d6c14, type: 3}
+--- !u!4 &4098882240823272475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a665fa78c8a36fa4ab5d0190df7d6c14,
+    type: 3}
+  m_PrefabInstance: {fileID: 4569076451492545520}
+  m_PrefabAsset: {fileID: 0}
