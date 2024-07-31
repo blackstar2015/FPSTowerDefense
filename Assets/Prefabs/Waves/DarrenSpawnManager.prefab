@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 0}
   waveList:
   - waveIdx: 0
-    message: Toy soldiers incoming! Use area attack!
+    message: Use area attack!
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -78,7 +78,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: RC cars incoming! Slow them down!
+    message: Slow them down!
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -102,7 +102,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 'Matryoshka dolls: Hit them hard, then hit them again!'
+    message: Hit them hard, then hit them again!
     subWaveList:
     - prefab: {fileID: 3768776747536881616, guid: 95cc4fba63823aa42831dbb37a56a068,
         type: 3}
@@ -150,8 +150,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 'Incoming: RC Cars & Matryoshka dolls. Larger matryoshka dolls are immune
-      to slowdown.'
+    message: Larger matryoshka dolls are immune to slowdown.
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -186,7 +185,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 'Giant Toy Soldiers: Hit them hard and heavy!'
+    message: Hit them hard and heavy!
     subWaveList:
     - prefab: {fileID: 3943892367571076649, guid: 4b13636fda09d2849854aac88bd0f0f7,
         type: 3}
@@ -210,8 +209,8 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 'Incoming: RC Cars & Toy Soldiers. The secret to success: Redirect the
-      toys'' path in ways that keep them in range of your towers longer.'
+    message: 'The secret to success: Redirect the toys'' path in ways that keep them
+      in range of your towers longer.'
     subWaveList:
     - prefab: {fileID: 3096427807430669820, guid: eea2e3d039093ec4daf26cda1e1fc161,
         type: 3}
@@ -246,7 +245,7 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: It's a good idea to have some backup defenses.
     subWaveList:
     - prefab: {fileID: 3905295421729051894, guid: 76d80483aa2e95b49b9cc8ad93b660f9,
         type: 3}
@@ -286,8 +285,8 @@ MonoBehaviour:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}
       delay: 0
-      spawnCount: 8
-      spacing: 1
+      spawnCount: 6
+      spacing: 1.5
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -305,13 +304,13 @@ MonoBehaviour:
     abilityRscGainOnCleared: 0
     lifeGainOnCleared: 0
   - waveIdx: -1
-    message: 
+    message: It's a good idea to keep some toy parts in reserve for emergencies.
     subWaveList:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}
       delay: 0
-      spawnCount: 15
-      spacing: 1
+      spawnCount: 12
+      spacing: 1.5
       path: {fileID: 0}
       HP: -1
       SH: -1
@@ -380,8 +379,8 @@ MonoBehaviour:
     - prefab: {fileID: 7095420379050501999, guid: 2532d8d59d7cdea449a735bc5afc13c2,
         type: 3}
       delay: 0
-      spawnCount: 10
-      spacing: 1
+      spawnCount: 8
+      spacing: 1.5
       path: {fileID: 0}
       HP: -1
       SH: -1

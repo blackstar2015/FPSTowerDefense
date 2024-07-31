@@ -175,12 +175,14 @@ namespace TDTK{
 				return null;
 
 			var nextWave = instance.waveList[instance.currentWaveIdx + 1];
-			var message = nextWave.message;
 
-			if (message != null && message != string.Empty)
-				return message;
+			var message = ConstructMessage(nextWave); // construct the wave info part of message
 
-			return ConstructMessage(nextWave);
+			// append on any additional message.
+			if (nextWave.message != null && message != string.Empty)
+				message += "\n" + nextWave.message;
+
+			return message;
 		}
 
 		static string ConstructMessage(Wave nextWave)
