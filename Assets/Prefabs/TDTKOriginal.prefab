@@ -39573,7 +39573,6 @@ MonoBehaviour:
   loadFromCache: 0
   cacheOnLevelWon: 0
   cacheOnRestart: 0
-  audioManager: {fileID: 0}
   useRscManagerForCost: 0
   rsc: 3
   unavailablePrefabIDList: 
@@ -44894,7 +44893,6 @@ MonoBehaviour:
   genWaveOnStart: 0
   autoStart: 0
   startTimer: 5
-  audioManager: {fileID: 0}
   pathList:
   - {fileID: 0}
   waveList:
@@ -52031,90 +52029,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraT: {fileID: 0}
-  playerWon:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <playerLost>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <lostLife>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <newWave>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <waveCleared>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <buildStart>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <buildComplete>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <upgradeStart>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <upgradeComplete>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <towerSold>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <perkPurchased>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <invalidAction>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  playerWon: {fileID: 0}
+  playerLost: {fileID: 0}
+  lostLife: {fileID: 0}
+  newWave: {fileID: 0}
+  waveCleared: {fileID: 0}
+  buildStart: {fileID: 0}
+  buildComplete: {fileID: 0}
+  upgradeStart: {fileID: 0}
+  upgradeComplete: {fileID: 0}
+  towerSold: {fileID: 0}
+  perkPurchased: {fileID: 0}
+  invalidAction: {fileID: 0}
 --- !u!1 &2724691630349440211
 GameObject:
   m_ObjectHideFlags: 0
@@ -154772,26 +154698,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2019817397695899001}
     m_Modifications:
-    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 461722521347811850, guid: b6ad1ac811cdefc4ea72a372a72dd299,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3724951152503028796, guid: b6ad1ac811cdefc4ea72a372a72dd299,
         type: 3}
       propertyPath: m_Color.b
