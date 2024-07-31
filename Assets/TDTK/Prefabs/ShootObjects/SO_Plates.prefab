@@ -111,7 +111,7 @@ MonoBehaviour:
     autoDestroy: 1
     duration: 1.5
   shootSound: {fileID: 8300000, guid: 858963831aa66944e84d3d4ac9156a62, type: 3}
-  hitSound: {fileID: 8300000, guid: 892c0955209e1f242a54d47c384d451f, type: 3}
+  hitSound: {fileID: 8300000, guid: 82b6c579fc5e6c04187dff6d096b124a, type: 3}
   tgtRadius: 0
   targetPos: {x: 0, y: 0, z: 0}
   shootTime: 0
