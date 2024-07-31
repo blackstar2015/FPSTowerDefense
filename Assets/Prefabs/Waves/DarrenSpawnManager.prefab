@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endlessMode: 0
-  spawnCDType: 1
+  spawnCDType: 2
   skippable: 1
   genWaveOnStart: 0
   autoStart: 0

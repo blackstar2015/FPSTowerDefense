@@ -219,7 +219,7 @@ MonoBehaviour:
     hit_AOE: 1
     damageMin_AOE: 0
     damageMax_AOE: 0.05
-    attackRange_AOE: 1
+    attackRange_AOE: 1.5
     cooldown_AOE: 0.25
     critChance_AOE: 0
     critMultiplier_AOE: 0

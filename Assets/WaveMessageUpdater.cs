@@ -11,7 +11,8 @@ public class WaveMessageUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TDTK.TDTK.onSpawnCountDownE += OnSpawnCountDown;
+        //TDTK.TDTK.onSpawnCountDownE += OnSpawnCountDown;
+        TDTK.TDTK.onEnableSpawnE += OnSpawnCountDown;
         textObject.text = SpawnManager.GetNextWaveMessage();
     }
 

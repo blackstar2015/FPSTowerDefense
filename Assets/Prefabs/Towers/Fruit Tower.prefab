@@ -209,10 +209,10 @@ MonoBehaviour:
   attacksPlayer: 0
   prefabID: 11
   instanceID: -1
-  unitName: High Speed Fruit Dispenser
+  unitName: Heavy Fruit Dispenser
   icon: {fileID: 21300004, guid: c1bf8f531a58e5a43a7677bc162c964a, type: 3}
-  desp: 'HEAVY TOWER, 10-12 Damage.                  Dispenses fruit at unsafe consumption
-    speeds. '
+  desp: HEAVY TOWER, 10-12 Damage.                  Dispenses fruit at unsafe consumption
+    speeds. Slow to reload.
   canBeAttacked: 1
   canBeTargeted: 1
   unitRadius: 0.25
