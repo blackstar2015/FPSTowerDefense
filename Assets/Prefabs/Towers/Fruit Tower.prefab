@@ -287,7 +287,7 @@ MonoBehaviour:
     - 0
     - 0
   effectImmunityList: 
-  shootObject: {fileID: 114917850592720432, guid: 9894ee1936d71e4409526f77dc26b2ec,
+  shootObject: {fileID: 1267761218269918021, guid: 48f1d6285e663254ab8432bab09f166c,
     type: 3}
   shootPoint:
   - {fileID: 2802078774419350125}
