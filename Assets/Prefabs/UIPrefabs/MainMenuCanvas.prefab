@@ -1307,27 +1307,27 @@ PrefabInstance:
     - target: {fileID: 8976308117115183303, guid: edd580b3cc6cf5b4d8a5b5e2269bc967,
         type: 3}
       propertyPath: EventReference.Path
-      value: event:/UI/ui_hover
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8976308117115183303, guid: edd580b3cc6cf5b4d8a5b5e2269bc967,
         type: 3}
       propertyPath: EventReference.Guid.Data1
-      value: -1650342008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8976308117115183303, guid: edd580b3cc6cf5b4d8a5b5e2269bc967,
         type: 3}
       propertyPath: EventReference.Guid.Data2
-      value: 1133166635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8976308117115183303, guid: edd580b3cc6cf5b4d8a5b5e2269bc967,
         type: 3}
       propertyPath: EventReference.Guid.Data3
-      value: 944766849
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8976308117115183303, guid: edd580b3cc6cf5b4d8a5b5e2269bc967,
         type: 3}
       propertyPath: EventReference.Guid.Data4
-      value: 1409440701
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1414,52 +1414,52 @@ PrefabInstance:
     - target: {fileID: 377639134019698626, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Path
-      value: event:/UI/ui_hover
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 377639134019698626, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data1
-      value: -1650342008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134019698626, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data2
-      value: 1133166635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134019698626, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data3
-      value: 944766849
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134019698626, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data4
-      value: 1409440701
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134771397143, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Path
-      value: event:/UI/ui_hover
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 377639134771397143, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data1
-      value: -1650342008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134771397143, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data2
-      value: 1133166635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134771397143, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data3
-      value: 944766849
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 377639134771397143, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
       propertyPath: EventReference.Guid.Data4
-      value: 1409440701
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2346461958790654611, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
@@ -1932,7 +1932,8 @@ PrefabInstance:
       value: TestScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8768478126695777674, guid: f85136a041ed6164fa98333a6349a94b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8768478126428734631, guid: f85136a041ed6164fa98333a6349a94b,
         type: 3}
