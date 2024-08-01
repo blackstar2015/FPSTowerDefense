@@ -126,11 +126,16 @@ namespace TDTK{
 				if(upgradeTowerList[i]==null) upgradeTowerList.RemoveAt(i);
 			}
 		}
+
+		public bool doNotAutoConstruct;
 		
 		public void Init(){
+
 			if(!isPreview){
-				if(instanceID<0) TowerManager.PreBuildTower(this);
-				else Build();
+				if(instanceID<0) 
+					TowerManager.PreBuildTower(this);
+				else 
+					Build();
 			}
 			
 			if(IsResource()) cooldown=GetCooldown_Rsc();
@@ -196,7 +201,8 @@ namespace TDTK{
 			
 			base.FixedUpdate();
 			
-			Construction();
+			if (!doNotAutoConstruct)
+				Construction();
 			
 			TowerFunction();
 		}
