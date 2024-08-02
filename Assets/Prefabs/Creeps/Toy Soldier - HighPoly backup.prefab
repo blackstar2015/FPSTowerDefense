@@ -78,11 +78,31 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6523904660142881661, guid: b6568d462dc25104a93079adc61d6920,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dff2dca6156ae346a8bc50126bceb60, type: 2}
     - target: {fileID: 919132149155446097, guid: b6568d462dc25104a93079adc61d6920,
         type: 3}
       propertyPath: m_Name
       value: WalkingSoldier
       objectReference: {fileID: 0}
+    - target: {fileID: 4173030178738360075, guid: b6568d462dc25104a93079adc61d6920,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dff2dca6156ae346a8bc50126bceb60, type: 2}
+    - target: {fileID: 4347746477114614357, guid: b6568d462dc25104a93079adc61d6920,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dff2dca6156ae346a8bc50126bceb60, type: 2}
+    - target: {fileID: 6903316774476662492, guid: b6568d462dc25104a93079adc61d6920,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dff2dca6156ae346a8bc50126bceb60, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -135,7 +155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1460238369207030, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
       propertyPath: m_Name
-      value: Toy Soldier
+      value: Toy Soldier - HighPoly backup
       objectReference: {fileID: 0}
     - target: {fileID: 1849425225598372, guid: dce61169ecc869f4594a7e45d0265c7a, type: 3}
       propertyPath: m_IsActive
