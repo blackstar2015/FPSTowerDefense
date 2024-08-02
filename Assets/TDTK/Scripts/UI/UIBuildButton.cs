@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 
@@ -119,6 +120,8 @@ namespace TDTK{
 			UITooltip.Hide();
 			if(UIControl.UsePointNBuildMode()) TowerManager.HideSampleTower();
 		}
+
+		public static UnityEvent buildTower = new UnityEvent();
 		
 		private int touchModeButtonIdx=-1;
 		public void OnBuildButton(GameObject butObj){ OnBuildButton(UI.GetItemIndex(butObj, buildButtons)); OnHoverBuildButton(butObj); }
@@ -140,7 +143,7 @@ namespace TDTK{
 					
 					touchModeButtonIdx=idx;
 					buildButtons[touchModeButtonIdx].SetHighlight(true);
-					OnHoverBuildButton(buildButtons[idx].rootObj);
+					OnHoverBuildButton(buildButtons[idx].rootObj);					
 					return;
 				}
 				
@@ -156,6 +159,7 @@ namespace TDTK{
 				Hide();
 				
 				TowerManager.HideSampleTower();
+				buildTower.Invoke();
 			}
 			
 			if(UIControl.UseDragNDropMode()){
@@ -294,23 +298,9 @@ namespace TDTK{
 			UpdateDisplay();
 			base._Show();
 			//base._Show(instant);
-			HoldNode();
 			FindObjectOfType<PlayerControllerFPSTD>().enabled = false;
 		}
 
-		void HoldNode()
-        {
-			sInfo.Hold();
-			sInfo.platform.UpdatePath();
-			TDTK.OnNewTower(null);
-		}
-
-		void ReleaseNode()
-        {
-			sInfo.Release();
-			sInfo.platform.UpdatePath();
-			TDTK.OnNewTower(null);
-		}
 		public static void Hide(bool instant=false){
 			if(instance==null || !instance.thisObj.activeInHierarchy) return;
 			
@@ -318,14 +308,12 @@ namespace TDTK{
 			
 			instance.ClearTouchModeSelect();
 			instance._Hide(true);
-			instance.ReleaseNode();
 			FindObjectOfType<PlayerControllerFPSTD>().enabled = true;
 		}
 
         public override void _Hide(float duration = 0.25F)
         {
             base._Hide(duration);
-			//instance.ReleaseNode();
 		}
 
         public static bool IsActive(){ return instance!=null && instance.thisObj.activeInHierarchy; }

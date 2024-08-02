@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 namespace TDTK{
 
@@ -462,8 +462,9 @@ namespace TDTK{
 		public List<UnitCreep> creepOnPath=new List<UnitCreep>();
 		public void OnCreepEnter(UnitCreep unit){ creepOnPath.Add(unit); }
 		public void OnCreepExit(UnitCreep unit){ creepOnPath.Remove(unit); }
-		
-		
+
+		public static UnityEvent pathRecalculation = new UnityEvent();
+
 		//recalculate path on one of the waypoint platform, called when tower is built or sold
 		public void UpdatePlatformPath(BuildPlatform platform, UnitTower tower=null){	
 			bool requireUpdate=false;
@@ -475,15 +476,26 @@ namespace TDTK{
 						
 						for(int j=0; j<count; j++){
 							List<Vector3> subPath=wpSecList[i].GetWaypointList(j);
-							for(int n=0; n<subPath.Count; n++){
-								if(tower.GetPos()==subPath[n]){ inPath=true; break; }
+							for(int n=0; n<subPath.Count; n++)
+							{
+								var position = tower.GetPos();
+								var subPathSubPosition = subPath[n];
+
+								if(position==subPathSubPosition)
+								{ 
+									inPath=true;
+									pathRecalculation.Invoke();
+									break; 
+								}
 							
 								if(AStar.EnableDiagonal() || AStar.EnableSmoothing()){
 									if(n<subPath.Count-1){
 										if(subPath[n].x!=subPath[n+1].x && subPath[n].z!=subPath[n+1].z){
 											float gridSize=TowerManager.GetGridSize()*(AStar.EnableFreeSmoothing() ? 1.75f : 1.15f);
 											if(Vector3.Distance(subPath[n], tower.GetPos())<gridSize){ 
-												inPath=true; break; 
+												inPath=true;
+												pathRecalculation.Invoke();
+												break; 
 											}
 										}
 									}

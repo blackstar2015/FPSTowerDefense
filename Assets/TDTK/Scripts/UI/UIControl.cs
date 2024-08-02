@@ -70,6 +70,9 @@ namespace TDTK{
 				Debug.LogWarning("PointNBuild mode is not supported when using FreeFormMode in TowerManager, changed to DragNDrop instead");
 				buildMode=_BuildMode.DragNDrop;
 			}
+
+			Path.pathRecalculation.AddListener(OnPathRecalculation);
+			UIBuildButton.buildTower.AddListener(ReleaseTempTower);
 		}
 		
 		void OnEnable(){
@@ -196,6 +199,7 @@ namespace TDTK{
 				if(buildMode==_BuildMode.PointNBuild){
 					SelectControl.ClearNode();
 					UIBuildButton.Hide();
+					OnCancelOutOfBuildMenu();
 				}
 				SelectControl.ClearUnit();
 				UITowerSelect.Hide();
@@ -203,8 +207,10 @@ namespace TDTK{
 			
 			if(UsePointNBuildMode() && !UIBuildButton.IsActive()){
 				SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
-				if(sInfo.platform!=null) SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
-				else SelectControl.ClearNode();
+				if(sInfo.platform!=null) 
+					SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
+				else 
+					SelectControl.ClearNode();
 			}
 			
 			wasCursorOnUI=UI.IsCursorOnUI(pointerID);	//to be used for next frame
@@ -219,39 +225,98 @@ namespace TDTK{
 			if(tInfo.valid) AbilityManager.ActivateAbility(idx, tInfo.pos);
 			else Debug.Log("target not valid");
 		}
-		
-		
-		private void OnCursorDown(){
-			SelectInfo sInfo=TowerManager.GetSelectInfo(Input.mousePosition);
-			
+
+		bool pathRecalculateDetected;
+		SelectInfo sInfo;
+
+		private void OnCursorDown()
+		{	
 			bool select=false;
 			bool build=false;
-			
-			if(!UIBuildButton.IsActive() && sInfo.HasValidPoint()){
-				if(sInfo.GetTower()!=null){
-					select=true;
-					SelectControl.SelectUnit(sInfo.GetTower());
-					UITowerSelect.Show(sInfo.GetTower());
+
+			if (!UIBuildButton.IsActive())
+			{
+				sInfo = TowerManager.GetSelectInfo(Input.mousePosition);
+				if (sInfo.HasValidPoint())
+				{
+					if (sInfo.GetTower() != null)
+					{
+						select = true;
+						SelectControl.SelectUnit(sInfo.GetTower());
+						UITowerSelect.Show(sInfo.GetTower());
+					}
+					else if (buildMode == _BuildMode.PointNBuild && sInfo.AvailableForBuild() && sInfo.buildableList.Count > 0)
+					{ // we bring up the build menu. -- djoe
+						build = true;
+						UIBuildButton.Show(sInfo);
+						SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
+						HoldNode(sInfo.platform, sInfo.nodeID);
+					}
+					else
+						GameControl.InvalidAction("Invalid Build Point");
 				}
-				else if(buildMode==_BuildMode.PointNBuild && sInfo.AvailableForBuild() && sInfo.buildableList.Count>0){ // we bring up the build menu. -- djoe
-					build=true;
-					UIBuildButton.Show(sInfo);
-					SelectControl.SelectNode(sInfo.platform, sInfo.nodeID);
-				}
-				else
-					GameControl.InvalidAction("Invalid Build Point");
 			}
 			
-			// if we clicked but we're not buliding, meaning we just selected a tower to build? -- djoe
+			// if we clicked but we're not buliding, meaning we just cleared the menu. Check on method above for not on UI. -- djoe
 			if(buildMode==_BuildMode.PointNBuild && !build){
 				SelectControl.ClearNode();
 				UIBuildButton.Hide();
+				OnCancelOutOfBuildMenu();
 			}
 			if(!select){
 				SelectControl.ClearUnit();
 				UITowerSelect.Hide();
 			}
 		}
+
+		void OnPathRecalculation()
+			{
+				pathRecalculateDetected = true;
+			}
+
+		int counter = 0;
+		int Increment()
+        {
+			counter++;
+			return counter;
+        }
+
+		bool holdingNode = false;
+		UnitTower tempTower;
+
+		void HoldNode(BuildPlatform platform, int nodeID)
+		{			
+			NodeTD node = platform.GetNode(nodeID);
+			GameObject obj = new GameObject("temp " + Increment() );//
+			obj.transform.position = node.pos;
+			obj.transform.rotation = platform.GetRot() * Quaternion.Euler(-90, 0, 0);
+			tempTower = obj.AddComponent<UnitTower>();			
+			tempTower.SetBuildPoint(platform, nodeID);
+			tempTower.doNotAutoConstruct = true;
+
+			pathRecalculateDetected = false;
+			platform.UpdatePath(tempTower);
+			TDTK.OnNewTower(tempTower);
+			holdingNode = true;
+			
+			//Destroy(obj, 0.5f); // Destroy after its had enough time to do path recalculation and before the build complete sound plays.
+		}
+
+		void ReleaseTempTower()//UnitTower tower)
+        {
+			holdingNode = false;
+			TowerManager.RemoveTower(tempTower);
+			Destroy(tempTower.gameObject);
+        }
+
+		void OnCancelOutOfBuildMenu()
+        {
+			if (holdingNode)
+			{
+				sInfo.platform.RemoveTower(sInfo.nodeID, pathRecalculateDetected);
+				ReleaseTempTower();
+			}
+        }
 		
 		
 		//[Space(10)][Tooltip("The blur effect component used to blocked out the in game UI when menu screen is shown")]
