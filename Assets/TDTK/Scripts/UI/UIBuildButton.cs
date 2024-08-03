@@ -298,7 +298,8 @@ namespace TDTK{
 			UpdateDisplay();
 			base._Show();
 			//base._Show(instant);
-			FindObjectOfType<PlayerControllerFPSTD>().enabled = false;
+			//FindObjectOfType<PlayerControllerFPSTD>().enabled = false;
+			
 		}
 
 		public static void Hide(bool instant=false){
@@ -308,7 +309,7 @@ namespace TDTK{
 			
 			instance.ClearTouchModeSelect();
 			instance._Hide(true);
-			FindObjectOfType<PlayerControllerFPSTD>().enabled = true;
+			//FindObjectOfType<PlayerControllerFPSTD>().enabled = true;
 		}
 
         public override void _Hide(float duration = 0.25F)
