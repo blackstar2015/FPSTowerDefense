@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         // launch!
-        _rigidbody.velocity = transform.forward * Speed;
+        _rigidbody.linearVelocity = transform.forward * Speed;
         _spawnPosition = transform.position;
     }
 

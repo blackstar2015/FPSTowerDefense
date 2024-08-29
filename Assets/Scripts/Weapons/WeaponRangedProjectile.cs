@@ -41,7 +41,7 @@ public class WeaponRangedProjectile : Weapon
         else targetPoint = ray.GetPoint(Range);
 
         Vector3 direction = (targetPoint - _muzzle.position).normalized;
-        rb.velocity = direction * _projectileSpeed + direction * _projectileSpeed * ChargePercentage;
+        rb.linearVelocity = direction * _projectileSpeed + direction * _projectileSpeed * ChargePercentage;
     }
 
     private Rigidbody SpawnProjectile()
